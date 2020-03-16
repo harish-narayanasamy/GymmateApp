@@ -1,1 +1,1 @@
-Gymmate App
+Gymmate App --v 2.0
