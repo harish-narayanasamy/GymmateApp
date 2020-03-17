@@ -685,7 +685,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".side-menu-logo {\n  max-width: 140px; }\n\nion-header {\n  padding: 24px 10px; }\n\nion-item {\n  padding: 0 20px; }\n\nion-icon {\n  color: #333; }\n\nion-label {\n  text-transform: uppercase;\n  font-size: 13px !important;\n  font-weight: 600; }\n\nion-footer {\n  text-align: center;\n  padding: 20px;\n  color: #fff;\n  background: #333;\n  font-size: 14px !important;\n  font-weight: 600; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxIYXJpc2hcXExvY2FsX2RldlxcaW9uaWNcXEd5bW1hdGUvc3JjXFxhcHBcXGFwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGdCQUFnQixFQUFBOztBQUdwQjtFQUNJLGtCQUFrQixFQUFBOztBQUd0QjtFQUNJLGVBQWUsRUFBQTs7QUFHbkI7RUFDSSxXQUFXLEVBQUE7O0FBR2Y7RUFDSSx5QkFBeUI7RUFDekIsMEJBQTBCO0VBQzFCLGdCQUFnQixFQUFBOztBQUdwQjtFQUNJLGtCQUFrQjtFQUNsQixhQUFhO0VBQ2IsV0FBVztFQUNYLGdCQUFnQjtFQUNoQiwwQkFBMEI7RUFDMUIsZ0JBQWdCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2lkZS1tZW51LWxvZ297XG4gICAgbWF4LXdpZHRoOiAxNDBweDtcbn1cblxuaW9uLWhlYWRlcntcbiAgICBwYWRkaW5nOiAyNHB4IDEwcHg7XG59XG5cbmlvbi1pdGVte1xuICAgIHBhZGRpbmc6IDAgMjBweDtcbn1cblxuaW9uLWljb257XG4gICAgY29sb3I6ICMzMzM7XG59XG5cbmlvbi1sYWJlbHtcbiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICAgIGZvbnQtc2l6ZTogMTNweCAhaW1wb3J0YW50O1xuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG59XG5cbmlvbi1mb290ZXJ7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIHBhZGRpbmc6IDIwcHg7XG4gICAgY29sb3I6ICNmZmY7XG4gICAgYmFja2dyb3VuZDogIzMzMztcbiAgICBmb250LXNpemU6IDE0cHggIWltcG9ydGFudDtcbiAgICBmb250LXdlaWdodDogNjAwO1xufSJdfQ== */"
+module.exports = ".side-menu-logo {\n  max-width: 140px; }\n\nion-header {\n  padding: 24px 10px; }\n\nion-item {\n  padding: 0 20px; }\n\nion-icon {\n  color: #333; }\n\nion-label {\n  text-transform: uppercase;\n  font-size: 13px !important;\n  font-weight: 600; }\n\nion-footer {\n  text-align: center;\n  padding: 20px;\n  color: #fff;\n  background: #333;\n  font-size: 14px !important;\n  font-weight: 600; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxIYXJpc2hcXExvY2FsX2RldlxcR3ltbWF0ZUFwcC9zcmNcXGFwcFxcYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZ0JBQWdCLEVBQUE7O0FBR3BCO0VBQ0ksa0JBQWtCLEVBQUE7O0FBR3RCO0VBQ0ksZUFBZSxFQUFBOztBQUduQjtFQUNJLFdBQVcsRUFBQTs7QUFHZjtFQUNJLHlCQUF5QjtFQUN6QiwwQkFBMEI7RUFDMUIsZ0JBQWdCLEVBQUE7O0FBR3BCO0VBQ0ksa0JBQWtCO0VBQ2xCLGFBQWE7RUFDYixXQUFXO0VBQ1gsZ0JBQWdCO0VBQ2hCLDBCQUEwQjtFQUMxQixnQkFBZ0IsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zaWRlLW1lbnUtbG9nb3tcbiAgICBtYXgtd2lkdGg6IDE0MHB4O1xufVxuXG5pb24taGVhZGVye1xuICAgIHBhZGRpbmc6IDI0cHggMTBweDtcbn1cblxuaW9uLWl0ZW17XG4gICAgcGFkZGluZzogMCAyMHB4O1xufVxuXG5pb24taWNvbntcbiAgICBjb2xvcjogIzMzMztcbn1cblxuaW9uLWxhYmVse1xuICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gICAgZm9udC1zaXplOiAxM3B4ICFpbXBvcnRhbnQ7XG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcbn1cblxuaW9uLWZvb3RlcntcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgcGFkZGluZzogMjBweDtcbiAgICBjb2xvcjogI2ZmZjtcbiAgICBiYWNrZ3JvdW5kOiAjMzMzO1xuICAgIGZvbnQtc2l6ZTogMTRweCAhaW1wb3J0YW50O1xuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG59Il19 */"
 
 /***/ }),
 
@@ -1159,7 +1159,7 @@ var strings = {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "ion-modal {\n  position: absolute;\n  top: 80%;\n  display: block;\n  height: 20%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kYWxzL3BsYW4vQzpcXFVzZXJzXFxIYXJpc2hcXExvY2FsX2RldlxcaW9uaWNcXEd5bW1hdGUvc3JjXFxhcHBcXG1vZGFsc1xccGxhblxccGxhbi5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxrQkFBa0I7RUFDbEIsUUFBUTtFQUNSLGNBQWM7RUFDZCxXQUFXLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9tb2RhbHMvcGxhbi9wbGFuLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi1tb2RhbCB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDgwJTtcclxuICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gICAgaGVpZ2h0OiAyMCU7XHJcbn0iXX0= */"
+module.exports = "ion-modal {\n  position: absolute;\n  top: 80%;\n  display: block;\n  height: 20%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kYWxzL3BsYW4vQzpcXFVzZXJzXFxIYXJpc2hcXExvY2FsX2RldlxcR3ltbWF0ZUFwcC9zcmNcXGFwcFxcbW9kYWxzXFxwbGFuXFxwbGFuLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFrQjtFQUNsQixRQUFRO0VBQ1IsY0FBYztFQUNkLFdBQVcsRUFBQSIsImZpbGUiOiJzcmMvYXBwL21vZGFscy9wbGFuL3BsYW4ucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLW1vZGFsIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogODAlO1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICBoZWlnaHQ6IDIwJTtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -1954,7 +1954,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Harish\Local_dev\ionic\Gymmate\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Harish\Local_dev\GymmateApp\src\main.ts */"./src/main.ts");
 
 
 /***/ })
