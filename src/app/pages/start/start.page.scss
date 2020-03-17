@@ -1,28 +1,112 @@
 
 .grid-bg{
     height: 100%;
-    background-image: url('../../../assets/images/bg.jpg');
+    background-image: url('../../../assets/images/start.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center center fixed;
     background-repeat: no-repeat;
+   min-height: 480px;
+   width: 100%;
 }
 
 .start-logo{
     max-width: 160px;
-    margin-bottom: 20px;
 }
 
 .margin-h{
-    margin-top: 15px !important;
-    margin-bottom: 15px !important;
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+    background-color: #E71923;
+    color: #ffffff;
+    border-radius: 50px;
+
+}
+
+.fb-button{
+    background-color: #3A5998;
+    border-radius: 50px;
+    margin-bottom: 20px;
 }
 
 .button-h{
     height: 50px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold !important;
+    --border-image: none !important;
 }
 
 .color-facebook{
     color: #3b5998 !important;
 }
+
+.button-native {
+    padding: 0 !important;
+    border: none !important;
+    
+}
+
+ion-button{
+    --border-style: none;
+  }
+
+  h1{
+   font-size: 35px;
+    font-family: Gilroy-blacktalic ;
+}
+
+p{
+    margin-bottom: 45%;
+    font-family: Nunito;
+}
+
+.start-or{
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.ion-text-center{
+    flex: 0 0 calc(calc(8 / var(--ion-grid-columns, 9)) * 100%) !important;
+    width: calc(calc(8 / var(--ion-grid-columns, 9)) * 100%) !important;
+    max-width: calc(calc(8 / var(--ion-grid-columns, 9)) * 100%) !important;
+    height: 90%;
+}
+
+.button-start{
+   display: flex;
+   justify-content: flex-end;
+   flex-direction: column;
+   min-height: 80%;
+}
+
+.img-logo{
+    height: 20%;
+}
+
+@media only screen and (min-width: 420px) {
+    p{
+        margin-bottom: 50px;
+    }
+    .button-start{
+        min-height: auto;
+    }
+    }
+
+    @media only screen and (max-width: 420px) {
+        p{
+            margin-bottom: 30%;
+      
+        }
+    }
+@media only screen and (max-width: 370px) {
+p{
+    margin-bottom: 25%;
+}
+
+}
+
+@media only screen and (max-width: 320px) {
+    p{
+        margin-bottom: 20%;
+    }
+    
+    }

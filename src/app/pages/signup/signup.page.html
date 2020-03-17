@@ -1,57 +1,56 @@
-<ion-header class="lightheader" no-border>
-  <ion-toolbar mode="ios">
+<div class="main-wrapper">
+  <ion-header class="lightheader" no-border>
+    <ion-toolbar mode="ios" class="ion-color" [style.background-color]="customColor">
       <ion-title class="ion-text-capitalize">
-        {{strings.ST27}}
-      </ion-title>
-          <ion-buttons slot="start">
-            <ion-button color="dark" mode="md" (click)="goClosePage()" slot="start">
-              <ion-icon name="md-arrow-back"></ion-icon>
-            </ion-button>
-          </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content fixed>
-
-<ion-grid fixed style="height: 100%;">
-
-    <ion-row class="ion-justify-content-center ion-align-items-center" style="height: 100%;">
-      <ion-col size="8" class="ion-text-center">
-        <img src="./assets/images/logo_dark.png" class="start-logo"/>
+          {{strings.ST27}}
+        </ion-title>
+            <ion-buttons slot="start">
+              <ion-button color="light" mode="md" (click)="goClosePage()" slot="start">
+                <ion-icon name="md-arrow-back"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
   
-  <form class="form" [formGroup]="validationsform" (ngSubmit)="tryRegister(validationsform.value)">
-              <ion-list class="line-input" mode="md"> 
-                <ion-item mode="md">
-                    <ion-icon name="md-person" size="small" slot="start"></ion-icon>
-              <ion-input class="ion-text-left" placeholder="Name" type="text" formControlName="name"></ion-input>
+  <ion-content fixed class="ion-color" [style.background-color]="customColor">
+  
+  <ion-grid fixed style="height: 100%;">
+  
+      <ion-row class="ion-justify-content-center ion-align-items-center" style="height: 100%;">
+        <ion-col size="8" class="ion-text-center">
+          <h1>Create an account</h1>
+    
+          <form class="form" [formGroup]="validationsform" (ngSubmit)="tryRegister(validationsform.value)">
+            <ion-list class="line-input" mode="md"> 
+              <ion-item mode="md">
+                  
+            <ion-input class="ion-text-left ion-color" placeholder="Full Name" type="text" formControlName="name" [style.background-color]="customColor"></ion-input>
+              </ion-item> 
+            </ion-list>
+  
+            <ion-list class="line-input" mode="md"> 
+              <ion-item mode="md">
+                  
+            <ion-input class="ion-text-left" placeholder="Email" type="email" formControlName="email"></ion-input>
+              </ion-item> 
+            </ion-list>
+  
+            <ion-list class="line-input" mode="md"> 
+                <ion-item mode="md"> 
+              
+            <ion-input class="ion-text-left" type="Password" placeholder="Password" formControlName="password"></ion-input>
+            <ion-icon name="md-eye" size="medium" slot="end"></ion-icon>
                 </ion-item> 
               </ion-list>
-
-              <ion-list class="line-input" mode="md"> 
-                <ion-item mode="md">
-                    <ion-icon name="md-mail" size="small" slot="start"></ion-icon>
-              <ion-input class="ion-text-left" placeholder="Email" type="email" formControlName="email"></ion-input>
-                </ion-item> 
-              </ion-list>
-
-              <ion-list class="line-input" mode="md"> 
-                  <ion-item mode="md"> 
-                <ion-icon name="md-lock" size="small" slot="start"></ion-icon>
-              <ion-input class="ion-text-left" type="password" placeholder="Password" formControlName="password"></ion-input>
-                  </ion-item> 
-                </ion-list>
-            <ion-button class="button-h" mode="ios" type="submit" [disabled]="!validationsform.valid" color="primary" fill="solid" size="default" shape="round" expand="block">
-              {{strings.ST28}}
-            </ion-button>
-          </form>
-
-          <p class="go-to-terms">
-              <a (click)="goTermsPage()">{{strings.ST82}}</a>
-          </p>
+          <ion-button class="button-h ion-color" mode="ios" type="submit" [disabled]="!validationsform.valid" [style.background-color]="customColor" fill="solid" size="default" shape="round" expand="block">
+                {{strings.ST28}}
+              </ion-button>
+            </form>
+    
+        </ion-col>
+      </ion-row>
+    
+    </ion-grid>
   
-      </ion-col>
-    </ion-row>
-  
-  </ion-grid>
-
-</ion-content>
+  </ion-content>
+  </div>

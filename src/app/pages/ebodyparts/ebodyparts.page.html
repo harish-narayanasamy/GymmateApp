@@ -1,16 +1,16 @@
 <ion-header class="lightheader" no-border>
-  <ion-toolbar mode="ios">
+  <ion-toolbar mode="ios" class="ion-color" [style.background-color]="customColor">
     <ion-title class="ion-text-capitalize">
       {{title}}
     </ion-title>
     <ion-buttons slot="start">
-      <app-backbutton color="dark"></app-backbutton>
+      <app-backbutton color="light"></app-backbutton>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 
-<ion-content>
+<ion-content fixed class="ion-color" [style.background-color]="customColor">
 
   <app-loading *ngIf="isLoading"></app-loading>
 
@@ -20,23 +20,27 @@
     <ng-container *ngFor="let item of exercises" >
 
 
-      <ion-item  *ngIf="subscribe;else notShow" [routerLink]="['/edetails', item.exercise_id]">
+      <ion-item  *ngIf="subscribe;else notShow ion-color" [routerLink]="['/edetails', item.exercise_id]" [style.background-color]="customColor">
 
         <ion-avatar slot="start">
-          <img [src]="item.exercise_image | image">
+          <img class="body-img" [src]="item.exercise_image | image">
         </ion-avatar>
-        <ion-label>{{item.exercise_title}}</ion-label>
-
+        <div class="body-info">
+          <ion-label>{{item.exercise_title}}</ion-label>
+          <p>10 Reps - 4 Sets</p>
+          </div>
       </ion-item>
 
       <ng-template #notShow >
-        <ion-item class="disabled" [routerLink]="['/tabs/tab5']">
+        <ion-item class="disabled" [routerLink]="['/profile']">
 
-          <ion-avatar slot="start">
-            <img [src]="item.exercise_image | image">
+          <ion-avatar slot="stat">
+            <img class="body-img" [src]="item.exercise_image | image">
           </ion-avatar>
+          <div class="body-info">
           <ion-label>{{item.exercise_title}}</ion-label>
-  
+          <p>10 Reps - 4 Sets</p>
+          </div>
         </ion-item>
       </ng-template>
     </ng-container>

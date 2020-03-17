@@ -1,9 +1,11 @@
 ion-grid{
     flex: 1;
+    height: 100%;
 }
 
 ion-row{
     flex: 1;
+    height: 100%;
 }
 
 .cardcategory{
@@ -39,26 +41,69 @@ ion-row{
     position: relative;
     top: 0;
     margin-bottom: 10px;
+    display: none;
 }
 
 .cardcategory .texts{
     padding-bottom: 15px;
-    width: 100%;
+
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     position: relative;
+    height: 20%;
+    bottom: 40%;
+    left: 10%;
 }
 
 .cardcategory .texts h1{
     color: white;
     margin: 0;
-    font-weight: bold;
-    font-size: 14px;
+    font-size: 30px;
     display: block;
     overflow: hidden;
-    text-transform: uppercase;
     text-overflow: ellipsis;
     white-space: nowrap;
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-family: 'Gilroy-blacktalic';
 }
+
+ion-header{
+    background-color:#212121 ;
+    height: 100%;
+    padding: 40px 0 10px 0 !important;
+    height: auto ;
+}
+
+.ion-text-capitalize{
+    width: 100%;
+    color: #f7474f;
+    font-family: Proxima-bold;
+    font-size: 20px !important;
+    text-transform: none !important;
+    }
+
+    ion-content{
+        background: #191919;
+    }
+
+    ion-grid{
+        padding: 22px 8px;
+    }
+
+    ion-col:nth-last-child(1){
+        margin-bottom: 80px;
+    }
+
+    ion-col{
+        flex: 0 0 calc(calc(12 / var(--ion-grid-columns, 12)) * 90%) !important;
+        width: calc(calc(12 / var(--ion-grid-columns, 12)) * 90%) !important;
+        max-width: calc(calc(12 / var(--ion-grid-columns, 12)) * 90%) !important;
+        max-height: 135px;
+        min-height: 135px;
+     margin: 5px auto;
+     padding-left: 0px;
+     padding-right: 0px;
+    }

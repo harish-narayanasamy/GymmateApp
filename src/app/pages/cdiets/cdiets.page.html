@@ -1,18 +1,18 @@
+
 <ion-header class="lightheader" no-border>
-  <ion-toolbar mode="ios">
-      <ion-title class="ion-text-capitalize">
+  <ion-toolbar mode="ios" class="ion-color" [style.background-color]="customColor">
+    <ion-title class="ion-text-capitalize">
         {{title}}
       </ion-title>
             <ion-buttons slot="start">
-              <app-backbutton color="dark"></app-backbutton>
+              <app-backbutton color="light"></app-backbutton>
             </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fixed class="ion-color" [style.background-color]="customColor">
 
   <app-loading *ngIf="isLoading"></app-loading>
-
   <app-empty *ngIf="diets.length === 0" [title]="strings.ST142"></app-empty>
 
   <ion-grid>
@@ -22,12 +22,15 @@
                <div class="overlay">
                <div class="texts">
                <h1>{{item.diet_title}}</h1>
-               <p><ion-icon name="ios-stopwatch" color="primary"></ion-icon>{{item.diet_time}} <ion-icon style="margin-left: 8px;" name="ios-flame" color="primary"></ion-icon>{{item.diet_calories}} {{strings.ST45}}</p>
+               <p><ion-icon name="ios-stopwatch" color="light"></ion-icon>{{item.diet_time}} <ion-icon style="margin-left: 8px;" name="ios-flame" color="light"></ion-icon>{{item.diet_calories}} {{strings.ST45}}</p>
                </div>
              </div>
              </div>
         </ion-col>
       </ion-row>
+      
     </ion-grid>
+
+    
 
 </ion-content>

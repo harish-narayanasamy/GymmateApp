@@ -1,5 +1,11 @@
 ion-grid{
     height: 100%;
+    padding: 22px 8px !important;
+    height: auto ;
+}
+
+ion-content{
+    background: #191919;
 }
 
 ion-row{
@@ -39,26 +45,106 @@ ion-row{
     position: relative;
     top: 0;
     margin-bottom: 10px;
+    display: none;
 }
 
 .cardcategory .texts{
     padding-bottom: 15px;
-    width: 100%;
+
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     position: relative;
+    height: 20%;
+    bottom: 40%;
+    left: 10%;
 }
 
 .cardcategory .texts h1{
     color: white;
     margin: 0;
-    font-weight: bold;
-    font-size: 14px;
+    font-size: 30px;
     display: block;
     overflow: hidden;
-    text-transform: uppercase;
     text-overflow: ellipsis;
     white-space: nowrap;
+ 
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-family: 'Gilroy-blacktalic';
 }
+
+ion-col{
+    flex: 0 0 calc(calc(12 / var(--ion-grid-columns, 12)) * 90%) !important;
+    width: calc(calc(12 / var(--ion-grid-columns, 12)) * 90%) !important;
+    max-width: calc(calc(12 / var(--ion-grid-columns, 12)) * 90%) !important;
+    max-height: 135px;
+    min-height: 135px;
+ margin: 5px auto;
+ padding-left: 0px;
+ padding-right: 0px;
+}
+
+.ion-page {
+    .in-toolbar {
+      .toolbar-background {
+        background: transparent !important;
+      }
+    }
+  }
+
+  .ion-text-capitalize{
+    width: 100%;
+    color: #f7474f;
+    font-family: Proxima-bold;
+    font-size: 20px !important;
+    text-transform: none !important;
+    }
+
+    .search-bar{
+        max-width: 90%;
+        margin: 20px auto 10px auto;
+        height: 40px;
+        border-radius: 8px;
+        background-color:#454545;
+        color:#979797 ;
+        display: flex;
+    }
+
+    .item-native{
+        background-color:#454545;
+    }
+
+    .in-toolbar{
+        padding: 40px 0 10px 0 !important;
+        background: #212121;
+    }
+
+    .ios-search{
+        padding-right: 5px;
+        margin-bottom: 7px;
+    }
+
+
+          .button-solid   {
+              width: 100% !important;
+              margin: 0px !important;
+              background-color: #F7474F;
+              height: 80px;
+              font-size: 18px;
+              font-weight: bold;
+              padding-bottom: 21px;
+          }   
+
+          .filter{
+              max-width: 25px;
+          }
+
+          ion-textarea{
+              margin-top: 0px !important;
+          }
+  
+          ion-col:nth-last-child(1){
+            margin-bottom: 80px;
+        }

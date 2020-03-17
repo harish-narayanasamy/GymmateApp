@@ -45,9 +45,28 @@
 }
 
 ion-segment-button ion-label{
-    font-size: 14px !important;
-    font-weight: bold !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
     letter-spacing: 0 !important;
+    text-transform: none !important;
+    margin: 0px !important;
+}
+
+ion-segment-button{
+    max-height: 40px !important;
+
+}
+
+.second .sc-ion-segment-md-h{
+ border-left: 1.5px solid #979797 !important;
+  border-right: 1.5px solid #979797 !important;
+}
+
+ion-segment-button:hover, ion-segment-button:focus, ion-segment-button:active{
+    background-color: #979797!important;
+    border-radius: 10px;
+    color: #ffffff !important;
+
 }
 
 .col-icon{
@@ -66,20 +85,21 @@ ion-segment-button ion-label{
 .col-icon .name{
     margin: 0;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 7px;
 }
 
 .col-icon .value{
 margin: 0;
-font-size: 14px;
+font-size: 36px;
     
 }
 
   ion-slides{
-    min-height: 60%;
-    padding-top: 22px;
+    min-height: 50%;
+    padding-top: 0;
     width: 100%;
+    background-color:#191919;
     }
     .slide{
         min-height: 60%;
@@ -90,3 +110,205 @@ ion-slide{
     justify-content: flex-start !important;
     padding: 0 20px;
 }
+
+.ion-page {
+    .in-toolbar {
+      .toolbar-background {
+        background:#212121 !important;
+      }
+    }
+  }
+
+ .favourite{
+     z-index: 9999;
+     background-color: #191919;
+ } 
+
+ .text{
+     margin: 30px auto 0 auto;
+     max-width: 90%;
+ }
+
+ .category{
+     max-width: 100px;
+     width: 100%;
+     background: #f7474f;
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px;
+        color: #ffffff;
+        font-size: 12px;
+        line-height: normal;
+        letter-spacing: normal;
+         font-family: 'Proxima-bold';
+ }
+
+ .name-food{
+     font-size: 36px;
+     line-height: normal;
+     letter-spacing: normal;
+     font-family: 'Proxima-extra';
+     margin: 0px;
+     color: #ffffff;
+
+ }
+
+ ion-content{
+     background-color:#191919;
+ }
+
+ ion-header{
+     position: absolute;
+ }
+
+ .ion-text-left, p {
+    color: #ffffff !important;
+ }
+
+
+ .sc-ion-segment-md-h{
+    background-color: #313235;
+    border-radius: 10px;
+    color: #aeabab;
+    max-width: 90%;
+    margin: 15px auto 0 auto;
+ }
+
+ .about-meal{
+
+     max-width: 90%;
+     margin: 10px auto 5px auto;
+ }
+
+ .about-meal, .nutrition{
+     text-align: left !important;
+     padding: 0px !important;
+     font-size: 24px;
+     line-height: 28px;
+     letter-spacing: normal;
+     font-family: Proxima-semi;
+     color: #ffffff;
+     width: 100% !important;
+     margin: 15px 0!important;
+ }
+
+ .about-meal ion-title{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+ .description-diet p{
+        margin-top: 0px !important;
+ }
+
+ .description-diet, .method{
+    background-color: #313235;
+    color: #ffffff;
+    padding:0 14px;
+    font-size: 16px;
+    line-height: 18px;
+    border-radius: 5px;
+    width: 100% !important;
+ }
+
+ ion-grid{
+     padding: 0px !important;
+ }
+
+ ion-col{
+    flex: 0 0 calc(calc(6 / var(--ion-grid-columns, 12)) * 100%) !important;
+    width: calc(calc(6 / var(--ion-grid-columns, 12)) * 100%) !important;
+    max-width: calc(calc(6 / var(--ion-grid-columns, 12)) * 100%) !important;
+    padding: 25px;
+   
+ }
+
+ .detail-info{
+    background-color: #313235;
+    border-radius: 5px;
+    margin-bottom: 80px;
+ }
+
+ ion-col:nth-child(1), ion-col:nth-last-child(2){
+    border-right: 0.5px solid #979797;
+ }
+    
+ ion-col:nth-child(2), ion-col:nth-last-child(1){
+    border-left: 0.5px solid #979797;
+ } 
+
+ ion-col:nth-child(1), ion-col:nth-child(2){
+    border-bottom: 0.5px solid #979797;
+ }
+    
+ ion-col:nth-last-child(2), ion-col:nth-last-child(1){
+    border-top: 0.5px solid #979797;
+ } 
+
+ .value{
+     color: #ffffff;
+     text-align: center;
+     font-size: 36px;
+     font-family: 'Proxima-extra';
+    }
+
+  .name{
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+  }  
+
+
+ :nth-child(1) .name{
+    color: #f7474f !important;
+ }
+
+  ion-col:nth-child(2) .name{
+    color: #d2dd04 !important;
+ }
+
+ ion-col:nth-child(3) .name{
+    color: #01b2e6 !important;
+ }
+
+  ion-col:nth-child(4) .name{
+    color: #05ca7a !important;
+ }
+
+ .html ol, .html ul{
+    font-family: 'Proxima-regular' !important;
+ }
+
+ .ingredients, .direction{
+     flex-direction: column !important;
+ }
+
+.html ul{
+    list-style-position: inside !important;
+     padding: 5% !important;
+     background-color: #313235 !important;
+border-radius: 5px !important;
+
+ }
+
+ .recommend{
+     display: flex;
+     flex-direction: row;
+     margin: 0 auto;
+     margin: 0 -10px 50px 0;
+ }
+
+ .fav{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: left;
+    margin: 0 10px;
+ }
+
+ .about-recommend{
+    font-size: 16px;
+    line-height: 18px;
+    font-family: 'Nunito-semi';
+    margin: 8px 0 !important;
+ }

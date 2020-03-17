@@ -38,7 +38,7 @@ export class EbodypartsPage implements OnInit {
 
   ngOnInit() {
     this.admob.BannerAd();
-    this.subscribe = false;
+    this.subscribe = true;
 
   }
 

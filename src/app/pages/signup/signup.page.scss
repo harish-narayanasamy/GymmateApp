@@ -3,6 +3,14 @@
     margin-bottom: 20px;
 }
 
+.main-wrapper{
+    background-image: url('../../../assets/images/log-background.jpg') !important;
+    height: 100% !important;
+    background-size: cover;
+    background-repeat: none;
+
+}
+
 .button-h{
     height: 50px;
     font-size: 14px;
@@ -25,34 +33,111 @@
   color: #807e7e;
 }
 
-.line-input {
-    margin-bottom: 0!important;
-    ion-item {
-        --border-color: transparent!important;
-        --background-activated: white;
-        --background-focused: white;
-        --background-hover: white;
-        --highlight-height: 0;
-        border: 1px solid #807e7e;
-        border-radius: 50px;
-
-        &.item-has-focus {
-            border: 1px solid var(--ion-color-primary);
-        }
-
-        ion-label {
-            color: #807e7e!important;
-            font-weight: 300;
-            font-size: 14px!important;
-        }
-
-        ion-icon{
-            color: #807e7e !important;
-            margin-right: 8px !important;
+.ion-text-capitalize{
+    padding: 0 4%;
+    text-align: right;
+    width: 100%;
+    color: #ffffff;
+    font-family: Proxima-bold;
+    }
+    
+    .line-input {
+        margin-bottom: 0!important;
+        ion-item {
+            --border-color: transparent!important;
+            --background-activated: #21201F;
+            --background-focused: #21201F;
+            --background-hover: #21201F;
+            --highlight-height: 0;
+            border: 1px solid #21201F;
+            border-radius: 5px;
+    
+            &.item-has-focus {
+                border: 1px solid var(--ion-color-primary);
+            }
+    
+            ion-label {
+                color: #979797!important;
+                font-weight: 300;
+                font-size: 14px!important;
+            }
+    
+            ion-icon{
+                color: #807e7e !important;
+                margin-right: 8px !important;
+            }
         }
     }
-}
-
 .sc-ion-input-ios-h{
     font-size: 14px !important;
+}
+
+.ion-page {
+    .in-toolbar {
+      .toolbar-background {
+        background: transparent !important;
+        padding: 0 !important;
+      }
+    }
+  }
+
+.button-h{
+    height: 50px;
+    font-size: 18px;
+    font-weight: normal !important;
+    margin: 0 !important;
+    margin-top: 10px !important;
+    border-radius: 50px;
+    color: #ffffff;
+}
+
+.ion-text-center{
+    flex: 0 0 calc(calc(8 / var(--ion-grid-columns, 9)) * 100%) !important;
+    width: calc(calc(8 / var(--ion-grid-columns, 9)) * 100%) !important;
+    max-width: calc(calc(8 / var(--ion-grid-columns, 9)) * 100%) !important;
+    height: 90%;
+}
+
+.line-input{
+    background: none !important;
+}
+
+ion-item {
+    --ion-background-color: #21201F !important;
+  }
+
+
+  .ion-text-left{
+    color:  #979797 !important;
+    font-size: 20px !important;
+    font-weight: normal;
+    opacity: 1 !important;
+  }
+
+  .button-h{
+    background-color: #E71923;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    margin-top: 50px !important;
+    height: 60px;
+}
+
+.button{
+    --opacity: 1 !important;
+    --font-size: 18px !important;
+    --font-family: Proxima-bold;
+}
+
+ion-header{
+    max-width: 90%;
+    margin: 20px auto -50px auto;
+}
+
+h1{
+    font-size: 30px;
+    line-height: normal;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-family: Proxima-black;
 }
