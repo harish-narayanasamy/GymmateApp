@@ -1,0 +1,145 @@
+<ion-header class="darkheader" mode="ios" no-border>
+  <ion-toolbar mode="ios">
+<!--
+    <ion-buttons slot="start">
+      <app-backbutton color="light"></app-backbutton>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon mode="md" name="md-exit" slot="end">
+      </ion-icon>
+    </ion-buttons>
+-->
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-no-padding">
+
+  <app-loading *ngIf="isLoading"></app-loading>
+
+  <ion-grid class="ion-no-padding">
+    <ion-row class="header-bg" [ngStyle]="{'height': innerHeight}">
+      <div class="text">
+        <p class="name">{{name}}</p>
+        <p class="since">{{strings.ST65}} {{since | timeAgo}}</p>
+      </div>
+    </ion-row> 
+  </ion-grid>
+  <ion-list style="margin: 0; padding: 0;">
+    
+      <ion-button expand="block" (click)="logout()">
+        signout
+      </ion-button>
+    
+  </ion-list>
+  <!--<ion-card *ngIf="subscribe">
+    <ion-card-header>
+      <ion-card-title>Subscribe</ion-card-title>
+    </ion-card-header>
+
+   <ion-card-content>
+     
+      <ion-toggle [(ngModel)]="subscribe" (ionChange)="notify()" color="success"></ion-toggle>
+
+    </ion-card-content>
+  </ion-card>-->
+
+
+
+  <ion-card *ngIf="subscribe !== 'active'" else cancelSub>
+
+
+    <ion-card-content>
+      <ion-list>
+        <ion-radio-group value="plan">
+          <ion-list-header>
+            <ion-label><b>Subscription Plans</b></ion-label>
+          </ion-list-header>
+
+          <ion-item>
+            <ion-radio slot="end"></ion-radio>
+            <i>Free</i>
+          </ion-item>
+          <ion-item>
+            <ion-radio slot="end" (ionSelect)="logForm($event)" value="monthly"></ion-radio>
+            <i>5$/month</i>
+          </ion-item>
+
+          <ion-item>
+            <ion-radio slot="end" (ionSelect)="logForm($event)" value="yearly"></ion-radio>
+            <i>50$/year</i>
+          </ion-item>
+
+
+        </ion-radio-group>
+      </ion-list>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card *ngIf="subscribe === 'active'">
+    <!--<ion-img src="../../../assets/images/demo-image.png"></ion-img>-->
+    <ion-card-content>
+      <ion-card-header>
+        <ion-card-subtitle><b>Subscription type:</b> {{this.type | titlecase}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-item>
+        <ion-button (click)="presentAlert()">Cancel Subscription</ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-button (click)="showsubpage()">Edit</ion-button>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list style="margin: 0; padding: 0;">
+    <ion-list-header color="primary">
+      <ion-label style="font-weight: bold; letter-spacing: 0;">{{strings.ST56}}</ion-label>
+    </ion-list-header>
+  </ion-list>
+
+  <div class="ion-padding">
+
+    <!-- Workouts -->
+
+    <div class="tags" (click)=toggleWorkouts()>
+      <h1>{{strings.ST1}}</h1>
+      <ion-icon [name]="isWorkouts ? 'arrow-forward' : 'arrow-down'" color="primary" slot="end"></ion-icon>
+    </div>
+
+    <div class="animated fadeIn" [hidden]="isWorkouts">
+      <app-workoutsfav></app-workoutsfav>
+    </div>
+
+    <!-- Workouts -->
+
+    <!-- Posts -->
+
+    <div class="tags" (click)=togglePosts()>
+      <h1>{{strings.ST4}}</h1>
+      <ion-icon [name]="isPosts ? 'arrow-forward' : 'arrow-down'" color="primary" slot="end"></ion-icon>
+    </div>
+
+    <div class="animated fadeIn" [hidden]="isPosts">
+      <app-postsfav></app-postsfav>
+    </div>
+
+    <!-- Posts -->
+
+    <!-- Diets -->
+
+    <div class="tags" (click)=toggleDiets()>
+      <h1>{{strings.ST3}}</h1>
+      <ion-icon [name]="isDiets ? 'arrow-forward' : 'arrow-down'" color="primary" slot="end"></ion-icon>
+    </div>
+
+    <div class="animated fadeIn" [hidden]="isDiets">
+      <app-dietsfav></app-dietsfav>
+    </div>
+
+    <!-- Diets -->
+
+  </div>
+  
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-header class="lightheader" no-border>
+  <ion-toolbar mode="ios">
+    <ion-title class="ion-text-capitalize">
+      {{title}}
+    </ion-title>
+    <ion-buttons slot="start">
+      <app-backbutton color="dark"></app-backbutton>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <app-loading *ngIf="isLoading"></app-loading>
+
+  <app-empty *ngIf="exercises.length === 0" [title]="strings.ST140"></app-empty>
+
+  <ion-list lines="none" class="ion-padding-top">
+    <ng-container *ngFor="let item of exercises" >
+
+
+      <ion-item  *ngIf="subscribe;else notShow" [routerLink]="['/edetails', item.exercise_id]">
+
+        <ion-avatar slot="start">
+          <img [src]="item.exercise_image | image">
+        </ion-avatar>
+        <ion-label>{{item.exercise_title}}</ion-label>
+
+      </ion-item>
+
+      <ng-template #notShow >
+        <ion-item class="disabled" [routerLink]="['/tabs/tab5']">
+
+          <ion-avatar slot="start">
+            <img [src]="item.exercise_image | image">
+          </ion-avatar>
+          <ion-label>{{item.exercise_title}}</ion-label>
+  
+        </ion-item>
+      </ng-template>
+    </ng-container>
+  </ion-list>
+
+</ion-content>

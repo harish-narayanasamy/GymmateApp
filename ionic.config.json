@@ -1,0 +1,7 @@
+{
+  "name": "gymmate",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,45 @@
+ion-avatar {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 124px !important;
+    max-height: 124px !important;
+    border-radius: 0;
+}
+
+ion-avatar img {
+    border-radius: 0;
+
+}
+
+ion-item ion-label {
+    padding-left: 0px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px;
+    white-space: normal !important;
+}
+
+ion-item {
+    border-bottom: 1px solid #eee !important;
+
+
+}
+
+ion-item {
+    --background-focused: #fff !important;
+    --background-activated: #fff !important;
+    --detail-icon-color: var(--ion-color-primary);
+    --detail-icon-opacity: 1;
+}
+
+ion-item:last-child {
+    border-bottom: none !important;
+}
+
+.disabled {
+  //  pointer-events: none; //This makes it not clickable
+    opacity: 0.2; //This grays it out to look disabled
+    position: relative;
+    background: url('../../../assets/images/diets.png') no-repeat center center;
+    z-index: 1000;
+}
