@@ -1,22 +1,21 @@
-<ion-header class="darkheader" mode="ios" no-border>
-  <ion-toolbar mode="ios">
-      <ion-buttons slot="start">
-          <app-backbutton color="light"></app-backbutton>
-      </ion-buttons>
-      <ion-buttons slot="end">
-            <ion-button (click)="addToFavorites()" slot="start">
-              <ion-icon color="light" mode="md" [name]="icon"></ion-icon>
-              </ion-button>
-      </ion-buttons>
+<ion-header class="lightheader" no-border>
+  <ion-toolbar mode="ios" class="ion-color" [style.background-color]="customColor">
+    <ion-title class="ion-text-capitalize">
+      Workouts
+    </ion-title>
+    <ion-buttons slot="start">
+      <app-backbutton class="arrow"></app-backbutton>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-no-padding">
+<ion-content class="ion-no-padding ion-color" [style.background-color]="customColor">
 
     <app-loading *ngIf="isLoading"></app-loading>
 
-    <ion-grid class="ion-no-padding">
-        <ion-row class="header-bg" [style.background-image]="'url(' + (workout.workout_image | image) + ')'" [ngStyle]="{'height': innerHeight}">
+    <ion-grid class="ion-no-padding header-info">
+      <img src="./assets/images/top_header.png" class="start-logo"/>
+        <ion-row class="header-bg" [ngStyle]="{'height': innerHeight}">
           <div class="text">
           <p class="name">{{workout.workout_title}}</p>
           <p class="time">{{workout.workout_duration}}</p>
@@ -44,5 +43,6 @@
       </div>
 
     </div>
+
 
 </ion-content>

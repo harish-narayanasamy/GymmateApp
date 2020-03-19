@@ -1,47 +1,47 @@
 <ion-header class="lightheader" no-border>
-    <ion-toolbar mode="ios">
+    <ion-toolbar mode="ios" class="ion-color" [style.background-color]="customColor">
         <ion-title class="ion-text-capitalize">
-          {{strings.ST2}}
-        </ion-title>
+            {{strings.ST2}} 
+          </ion-title>
         <!--
         <ion-buttons slot="start">
             <app-backbutton color="dark"></app-backbutton>
           </ion-buttons>
 -->
-    </ion-toolbar>
+  </ion-toolbar>
   </ion-header>
-  
-  <ion-content>
-  
-      <ion-grid>
-        
-          <ion-row>
-            <ion-col [routerLink]="['/bodyparts']">
-              <div class="card-center-image" style="background-image: url('./assets/images/bodyparts.jpg');">
-                <div class="card-center-bg">
-                  <div class="card-center-text">
-                  <p class="title">{{strings.ST37}}</p>
-                  <p class="subtitle">{{strings.ST40}}</p>
+    
+  <ion-content fixed class="ion-color" [style.background-color]="customColor">
+    
+        <ion-grid>
+          
+            <ion-row>
+              <ion-col [routerLink]="['/bodyparts']">
+                <div class="card-center-image" style="background-image: url('./assets/images/bodyparts.jpg');">
+                  <div class="card-center-bg">
+                    <div class="card-center-text">
+                    <p class="title">{{strings.ST37}}</p>
+                    <p class="subtitle">{{strings.ST40}}</p>
+                  </div>
+                  </div>
                 </div>
-                </div>
-              </div>
-              
-            </ion-col>
-          </ion-row>
-        
-          <ion-row>
-              <ion-col [routerLink]="['/equipments']">
-                  <div class="card-center-image" style="background-image: url('./assets/images/equipments.jpg');">
-                      <div class="card-center-bg">
-                        <div class="card-center-text">
-                            <p class="title">{{strings.ST38}}</p>
-                            <p class="subtitle">{{strings.ST39}}</p>
-                      </div>
-                      </div>
-                    </div>
+                
               </ion-col>
             </ion-row>
-  
-        </ion-grid>
-  
-  </ion-content>
+          
+            <ion-row>
+                <ion-col [routerLink]="['/equipments']">
+                    <div class="card-center-image" style="background-image: url('./assets/images/equipments.jpg');">
+                        <div class="card-center-bg">
+                          <div class="card-center-text">
+                              <p class="title">{{strings.ST38}}</p>
+                              <p class="subtitle">{{strings.ST39}}</p>
+                        </div>
+                        </div>
+                      </div>
+                </ion-col>
+              </ion-row>
+    
+          </ion-grid>
+    
+    </ion-content>

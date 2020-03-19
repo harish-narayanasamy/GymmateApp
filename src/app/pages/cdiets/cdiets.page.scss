@@ -1,6 +1,7 @@
 ion-grid{
     height: 100%;
     max-width: 95%;
+    margin: 20px auto;
 }
 
 ion-content{
@@ -84,7 +85,7 @@ ion-row{
     text-transform: none !important;
     }
     .in-toolbar{
-        padding: 40px 0 10px 0 !important;
+        padding: 30px 0 10px 0 !important;
         background: #212121;
     }
 
@@ -96,11 +97,11 @@ ion-row{
    margin-bottom: 4em;
    height: 221px !important;
     }
-
-    ion-col:nth-last-child(1) {
-        margin-bottom: 7em !important;
-    }
-
+    
     .sc-ion-textarea-md-h{
         margin-top: 2px;
+    }
+
+    .arrow{
+        color: #f7474f !important;
     }

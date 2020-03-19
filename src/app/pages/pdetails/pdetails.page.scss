@@ -3,31 +3,31 @@
     background-size: cover;
     align-items: center;
     justify-content: center;
+    height: auto !important;
 }
 
 .header-bg .text{
     color: #fff;
     text-align: center;
-    background: -moz-linear-gradient(top,  rgba(0,0,0,0.4) 10%, rgba(0,0,0,0.75) 100%);
-    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.4) 10%,rgba(0,0,0,0.75) 100%);
-    background: linear-gradient(to bottom,  rgba(0,0,0,0.4) 10%,rgba(0,0,0,0.75) 100%);
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: flex-end;
     align-items: flex-start;
     flex-direction: column;
-    padding: 30px;
+    padding: 20px 0 0 0;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .header-bg .name{
     color: #ffffff;
     text-align: left;
     margin: 0;
-    font-weight: bold;
-    font-size: 17px;
-    text-transform: capitalize;
+    font-family: 'Proxima-bold';
+    font-size: 22px;
     margin-bottom: 6px;
+    line-height: 26px;
+    padding-left: 0px;
 }
 
 .header-bg .time{
@@ -37,6 +37,7 @@
     text-align: center;
     font-size: 14px;
     font-weight: bold;
+    margin-top: 0px;
 }
 
 .cols{
@@ -73,4 +74,68 @@
 .date-category ion-icon{
     margin-right: 5px;
     font-size: 16px;
+}
+
+.ion-page {
+    .in-toolbar {
+      .toolbar-background {
+        background: #212121 !important;
+      }
+    }
+  }
+
+  ion-content{
+    background: #191919;
+}
+
+ion-header{
+    background-color:#212121 ;
+    height: 100%;
+    padding: 10px 0 10px 0 !important;
+    height: auto ;
+}
+
+.ion-text-capitalize{
+    width: 100%;
+    color: #f7474f;
+    font-family: Proxima-bold;
+    font-size: 20px !important;
+    text-transform: none !important;
+    }
+
+.author-img{
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+}    
+
+.author{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.author p, .ion-no-padding p{
+    margin: 0px;
+    padding: 3px 10px;
+    font-family: 'Proxima-light';
+    font-size: 14px;
+    line-height: 18px;
+    color: #fafafa;
+    text-align: left;
+}
+
+ app-html{
+    color: #ffffff !important;
+    font-family: 'Nunito' !important;
+    font-size: 18px !important;
+    line-height: 22px !important;
+}
+
+.ion-padding{
+    padding-top: var(--ion-padding, 5px) !important;
+}
+
+.arrow{
+    color: #f7474f !important;
 }

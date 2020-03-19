@@ -2,8 +2,169 @@ ion-grid {
     height: 100%;
     display: flex;
     flex-direction: column;
-  
+    padding-top: 20px;
+    padding-bottom: 25px;
+    max-width: 95%;
+    margin: 0 auto;
+
     ion-row {
         flex-grow: 1;
+        height: 100%;
     }
   }
+ 
+  ion-content{
+    background: #191919;
+}
+
+ion-header{
+    background-color:#191919 ;
+    height: 100%;
+    padding: 10px 0 10px 0 !important;
+    height: auto ;
+}
+
+.ion-text-capitalize{
+    width: 100%;
+    color: #eafff7;
+    font-family: Proxima-bold;
+    font-size: 32px !important;
+    line-height: 32px;
+    text-transform: none !important;
+    padding: 0 5%;
+    text-align: left;
+    }
+
+    ion-col{
+        min-height: 150px;
+    }
+
+    .today{
+        color: #e0e0e0;
+        font-family: 'Proxima-semi';
+        line-height: 24px;
+        font-size: 20px;
+        text-align: left;
+        margin-top: 0px;
+        width: 80%;
+    }
+
+    .view-all .today{
+        margin: 0px;
+    }
+
+    .today-info .card-center-bg{
+        padding: 0px !important;
+        background: none;
+    }
+
+    .workout-info .card-center-bg, .workout-info .card-center-image, .workout-info ion-col{
+        min-height: auto !important;
+        background: none !important;
+        padding: 0px !important;
+    }
+
+
+    .workout-slide{
+        height: 250px;
+        width: 180px;
+        margin: 0 10px;
+    }
+    
+    .scrolling-wrapper {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        margin-bottom: 50px !important;
+      
+        .card {
+          display: inline-block;
+        }
+      }
+
+      .card-center-bg{
+          justify-content: left !important;
+      }
+
+      .card-center-text{
+          text-align: left !important;
+
+      }
+
+     .goals .card-center-text{
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .view-all{
+
+    }
+
+      .card-center-text .title{
+        color: white;
+        margin: 0;
+        font-size: 30px !important;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 30px;
+        letter-spacing: 1px;
+        font-family: 'Gilroy-blacktalic' !important;
+        text-transform: none !important;
+      }
+
+      .card-center-text .subtitle {
+        color: #fafafa;
+        text-transform: none !important;
+        font-size: 14px;
+        font-family: 'Nunito';
+        line-height: 18px;
+    }
+
+    ion-row:nth-last-child(1) ion-col{
+        margin-bottom: 35px !important;
+    }
+
+    .card:nth-last-child(1) .workout-slide:nth-last-child(1){
+        margin-right: -10px;
+    }
+
+    .card:nth-child(1){
+        margin-left: -10px;
+    }
+
+    .view-all{
+        display: flex;
+        flex-direction: row;
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    .info2{
+        width: 20%;
+        text-align: right !important;
+        margin: 0px !important;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: 'Proxima-semi';
+        color: #f7474f;
+
+    }
+
+    .goals ion-col{
+        min-height: 150px;
+    }
+
+    .goals-info ion-col{
+        min-height: auto;
+    }
+
+    .scroll ion-col{
+        margin-bottom: 35px !important;
+    }
+
+    .goals{
+        margin-bottom: 15px;
+        padding: 0px !important;
+    }

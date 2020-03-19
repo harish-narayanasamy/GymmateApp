@@ -52,11 +52,6 @@ ion-segment-button ion-label{
     margin: 0px !important;
 }
 
-ion-segment-button{
-    max-height: 40px !important;
-
-}
-
 .second .sc-ion-segment-md-h{
  border-left: 1.5px solid #979797 !important;
   border-right: 1.5px solid #979797 !important;
@@ -226,7 +221,7 @@ ion-slide{
  .detail-info{
     background-color: #313235;
     border-radius: 5px;
-    margin-bottom: 80px;
+    margin-bottom: 0px;
  }
 
  ion-col:nth-child(1), ion-col:nth-last-child(2){
@@ -311,4 +306,8 @@ border-radius: 5px !important;
     line-height: 18px;
     font-family: 'Nunito-semi';
     margin: 8px 0 !important;
+ }
+
+ .arrow{
+     color: #f7474f !important;
  }

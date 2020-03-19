@@ -1,15 +1,15 @@
-<ion-header class="lightheader" no-border>
-    <ion-toolbar mode="ios">
-        <ion-title class="ion-text-capitalize">
+<ion-header  class="lightheader" mode="ios" no-border>
+  <ion-toolbar mode="ios" class="ion-color" [style.background-color]="customColor">
+      <ion-title class="ion-text-capitalize">
           {{title}}
         </ion-title>
               <ion-buttons slot="start">
-                <app-backbutton color="dark"></app-backbutton>
+                <app-backbutton color="#f7474f"></app-backbutton>
               </ion-buttons>
     </ion-toolbar>
   </ion-header>
   
-  <ion-content>
+  <ion-content class="ion-color" [style.background-color]="customColor">
   
     <app-loading *ngIf="isLoading"></app-loading>
     <app-empty *ngIf="workouts.length === 0" [title]="strings.ST141"></app-empty>
@@ -22,7 +22,10 @@
                  <div class="texts">
                  <p>{{item.goal_title}}</p>
                  <h1>{{item.workout_title}}</h1>
+                 <div class="more-info">
+                 <h3><ion-icon name="ios-stopwatch" color="light"></ion-icon>20 minutes<ion-icon style="margin-left: 8px;" name="ios-flame" color="light"></ion-icon>Easy</h3>
                  </div>
+                </div>
                </div>
                </div>
           </ion-col>
