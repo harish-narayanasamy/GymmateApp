@@ -1,99 +1,105 @@
 <ion-header class="lightheader" no-border>
   <ion-toolbar mode="ios" class="ion-color" [style.background-color]="customColor">
-      <ion-title class="ion-text-capitalize">
-        {{strings.ST1}}
-      </ion-title>
-      <!--<ion-buttons slot="start">
+    <ion-title class="ion-text-capitalize">
+      {{strings.ST1}}
+    </ion-title>
+    <!--<ion-buttons slot="start">
               <app-backbutton color="dark"></app-backbutton>
             </ion-buttons>
-            --> 
+            -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content fixed class="ion-color" [style.background-color]="customColor">
 
-    <ion-grid>
-      
-        <ion-row class="scroll">
-          <ion-col >
-            <div class="card-center-image today-info">
-              <div class="card-center-bg">
-                <div class="card-center-text">
-                <p class="today">Today's motivation</p>
-                <img src="./assets/images/top_header.png" class="workout-head"/>
-              </div>
-              </div>
+  <ion-grid>
+
+    <ion-row class="scroll">
+      <ion-col>
+        <div class="card-center-image today-info">
+          <div class="card-center-bg">
+            <div class="card-center-text">
+              <p class="today">Today's motivation</p>
+              <img src="./assets/images/top_header.png" class="workout-head" />
             </div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col >
-            <div class="card-center-image today-info">
-              <div class="card-center-bg">
-                <div class="card-center-text">
-                <p class="today">Workout based on Levels</p>
-                <div class="scrolling-wrapper">
-                  <div class="card"><img src="./assets/images/beginner.png" class="workout-slide"/></div>
-                  <div class="card"><img src="./assets/images/inter.png" class="workout-slide"/></div>
-                  <div class="card"><img src="./assets/images/level_card.png" class="workout-slide"/></div>
-                  <div class="card"><img src="./assets/images/elite.png" class="workout-slide"/></div>
-                </div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="card-center-image today-info">
+          <div class="card-center-bg">
+            <div class="card-center-text">
+              <p class="today">Workout based on Levels</p>
+              <div class="scrolling-wrapper">
+
+                <ion-col *ngFor="let item of levels" [routerLink]="['/wlevels', item.level_id, item.level_title]" >
+
                 
-              </div>
-              </div>
-            </div>
-          </ion-col>
-        </ion-row>
 
-        <ion-row class="workout-info">
-          <ion-col>
-            <div class="card-center-image">
-              <div class="card-center-bg">
-                <div class="card-center-text view-all">
-                <p class="today">Workout based on Goals</p>
-                <p class="info2">View all</p>    
-              </div>
-              </div>
-            </div>
-          </ion-col>
-        </ion-row>
+                  <div class="card" >   <img src ="http://hosting.lakeba.com:8092/images/{{item.level_image}}" class="workout-slide"/> </div>
 
-        <ion-row>
-          <ion-col [routerLink]="['/goals']" class="goals goals-info">
-            <div class="card-center-image" style="background-image: url('./assets/images/goals.jpg');">
-              <div class="card-center-bg">
-                <div class="card-center-text">
-                <p class="title ">Fat Loss</p>
-                <p class="subtitle">Beginner    7 min</p>
+                </ion-col>
+
+
               </div>
-              </div>
+
             </div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col [routerLink]="['/levels']" class="goals">
-                <div class="card-center-image" style="background-image: url('./assets/images/levels.jpg');">
-                    <div class="card-center-bg">
-                      <div class="card-center-text">
-                        <p class="title">Build Muscle</p>
-                        <p class="subtitle">Intermediate    10 min</p>
-                    </div>
-                    </div>
-                  </div>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col [routerLink]="['/levels']" class="goals">
-                <div class="card-center-image" style="background-image: url('./assets/images/levels.jpg');">
-                    <div class="card-center-bg">
-                      <div class="card-center-text">
-                          <p class="title">Transform</p>
-                          <p class="subtitle">Beginner    7 min</p>
-                    </div>
-                    </div>
-                  </div>
-            </ion-col>
-          </ion-row>
-      </ion-grid>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="workout-info">
+      <ion-col>
+        <div class="card-center-image">
+          <div class="card-center-bg">
+            <div class="card-center-text view-all">
+              <p class="today">Workout based on Goals</p>
+              <p class="info2">View all</p>
+            </div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col [routerLink]="['/goals']" class="goals goals-info">
+        <div class="card-center-image" style="background-image: url('./assets/images/goals.jpg');">
+          <div class="card-center-bg">
+            <div class="card-center-text">
+              <p class="title ">Fat Loss</p>
+              <p class="subtitle">Beginner 7 min</p>
+            </div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col [routerLink]="['/levels']" class="goals">
+        <div class="card-center-image" style="background-image: url('./assets/images/levels.jpg');">
+          <div class="card-center-bg">
+            <div class="card-center-text">
+              <p class="title">Build Muscle</p>
+              <p class="subtitle">Intermediate 10 min</p>
+            </div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col [routerLink]="['/levels']" class="goals">
+        <div class="card-center-image" style="background-image: url('./assets/images/levels.jpg');">
+          <div class="card-center-bg">
+            <div class="card-center-text">
+              <p class="title">Transform</p>
+              <p class="subtitle">Beginner 7 min</p>
+            </div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>
