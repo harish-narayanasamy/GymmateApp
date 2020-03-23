@@ -31,9 +31,10 @@ import {StreamingMedia} from '@ionic-native/streaming-media/ngx';
 import { AdMobFree } from '@ionic-native/admob-free/ngx';
 import { AdmobService } from './services/admob.service';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { EditprofilePipe } from './pages/editprofile.pipe';
 
 @NgModule({
-  declarations: [AppComponent,PlanPage,SubscriptionPage],
+  declarations: [AppComponent,PlanPage,SubscriptionPage, EditprofilePipe],
   entryComponents: [PlanPage,SubscriptionPage],
   imports: [
     BrowserModule,

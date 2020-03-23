@@ -58,7 +58,7 @@ export class EequipmentsPage implements OnInit {
     }
 
     toggleInfo(index: number) {
-      this.show[index] = true;
+   // this.show[index] = true;
     }
 
   getExercises() {
