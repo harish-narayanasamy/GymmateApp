@@ -8,13 +8,14 @@ import { AdmobService } from '../../services/admob.service';
 import { AuthService } from '../../services/auth.service';
 import { SubscriptionService } from '../../services/subscription.service';
 
+
 @Component({
   selector: 'app-ebodyparts',
   templateUrl: './ebodyparts.page.html',
   styleUrls: ['./ebodyparts.page.scss'],
 })
 export class EbodypartsPage implements OnInit {
-
+  show: {[key: number]: boolean} = {};
   public strings = strings;
   exercises: MuscleObject[] = [];
   title: string;
@@ -22,7 +23,8 @@ export class EbodypartsPage implements OnInit {
   id: any;
   height: any;
   public subscribe: any
-
+  et:string;
+  st:string;
   constructor(
     private dataService: DataService,
     private router: Router,
@@ -34,7 +36,11 @@ export class EbodypartsPage implements OnInit {
 
   ) { }
 
-
+  exercise: any = {};
+  isInfoHidden = true;
+  isInstruHidden = true;
+  isTipsHidden = true;
+  orientation = 'landscape';
 
   ngOnInit() {
     this.admob.BannerAd();
@@ -71,6 +77,11 @@ export class EbodypartsPage implements OnInit {
 
   goBack() {
     this.router.navigate(['/home']);
+  }
+
+
+  toggleInfo(index: number) {
+    this.show[index] = true;
   }
 
   getExercises() {

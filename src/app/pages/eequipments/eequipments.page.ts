@@ -57,6 +57,10 @@ export class EequipmentsPage implements OnInit {
       this.router.navigate(['/home']);
     }
 
+    toggleInfo(index: number) {
+      this.show[index] = true;
+    }
+
   getExercises() {
 
     this.dataService.getDataExercisesByEquipment(this.id)

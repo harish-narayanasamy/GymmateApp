@@ -78,4 +78,63 @@ padding: 10px 0;
     .header-info ion-row, .days{
         max-width: 90%;
         margin: 0 auto !important;
+        height: auto !important;
     }
+
+    .name{
+        font-size: 30px;
+        line-height: 35px;
+        font-family: 'Proxima-bold';
+        color: #ffffff;
+        margin-bottom: 0px;
+    }
+
+    .author, .further-info{
+font-size: 16px;
+line-height: 20px;
+font-family: 'Nunito';
+color: #979797;
+margin-top: 5px;
+margin-bottom: 25px;
+    }
+
+    .level-info{
+        display: flex;
+        flex-direction: row;
+        background-color:#313235;
+        border-radius: 5px;
+        max-width: 95%;
+        padding: 5px 15px;
+        margin-bottom: 10px;
+
+    }
+
+    .level-logo{
+       max-width: 25px;;
+        max-height: 25px;
+    }
+
+    .task, .task-info{
+        color: #fafafa;
+        font-size: 16px;
+        line-height: 20px;
+        font-family: 'Nunito-bold';
+        margin: 0px;
+    }
+    .task{
+        margin: 0 16px 0px 8px;
+    }
+
+    .text{
+        margin-bottom: 40px;
+    }
+
+    .exercise-header{
+        color: #efeeee;
+        font-size: 22px;
+        line-height: 26px;
+        font-family: 'Proxima-semi';
+        margin: 0px;
+        text-align: left;
+    }
+

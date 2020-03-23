@@ -1,36 +1,205 @@
-ion-avatar  {     
-    width:100% !important;  
-    height : 100% !important;  
-    max-width: 124px !important;
-    max-height: 124px !important;
+ion-avatar {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 90px !important;
+    max-height: 98px !important;
     border-radius: 0;
-    padding-top: 5px;
-    }
+    margin: 0 15px 0px 0 !important;
+}
 
-ion-avatar img{
-    border-radius: 6px;
+ion-avatar img {
+    border-radius: 0;
 
 }
 
-ion-item ion-label{
+ion-item ion-label, .exer-info ion-label {
     padding-left: 0px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 13px;
     white-space: normal !important;
+    color: #ffffff !important;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: 'Proxima-bold';
 }
 
-ion-item{
+ion-item {
     border-bottom: 1px solid #eee !important;
 }
 
-ion-item{
-    --background-focused:#fff !important;
-    --background-activated:#fff !important;
-    --detail-icon-color: var(--ion-color-primary);
+ion-item {
+    --background-focused: #191919 !important;
+    --background-activated: #191919 !important;
+    --detail-icon-color: transparent;
     --detail-icon-opacity: 1;
+
+    background: none !important;
+    border: none !important;
+}
+
+.item-native{
+    background-color: #191919 !important;
+    display: none !important;
+}
+.disabled {
+  //  pointer-events: none; //This makes it not clickable
+    opacity: 1; //This grays it out to look disabled
+    position: relative;
+    z-index: 1000;
+}
+
+.item-native{
+    background-color:#454545;
+}
+
+.in-toolbar{
+    padding: 30px 0 10px 0 !important;
+    background: #212121;
+}
+
+.ion-page {
+    .in-toolbar {
+      .toolbar-background {
+        background: transparent !important;
+      }
+    }
+  }
+
+  ion-content{
+    background: #191919;
+}
+
+ion-list{
+    background-color:#191919 ;
+    padding-top: 30px;
+    height: 100%;
+}
+ion-item{
+    --background: none !important;
+    margin-bottom: 20px !important;
+    --padding-start: 0px !important;
+    --inner-padding-end: 0px !important;
+    max-width: 90%;
+    margin: 0 auto;
+    border: 1px solid #313235 !important;
+    border-radius: 5px;
+
+}
+
+ .body-img{
+    width: 90px;
+    height: 98px;
+ } 
+
+ .ion-text-capitalize{
+    width: 100%;
+    color: #f7474f;
+    font-family: Proxima-bold;
+    font-size: 20px !important;
+    text-transform: none !important;
+    }   
+
+ p{
+     color: #ffffff;
+     margin: 5px 0;
+     font-size: 16px;
+     line-height: normal;
+     letter-spacing: normal;
+     font-family: 'Muli-light';
  }
 
-ion-item:last-child{
-    border-bottom: none !important;
+ .body-info{
+     position: absolute;
+     top: 20px;
+ }
+
+ ion-item {
+    --background-focused: #fff !important;
+    --background-activated: #fff !important;
+    --detail-icon-color: var(--ion-color-primary);
+    --detail-icon-opacity: 1;
+    --detail-icon-transform: rotate(90deg) !important;
 }
+
+ .body-info p, .exer-info p{
+     font-size: 14px;
+     color: #979797;
+     line-height: 16px;
+     font-family: 'Nunito-light';
+
+ }
+
+ .arrow{
+     color: #f7474f !important;
+ }
+
+ .tags{
+     display: flex;
+    flex-direction: row; 
+    max-width: 100%;
+    border: 1px solid #313235;
+    border-radius: 5px;
+    }
+
+    .exer-img{
+        width: 98px;
+        height: 90px;
+        display: block;
+    }
+
+    .exer-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .arrow-icon{
+        position: absolute;
+        right: 7%;
+        width: 20px;
+        height: 20px;
+        color:#8d8a8a !important;
+    }
+
+    .subinfo{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .further-info{
+       
+        margin: 0 auto;
+        border: 1px solid #313235;
+        border-top: none;
+        padding: 5%;
+    }
+
+
+    .exer-title{
+        color: #fafafa;
+        line-height: 26px;
+        font-size: 22px;
+        font-family: 'Proxima-bold';
+    }
+
+    .subinfo .subtitle{
+        color: #fafafa;
+        line-height: 20px;
+        font-size: 16px;
+        font-family: 'Muli-Regular';
+    }
+
+    .sub-img{
+        display: block;
+        margin-top: -3px;
+    }
+
+    .body-parts{
+        display: flex !important;
+        flex-direction: column !important;
+       --display: flex !important;
+        --flex-direction: column !important;
+        width: 100%;
+    }
+
+    .s-ion-icon{
+        display: none !important;
+    }

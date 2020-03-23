@@ -6,6 +6,7 @@
     <ion-buttons slot="start">
       <app-backbutton class="arrow"></app-backbutton>
     </ion-buttons>
+    
   </ion-toolbar>
 </ion-header>
 
@@ -17,11 +18,11 @@
   <app-empty *ngIf="exercises.length === 0" [title]="strings.ST140"></app-empty>
 
   <ion-list lines="none" class="ion-padding-top">
-    <ng-container *ngFor="let item of exercises" >
+    <ng-container *ngFor="let item of exercises; index as i;">
 
 
-      <ion-item  *ngIf="subscribe;else notShow ion-color" [routerLink]="['/edetails', item.exercise_id]" [style.background-color]="customColor">
-
+      <ion-item  *ngIf="subscribe;else notShow "  class="ion-color" [style.background-color]="customColor">
+<!--
         <ion-avatar slot="start">
           <img class="body-img" [src]="item.exercise_image | image">
         </ion-avatar>
@@ -29,8 +30,34 @@
           <ion-label>{{item.exercise_title}}</ion-label>
           <p>10 Reps - 4 Sets</p>
           </div>
-      </ion-item>
+          -->
+          <div class=" body-parts">
+          <div class="tags"  (click)=toggleInfo(i)>
+    
+            <ion-avatar slot="start">
+              <img src="./assets/images/blast.png" class="exer-img"/>
+            </ion-avatar>
+            <div class="exer-info">
+            <ion-label>Barbell Hang Pull</ion-label>
+            <p>10 Reps - 4 Sets</p>
+            <ion-icon [name]="isInfoHidden ? 'arrow-down' : 'arrow-up'"  slot="end" class="arrow-icon" ></ion-icon>
+            </div>
+        
+          </div>
+        
+          <div *ngIf="show[i]" class="animated fadeIn subinfo">
+            <div  class="test">
+          <img src="./assets/images/blast.png" class="sub-img"/> 
+          <div class="further-info">
+          <p class="exer-title">{{item.exercise_title}}</p>
+          <p class="subtitle">{{item.exercise_id}}</p>
+        </div>
+          </div> 
+         </div> 
+         </div>
 
+      </ion-item>
+<!--
       <ng-template #notShow >
         <ion-item class="disabled" [routerLink]="['/profile']">
 
@@ -43,7 +70,9 @@
           </div>
         </ion-item>
       </ng-template>
+      -->
     </ng-container>
   </ion-list>
+
 
 </ion-content>

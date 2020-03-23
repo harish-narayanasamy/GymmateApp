@@ -12,7 +12,7 @@ ion-avatar img {
 
 }
 
-ion-item ion-label {
+ion-item ion-label, .exer-info ion-label {
     padding-left: 0px;
     white-space: normal !important;
     color: #ffffff !important;
@@ -118,7 +118,7 @@ ion-item{
     --detail-icon-transform: rotate(90deg) !important;
 }
 
- .body-info p{
+ .body-info p, .exer-info p{
      font-size: 14px;
      color: #979797;
      line-height: 16px;
@@ -129,3 +129,72 @@ ion-item{
  .arrow{
      color: #f7474f !important;
  }
+
+ .tags{
+     display: flex;
+    flex-direction: row; 
+    max-width: 100%;
+    border: 1px solid #313235;
+    border-radius: 5px;
+    }
+
+    .exer-img{
+        width: 98px;
+        height: 90px;
+        display: block;
+    }
+
+    .exer-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .arrow-icon{
+        position: absolute;
+        right: 7%;
+        width: 20px;
+        height: 20px;
+        color:#8d8a8a !important;
+    }
+
+    .subinfo{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .further-info{
+       
+        margin: 0 auto;
+        border: 1px solid #313235;
+        border-top: none;
+        padding: 5%;
+    }
+
+
+    .exer-title{
+        color: #fafafa;
+        line-height: 26px;
+        font-size: 22px;
+        font-family: 'Proxima-bold';
+    }
+
+    .subinfo .subtitle{
+        color: #fafafa;
+        line-height: 20px;
+        font-size: 16px;
+        font-family: 'Muli-Regular';
+    }
+
+    .sub-img{
+        display: block;
+        margin-top: -3px;
+    }
+
+    .body-parts{
+        display: flex !important;
+        flex-direction: column !important;
+       --display: flex !important;
+        --flex-direction: column !important;
+        width: 100%;
+    }

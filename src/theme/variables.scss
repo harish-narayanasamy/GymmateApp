@@ -21,6 +21,7 @@
   --ion-color-secondary-shade: #0bb8cc;
   --ion-color-secondary-tint: #24d6ea;
 
+
   /** tertiary **/
   --ion-color-tertiary: #7044ff;
   --ion-color-tertiary-rgb: 112, 68, 255;
@@ -69,6 +70,14 @@
   --ion-color-medium-shade: #86888f;
   --ion-color-medium-tint: #a2a4ab;
 
+    /** arrow **/
+    --ion-color-arrow: #8d8a8a;
+    --ion-color-arrow-rgb: 141,138,138;
+    --ion-color-arrow-contrast: #8d8a8a;
+    --ion-color-arrow-contrast-rgb: 141,138,138;
+    --ion-color-arrow-shade: #8d8a8a;
+    --ion-color-arrow-tint: #8d8a8a;
+
   /** light **/
   --ion-color-light: #f4f5f8;
   --ion-color-light-rgb: 244, 244, 244;
@@ -79,6 +88,7 @@
 
     /** arrow **/
     --ion-color-arrow: #f7474f;
+
 }
 
 //**  Custom Css  **//
@@ -255,4 +265,18 @@
     font-style: normal;
     font-weight: normal;
     src: url('../assets/fonts/ProximaNova-Light.ttf');
+  }
+
+  @font-face {
+    font-family: 'Nunito-bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../assets/fonts/Nunito-Bold.ttf');
+  }
+
+  @font-face {
+    font-family: 'Muli-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../assets/fonts/Muli-Regular.ttf');
   }
