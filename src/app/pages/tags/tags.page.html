@@ -1,15 +1,18 @@
+
+
 <ion-header class="lightheader" no-border>
-  <ion-toolbar mode="ios">
-      <ion-title class="ion-text-capitalize">
-        {{strings.ST55}}
-      </ion-title>
-            <ion-buttons slot="start">
-              <app-backbutton color="dark"></app-backbutton>
-            </ion-buttons>
+  <ion-toolbar mode="ios" class="ion-color" [style.background-color]="customColor">
+    <ion-title class="ion-text-capitalize">
+      {{strings.ST55}}
+    </ion-title>
+    <ion-buttons slot="start">
+      <app-backbutton color="primary"></app-backbutton>
+    </ion-buttons>
+    
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding ion-color" [style.background-color]="customColor">
 
   <app-loading *ngIf="isLoading"></app-loading>
 

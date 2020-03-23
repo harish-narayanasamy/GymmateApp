@@ -50,7 +50,7 @@ export class ProfilePage implements OnInit {
 
 
   ) {
-    this.subscribe = false;
+    this.subscribe = true;
   }
 
   ngOnInit() {

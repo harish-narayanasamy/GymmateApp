@@ -1,5 +1,15 @@
-<ion-header class="darkheader" mode="ios" no-border>
-  <ion-toolbar mode="ios">
+<ion-header *ngIf="!isLoading" class="lightheader" no-border>
+  <ion-toolbar mode="ios" class="ion-color" [style.background-color]="customColor">
+    <ion-title  class="ion-text-capitalize">
+      Profile
+    </ion-title>
+    <!--<ion-buttons slot="start">
+              <app-backbutton color="dark"></app-backbutton>
+            </ion-buttons>
+            -->
+    
+  </ion-toolbar>
+</ion-header>
 <!--
     <ion-buttons slot="start">
       <app-backbutton color="light"></app-backbutton>
@@ -9,19 +19,33 @@
       </ion-icon>
     </ion-buttons>
 -->
-    
-  </ion-toolbar>
-</ion-header>
 
 <ion-content class="ion-no-padding">
 
   <app-loading *ngIf="isLoading"></app-loading>
 
   <ion-grid class="ion-no-padding">
-    <ion-row class="header-bg" [ngStyle]="{'height': innerHeight}">
+    <ion-row class="edit">        
+      <ion-buttons> 
+      <ion-button [routerLink]="['/editprofile']">
+        <ion-label class="view-more">
+          Edit Profile
+        </ion-label>
+          </ion-button>
+    </ion-buttons></ion-row>
+    <ion-row class="header-bg" >
       <div class="text">
-        <p class="name">{{name}}</p>
-        <p class="since">{{strings.ST65}} {{since | timeAgo}}</p>
+        <img src="./assets/images/avatar.png" class="author-img"/>
+        <div class="author">
+           
+        <p class="author-info">Sanjay Tarana</p>
+        <ion-buttons slot="start">
+          <ion-button [routerLink]="['/editprofile']" style="padding: 0 !important;">
+          <img src="./assets/images/pro.png" class="pro">
+              </ion-button>
+        </ion-buttons>
+        </div>
+        <app-postrating *ngIf="rating > 0" [value]="rating" color="rgba(255, 255, 255, 0.3)" [size]="18"></app-postrating>
       </div>
     </ion-row> 
   </ion-grid>

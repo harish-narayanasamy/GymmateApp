@@ -12,7 +12,7 @@ import { AdmobService } from '../../services/admob.service';
   styleUrls: ['./eequipments.page.scss'],
 })
 export class EequipmentsPage implements OnInit {
-
+  show: {[key: number]: boolean} = {};
   public strings = strings;
   exercises: EquipmentObject[] = [];
   title: string;
@@ -56,11 +56,12 @@ export class EequipmentsPage implements OnInit {
     goBack() {
       this.router.navigate(['/home']);
     }
-
+  
+  
     toggleInfo(index: number) {
       this.show[index] = true;
     }
-
+  
   getExercises() {
 
     this.dataService.getDataExercisesByEquipment(this.id)

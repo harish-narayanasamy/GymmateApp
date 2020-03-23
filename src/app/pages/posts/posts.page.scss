@@ -48,6 +48,7 @@
     background-position: center;
     position: relative;
     border-radius: 8px;
+    min-height: 180px;
 }
 
 .cardcategory .overlay{
@@ -63,6 +64,7 @@
     flex-flow: column;
     text-align: left;
     border-radius: 8px;
+    min-height: 180px;
 }
 
 .cardcategory .texts{
@@ -81,4 +83,57 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+ion-content{
+    background: #191919;
+}
+
+ion-header{
+    background-color:#191919 ;
+    height: 100%;
+    padding: 10px 5% !important;
+    height: auto ;
+}
+
+.ion-text-capitalize{
+    width: 100%;
+    color: #eafff7;
+    font-family: Proxima-bold;
+    font-size: 32px !important;
+    line-height: 32px;
+    text-transform: none !important;
+    text-align: left;
+    padding: 0;
+    }
+
+    .view-more{
+        width: 100%;
+        color: #eafff7;
+        font-family: Proxima-bold;
+        font-size: 16px !important;
+        line-height: 16px;
+        text-transform: none !important;
+    }
+
+
+    .today{
+        color: #e0e0e0;
+        font-family: 'Proxima-semi';
+        line-height: 24px;
+        font-size: 20px;
+        text-align: left;
+        margin-top: 0px;
+        width: 80%;
+    }
+
+ion-grid{
+    background-color: #191919 !important;
+    padding: 25px 0 40px 0;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+ion-button{
+    margin-right: -5px !important;
 }

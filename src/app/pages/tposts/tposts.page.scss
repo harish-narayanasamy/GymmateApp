@@ -1,5 +1,7 @@
 ion-grid{
-    height: 100%;
+    height: auto;
+    max-width: 95%;
+    padding-bottom: 40px;
 }
 
 ion-row{
@@ -42,7 +44,6 @@ ion-row{
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
 .cardcategory .texts p{
@@ -54,3 +55,32 @@ ion-row{
     text-transform: uppercase;
     letter-spacing: 0;
 }
+
+.in-toolbar{
+    padding: 30px 0 10px 0 !important;
+    background: #191919;
+}
+
+.ion-page {
+    .in-toolbar {
+      .toolbar-background {
+        background: transparent !important;
+      }
+    }
+  }
+
+  ion-content{
+    background: #191919;
+}
+
+.ion-text-capitalize{
+    width: 100%;
+    color: #f7474f;
+    font-family: Proxima-bold;
+    font-size: 20px !important;
+    text-transform: none !important;
+    }  
+
+    ion-col{
+        padding-bottom: 15px;
+    }
