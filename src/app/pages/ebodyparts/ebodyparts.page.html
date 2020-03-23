@@ -35,10 +35,16 @@
           <div class="tags"  (click)=toggleInfo(i)>
     
             <ion-avatar slot="start">
+
+              <img src ="http://hosting.lakeba.com:8092/images/{{item.exercise_image}}" class="exer-img"/>
+            
+            <!--
               <img src="./assets/images/blast.png" class="exer-img"/>
+
+            -->
             </ion-avatar>
             <div class="exer-info">
-            <ion-label>Barbell Hang Pull</ion-label>
+            <ion-label>{{item.exercise_title}}</ion-label>
             <p>10 Reps - 4 Sets</p>
             <ion-icon [name]="isInfoHidden ? 'arrow-down' : 'arrow-up'"  slot="end" class="arrow-icon" ></ion-icon>
             </div>
@@ -47,7 +53,7 @@
         
           <div *ngIf="show[i]" class="animated fadeIn subinfo">
             <div  class="test">
-          <img src="./assets/images/blast.png" class="sub-img"/> 
+          <img src="http://hosting.lakeba.com:8092/images/{{item.exercise_image}}" class="sub-img"/> 
           <div class="further-info">
           <p class="exer-title">{{item.exercise_title}}</p>
           <p class="subtitle">{{item.exercise_id}}</p>
