@@ -134,6 +134,7 @@ ion-grid{
     margin: 0 auto;
 }
 
-ion-button{
-    margin-right: -5px !important;
+.sc-ion-buttons-md-s ion-button{
+    --padding-start: 0px !important;
+    --padding-end: 0px !important;
 }
