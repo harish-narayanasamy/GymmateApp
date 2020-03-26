@@ -90,4 +90,14 @@ export class LoginPage implements OnInit {
     this.modalCtrl.dismiss();
   }
 
+  async goSignUpPage() {
+
+    const modal = await this.modalCtrl.create({
+       component: SignupPage,
+     });
+
+    modal.present();
+
+   }
+
 }

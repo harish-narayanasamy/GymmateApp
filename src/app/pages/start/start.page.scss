@@ -110,3 +110,9 @@ p{
     }
     
     }
+ 
+    @media only screen and (max-width: 280px) {
+        .grid-bg{
+        height: auto;
+        }
+    } 

@@ -77,6 +77,13 @@
 
 }
 
+ion-header{
+    background-image: url('../../../assets/images/log-background.jpg') !important;
+    padding: 20px 5% 0px 5%;
+    background-position: top;
+    margin-bottom: -50px;
+}
+
 .ion-page {
     .in-toolbar {
       .toolbar-background {
@@ -133,14 +140,13 @@ h1{
     font-family: Proxima-black;
 }
 
-ion-header{
-    max-width: 90%;
-    margin: 20px auto -50px auto;
-}
-
 .ion-text-left{
     color:  #979797 !important;
     font-size: 20px !important;
     font-weight: normal;
     opacity: 1 !important;
+  }
+
+  .form{
+      margin-bottom: 50px !important;
   }

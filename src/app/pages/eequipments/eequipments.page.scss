@@ -212,24 +212,192 @@ ion-item{
         max-height: 16px;
     }
 
-    @media only screen and (max-width: 280px) {
-        ion-item ion-label, .exer-info ion-label{
-            font-size: 16px;
-            line-height: 18px;
-        }
-
-        ion-avatar{
-            margin: 0 10px 0 0 !important;
-            max-width: 75px !important;
-        }
-
-        .arrow-icon{
-            right: 2%;
-        }
+    .body-parts {
+        display: -webkit-box !important;
+        display: flex !important;
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+        flex-direction: column !important;
+        --display: flex !important;
+        --flex-direction: column !important;
+        width: 100%;
     }
 
-    @media only screen and (max-width: 250px) {
-        ion-avatar{
-            max-width: 70px !important;
-        }
+    .body-parts .tags2{
+        display: flex;
+       flex-direction: row; 
+       max-width: 100%;
+       border: 1px solid #313235;
+       border-radius: 5px;
+       }
+   
+       .body-parts  .exer-img{
+           width: 98px;
+           height: 90px;
+           display: block;
+       }
+   
+       .body-parts  .exer-info{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           width: 50%;
+       }
+   
+       .body-parts  .arrow-icon{
+           position: absolute;
+           right: 4%;
+           width: 20px;
+           height: 20px;
+           color:#8d8a8a !important;
+           background-color: #191919 !important;
+       }
+   
+       .body-parts  .subinfo{
+           max-width: 100%;
+           margin: 0 auto;
+       }
+   
+       .body-parts .further-info{
+          
+           margin: 0 auto;
+           border: 1px solid #313235;
+           border-top: none;
+           padding: 5%;
+       }
+   
+   
+       .body-parts .exer-title{
+           color: #fafafa;
+           line-height: 26px;
+           font-size: 22px;
+           font-family: 'Proxima-bold';
+       }
+   
+       .body-parts .subinfo .subtitle{
+           color: #fafafa;
+           line-height: 20px;
+           font-size: 16px;
+           font-family: 'Muli-Regular';
+       }
+   
+       .body-parts .sub-img{
+           display: block;
+           margin-top: -3px;
+           border-right: 1px solid #313235;
+           border-left: 1px solid #313235;
+       }
+   
+       .body-parts .body-parts{
+           display: flex !important;
+           flex-direction: column !important;
+          --display: flex !important;
+           --flex-direction: column !important;
+           width: 100%;
+       }
+   
+       .body-parts .s-ion-icon{
+           display: none !important;
+       }
+
+       .body-parts ion-item{
+        --background-focused: #fff !important;
+        --background-activated: #fff !important;
+        --detail-icon-color: var(--ion-color-primary);
+        --detail-icon-opacity: 1;
+        --detail-icon-transform: rotate(90deg) !important;
     }
+
+    ion-avatar img {
+        border-radius: 0;
+    }
+
+    .body-parts ion-avatar{
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 90px !important;
+        max-height: 98px !important;
+        border-radius: 0;
+        margin: 0 15px 0px 0 !important;
+    }
+    .body-parts   ion-item ion-label,    .body-parts ion-label{
+        padding-left: 0px;
+        white-space: normal !important;
+        color: #ffffff !important;
+        font-size: 18px;
+        line-height: 20px;
+        font-family: 'Proxima-bold';
+    }
+
+    .workout-exercise{
+        background-color:transparent !important;
+        padding-bottom: 40px;
+    }
+
+    .exer-info p{
+        font-size: 14px;
+        color: #979797;
+        line-height: 16px;
+        font-family: 'Nunito-light';
+        margin: 5px 0;
+    }
+
+    .workout-exercise ion-item{
+        --inner-padding-end: 0px;
+        --padding-start: 0px ;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    .inner {
+        position: relative;
+        overflow: hidden;
+      }
+      .hide2 {
+        width: 50%;
+        float: left;
+        clear: both;
+        border: 1px solid #000;
+        background: red;
+        opacity: 1;
+        overflow: hidden;
+        transform: translateY(0);
+        margin: 0;
+        transition: all 1.5s linear, margin 0s linear 0s;
+      }
+      .hide2 p {
+        padding: 10px;
+        margin: 0;
+      }
+      .ex2 .follow {
+        clear: both;
+      }
+      
+      .ex2 input[type="checkbox"]:checked + .inner .hide2 {
+        opacity: 0;
+        transform: translateY(-100%);
+        margin-bottom: -999em;
+        transition: all 1.5s linear, margin 0s linear 1.5s;
+      }
+      
+       @media only screen and (max-width: 280px) {
+        .body-parts .exer-info ion-label{
+               font-size: 16px;
+               line-height: 18px;
+           }
+   
+           .body-parts ion-avatar{
+               margin: 0 10px 0 0 !important;
+               max-width: 75px !important;
+           }
+   
+           .body-parts .arrow-icon{
+               right: 2%;
+           }
+       }
+   
+       @media only screen and (max-width: 250px) {
+        .body-parts   ion-avatar{
+               max-width: 70px !important;
+           }
+       }

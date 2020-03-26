@@ -129,8 +129,10 @@ ion-item {
 }
 
 ion-header{
-    max-width: 90%;
-    margin: 20px auto -50px auto;
+    background-image: url('../../../assets/images/log-background.jpg') !important;
+    padding: 20px 5% 0px 5%;
+    background-position: top;
+    margin-bottom: -50px;
 }
 
 h1{

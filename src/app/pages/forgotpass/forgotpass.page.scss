@@ -29,19 +29,19 @@
     margin-bottom: 0!important;
     ion-item {
         --border-color: transparent!important;
-        --background-activated: white;
-        --background-focused: white;
-        --background-hover: white;
+        --background-activated: #21201F;
+        --background-focused: #21201F;
+        --background-hover: #21201F;
         --highlight-height: 0;
-        border: 1px solid #807e7e;
-        border-radius: 50px;
+        border: 1px solid #21201F;
+        border-radius: 5px;
 
         &.item-has-focus {
             border: 1px solid var(--ion-color-primary);
         }
 
         ion-label {
-            color: #807e7e!important;
+            color: #979797!important;
             font-weight: 300;
             font-size: 14px!important;
         }
@@ -55,4 +55,84 @@
 
 .sc-ion-input-ios-h{
     font-size: 14px !important;
+}
+
+h1{
+    font-size: 30px;
+    line-height: normal;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: Proxima-black;
+}
+
+.main-wrapper{
+    background-image: url('../../../assets/images/log-background.jpg') !important;
+    height: 100% !important;
+    background-size: cover;
+    background-repeat: none;
+
+}
+
+
+.ion-page {
+    .in-toolbar {
+      .toolbar-background {
+        background: transparent !important;
+      }
+    }
+  }
+
+  .ion-text-center{
+      text-align: left !important;
+      position: absolute;
+      top: 40px;
+      flex: 0 0 calc(calc(12 / var(--ion-grid-columns, 12)) * 90%) !important;
+      width: calc(calc(12 / var(--ion-grid-columns, 12)) * 100%) !important;
+      max-width: calc(calc(12 / var(--ion-grid-columns, 12)) * 90%) !important;
+      margin: 0 auto;
+  }
+
+  .line-input{
+    background: none !important;
+}
+
+ion-item {
+    --ion-background-color: #21201F !important;
+  }
+
+  .button-h{
+    background-color: #E71923;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    margin-top: 35% !important;
+    height: 60px;
+    border-radius: 50px;
+    font-size: 18px;
+}
+
+.button{
+    --opacity: 1 !important;
+    --font-size: 18px !important;
+    --font-family: Proxima-bold;
+}
+
+.ion-text-left{
+    color:  #979797 !important;
+    font-size: 20px !important;
+    font-weight: normal;
+    opacity: 1 !important;
+  }
+
+  p{
+    font-family: 'Proxima-regular';
+      font-size: 18px;
+      color: #ffffff;
+      line-height: normal;
+      margin: 5px 0 !important;
+  }
+
+  ion-header {
+    margin-top: 40px;
+    margin-bottom: -50px;
 }

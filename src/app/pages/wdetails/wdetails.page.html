@@ -83,62 +83,61 @@
 
     </div>
 
-    <!--AS per the design the exercises for the workouts-->
-    <ion-list lines="none" class="ion-padding-top workout-exercise">
-      <ng-container>
-  
-  
-        <ion-item  class="ion-color" [style.background-color]="customColor">
-  <!--
-          <ion-avatar slot="start">
-            <img class="body-img" [src]="item.exercise_image | image">
-          </ion-avatar>
-          <div class="body-info">
-            <ion-label>{{item.exercise_title}}</ion-label>
-            <p>10 Reps - 4 Sets</p>
-            </div>
-            -->
-            <div class=" body-parts">
-            <div class="tags2">
-      
-              <ion-avatar slot="start">
-                <img src="./assets/images/blast.png" class="exer-img"/>
-              </ion-avatar>
-              <div class="exer-info">
-              <ion-label>Barbell Hang Pull</ion-label>
-              <p>10 Reps - 4 Sets</p>
-              <ion-icon [name]="isInfoHidden ? 'arrow-down' : 'arrow-up'"  slot="end" class="arrow-icon" ></ion-icon>
-              </div>
-          
-            </div>
-          
-            <div  class="animated fadeIn subinfo">
-              <div  class="test">
-            <img src="./assets/images/blast.png" class="sub-img"/> 
-            <div class="further-info">
-            <p class="exer-title">Testing1</p>
-            <p class="subtitle">Testing 2</p>
-          </div>
-            </div> 
-           </div> 
-           </div>
-  
-        </ion-item>
-  <!--
-        <ng-template #notShow >
-          <ion-item class="disabled" [routerLink]="['/profile']">
-  
-            <ion-avatar slot="stat">
-              <img class="body-img" [src]="item.exercise_image | image">
-            </ion-avatar>
-            <div class="body-info">
-            <ion-label>{{item.exercise_title}}</ion-label>
-            <p>10 Reps - 4 Sets</p>
-            </div>
-          </ion-item>
-        </ng-template>
-        -->
-      </ng-container>
-    </ion-list>
+      <!-- THIS PART IS REQUIRED FOR GENERATING ALL THE EQUIPMENT EXCERCISES FROM BACKEND
+    
+  <app-loading *ngIf="isLoading"></app-loading>
 
+  <app-empty *ngIf="exercises.length === 0" [title]="strings.ST140"></app-empty>
+
+  <ion-list lines="none" class="ion-padding-top">
+    <ng-container *ngFor="let item of exercises; index as i;">
+      <ion-item  *ngIf="subscribe;else notShow "  class="ion-color" [style.background-color]="customColor">
+
+      -->
+    <ion-list lines="none" class="ion-padding-top workout-exercise">
+
+
+      <ion-item   class="ion-color" [style.background-color]="customColor">
+<!--
+        <ion-avatar slot="start">
+          <img class="body-img" [src]="item.exercise_image | image">
+        </ion-avatar>
+        <div class="body-info">
+          <ion-label>{{item.exercise_title}}</ion-label>
+          <p>10 Reps - 4 Sets</p>
+          </div>
+          -->
+          <div class=" body-parts">
+          <div class="tags2"  (click)=toggleInfo(i)>
+    
+            <ion-avatar slot="start">
+
+              <img src ="./assets/images/blast.png" class="exer-img"/>
+            
+            <!--
+              <img src="./assets/images/blast.png" class="exer-img"/>
+
+            -->
+            </ion-avatar>
+            <div class="exer-info">
+            <ion-label>Testing</ion-label>
+            <p>10 Reps - 4 Sets</p>
+            <ion-icon [name]="isInfoHidden ? 'arrow-down' : 'arrow-up'"  slot="end" class="arrow-icon" ></ion-icon>
+            </div>
+        
+          </div>
+        
+          <div *ngIf="show[i]" class="animated fadeIn subinfo">
+            <div  class="test">
+          <img src="./assets/images/blast.png" class="sub-img"/> 
+          <div class="further-info">
+          <p class="exer-title">Testing}</p>
+          <p class="subtitle">Testing</p>
+        </div>
+          </div> 
+         </div> 
+         </div>
+
+      </ion-item>
+  </ion-list>
 </ion-content>
