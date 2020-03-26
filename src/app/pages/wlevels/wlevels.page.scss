@@ -61,9 +61,9 @@ ion-row{
 }
 
 ion-header{
-    background-color:#212121 ;
+    background-color:#191919 ;
     height: 100%;
-    padding: 40px 0 10px 0 !important;
+    padding: 20px 0 0px 0 !important;
     height: auto ;
 }
 
@@ -109,4 +109,15 @@ ion-header{
 
     ion-col:nth-last-child(1){
         margin-bottom: 40px !important;
+    }
+
+    .close-img{
+        max-width: 16px;
+        max-height: 16px;
+    }
+
+    .level-easy{
+        max-width: 14px;
+        max-height: 14px;
+        margin: 0 5px 0 10px;
     }

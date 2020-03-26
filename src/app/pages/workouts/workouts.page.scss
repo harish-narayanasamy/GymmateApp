@@ -1,15 +1,15 @@
 ion-grid {
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding-top: 20px;
     padding-bottom: 25px;
-    max-width: 95%;
+    max-width: 90%;
     margin: 0 auto;
 
     ion-row {
         flex-grow: 1;
-        height: 100%;
+        height: auto;
     }
   }
  
@@ -46,7 +46,11 @@ ion-header{
         font-size: 20px;
         text-align: left;
         margin-top: 0px;
-        width: 80%;
+        width: 100%;
+    }
+
+    .workout-info .today{
+        width: 75%;
     }
 
     .view-all .today{
@@ -75,7 +79,7 @@ ion-header{
         overflow-x: scroll;
         overflow-y: hidden;
         white-space: nowrap;
-        margin-bottom: 50px !important;
+        margin: 0 -10px 40px -10px;
       
         .card {
           display: inline-block;
@@ -95,11 +99,7 @@ ion-header{
         position: absolute;
         bottom: 10px;
     }
-
-    .view-all{
-
-    }
-
+    
       .card-center-text .title{
         color: white;
         margin: 0;
@@ -136,7 +136,7 @@ ion-header{
     }
 
     .info2{
-        width: 20%;
+        width: 25%;
         text-align: right !important;
         margin: 0px !important;
         font-size: 16px;
@@ -156,9 +156,37 @@ ion-header{
 
     .scroll ion-col{
         margin-bottom: 35px !important;
+        padding-left: 0;
     }
 
     .goals{
         margin-bottom: 15px;
         padding: 0px !important;
     }
+
+    ion-col{
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+
+    @media only screen and (max-width: 320px) {
+        ion-grid{
+            max-width: 95%;
+        }
+    }
+
+    @media only screen and (max-width: 260px) {
+      .workout-info .today{
+          width: 65%;
+      }
+      .info2{
+          width: 35%;
+      }
+
+      .today{
+          font-size: 18px;
+          line-height: 20px;
+      }
+    }
+

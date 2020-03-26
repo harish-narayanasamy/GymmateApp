@@ -26,7 +26,7 @@
 
   <ion-grid class="ion-no-padding">
     <ion-row class="edit">        
-      <ion-buttons> 
+      <ion-buttons class="edit-profile"> 
       <ion-button [routerLink]="['/editprofile']">
         <ion-label class="view-more">
           Edit Profile
@@ -51,8 +51,8 @@
   </ion-grid>
   <ion-list style="margin: 0; padding: 0;">
     
-      <ion-button expand="block" (click)="logout()">
-        signout
+      <ion-button expand="block" (click)="logout()" class="log-out">
+        Sign Out
       </ion-button>
     
   </ion-list>
@@ -73,27 +73,27 @@
   <ion-card *ngIf="subscribe !== 'active'" else cancelSub>
 
 
-    <ion-card-content>
+    <ion-card-content class="plans">
       <ion-list>
         <ion-radio-group value="plan">
           <ion-list-header>
             <ion-label><b>Subscription Plans</b></ion-label>
           </ion-list-header>
-
+          <div class="price-plans">
           <ion-item>
             <ion-radio slot="end"></ion-radio>
-            <i>Free</i>
+            <b>Free</b>
           </ion-item>
           <ion-item>
             <ion-radio slot="end" (ionSelect)="logForm($event)" value="monthly"></ion-radio>
-            <i>5$/month</i>
+            <b>5$/month</b>
           </ion-item>
 
           <ion-item>
             <ion-radio slot="end" (ionSelect)="logForm($event)" value="yearly"></ion-radio>
-            <i>50$/year</i>
+            <b>50$/year</b>
           </ion-item>
-
+        </div>
 
         </ion-radio-group>
       </ion-list>
@@ -118,18 +118,18 @@
   </ion-card>
 
   <ion-list style="margin: 0; padding: 0;">
-    <ion-list-header color="primary">
+    <ion-list-header>
       <ion-label style="font-weight: bold; letter-spacing: 0;">{{strings.ST56}}</ion-label>
     </ion-list-header>
   </ion-list>
 
-  <div class="ion-padding">
+  <div class="ion-padding fav-info">
 
     <!-- Workouts -->
 
     <div class="tags" (click)=toggleWorkouts()>
       <h1>{{strings.ST1}}</h1>
-      <ion-icon [name]="isWorkouts ? 'arrow-forward' : 'arrow-down'" color="primary" slot="end"></ion-icon>
+      <ion-icon [name]="isWorkouts ? 'arrow-forward' : 'arrow-down'" color="light" slot="end"></ion-icon>
     </div>
 
     <div class="animated fadeIn" [hidden]="isWorkouts">
@@ -142,7 +142,7 @@
 
     <div class="tags" (click)=togglePosts()>
       <h1>{{strings.ST4}}</h1>
-      <ion-icon [name]="isPosts ? 'arrow-forward' : 'arrow-down'" color="primary" slot="end"></ion-icon>
+      <ion-icon [name]="isPosts ? 'arrow-forward' : 'arrow-down'" color="light" slot="end"></ion-icon>
     </div>
 
     <div class="animated fadeIn" [hidden]="isPosts">
@@ -155,7 +155,7 @@
 
     <div class="tags" (click)=toggleDiets()>
       <h1>{{strings.ST3}}</h1>
-      <ion-icon [name]="isDiets ? 'arrow-forward' : 'arrow-down'" color="primary" slot="end"></ion-icon>
+      <ion-icon [name]="isDiets ? 'arrow-forward' : 'arrow-down'" color="light" slot="end"></ion-icon>
     </div>
 
     <div class="animated fadeIn" [hidden]="isDiets">

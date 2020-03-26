@@ -5,7 +5,13 @@
     </ion-title>
     <ion-buttons slot="start">
       <app-backbutton class="arrow"></app-backbutton>
+    </ion-buttons>               
+     <ion-buttons slot="end">
+      <ion-button  slot="start" [routerLink]="['/tabs/tab1']">
+        <img src="./assets/images/close.png" class="close-img"/> 
+        </ion-button>
     </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
@@ -17,7 +23,14 @@
       <img src="./assets/images/blast.png" class="start-logo"/>
         <ion-row class="header-bg" [ngStyle]="{'height': innerHeight}">
           <div class="text">
+            <div class="title-info">
           <p class="name">6-DAY FLAT BLAST</p>
+          <ion-buttons slot="end" class="star">
+            <ion-button (click)="addToFavorites()" slot="start">
+              <ion-icon color="primary" mode="md" [name]="icon"></ion-icon>
+              </ion-button>
+          </ion-buttons>
+        </div>
           <p class="author">by Margret Robbie</p>
           <p class="further-info">There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station whether that is on the deck of your home or having a powerful but mobile telescope set up to take to the remove countryside to really get a good shot at some.</p>
         <div class="level-info">

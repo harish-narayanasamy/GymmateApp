@@ -9,6 +9,11 @@
     background-size: cover;
     align-items: center;
     justify-content: center;
+  }
+
+ion-header{
+background-color: #191919;
+padding: 0 2%;
 }
 
 .header-bg .text{
@@ -152,9 +157,6 @@ ion-slide{
      background-color:#191919;
  }
 
- ion-header{
-     position: absolute;
- }
 
  .ion-text-left, p {
     color: #ffffff !important;
@@ -310,4 +312,44 @@ border-radius: 5px !important;
 
  .arrow{
      color: #f7474f !important;
+ }
+
+ .cancel-img{
+     max-width: 25px;
+     max-height: 25px;
+ }
+
+ .star{
+     padding-top: 20px;
+ }
+
+ .close-img{
+     max-width: 18px;
+     max-height: 18px;
+ }
+
+ @media only screen and (max-width: 340px) {
+    .name-food{
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+.diet-container{
+    display: flex;
+    flex-direction: column;
+}
+
+ion-col{
+    padding: 25px 15px;
+}
+
+.col-icon .value{
+    font-size: 28px;
+    line-height: 32px;
+}
+
+.recommend-info{
+font-size: 18px;
+line-height: 22px;
+ }
  }

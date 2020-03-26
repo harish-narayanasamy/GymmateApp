@@ -34,7 +34,7 @@
               <p class="today">Workout based on Levels</p>
               <div class="scrolling-wrapper">
 
-                <ion-col *ngFor="let item of levels" [routerLink]="['/wlevels', item.level_id, item.level_title]" >
+                <ion-col *ngFor="let item of levels" [routerLink]="['/wlevels', item.level_id, item.level_title]"  >
 
                 
 
@@ -57,14 +57,14 @@
           <div class="card-center-bg">
             <div class="card-center-text view-all">
               <p class="today">Workout based on Goals</p>
-              <p class="info2">View all</p>
+              <p class="info2" [routerLink]="['/goals']">View all</p>
             </div>
           </div>
         </div>
       </ion-col>
     </ion-row>
 
-    <ion-row>
+    <ion-row class="workout-level">
       <ion-col [routerLink]="['/goals']" class="goals goals-info">
         <div class="card-center-image" style="background-image: url('./assets/images/goals.jpg');">
           <div class="card-center-bg">
@@ -76,7 +76,7 @@
         </div>
       </ion-col>
     </ion-row>
-    <ion-row>
+    <ion-row class="workout-level">
       <ion-col [routerLink]="['/levels']" class="goals">
         <div class="card-center-image" style="background-image: url('./assets/images/levels.jpg');">
           <div class="card-center-bg">
@@ -88,7 +88,7 @@
         </div>
       </ion-col>
     </ion-row>
-    <ion-row>
+    <ion-row class="workout-level">
       <ion-col [routerLink]="['/levels']" class="goals">
         <div class="card-center-image" style="background-image: url('./assets/images/levels.jpg');">
           <div class="card-center-bg">

@@ -71,9 +71,9 @@ ion-row{
 }
 
 ion-header{
-    background-color:#212121 ;
+    background-color: #191919;
     height: 100%;
-    padding: 10px 0 10px 0 !important;
+    padding: 20px 0 0px 0 !important;
     height: auto ;
 }
 
@@ -107,3 +107,15 @@ ion-header{
     .arrow{
         color: #f7474f !important;
     }
+
+    .close-img{
+        max-width: 16px;
+        max-height: 16px;
+    }
+
+    @media only screen and (max-width: 320px) {
+    .cardcategory .texts h1{    
+        font-size: 25px;
+        line-height: 28px;
+    }
+}

@@ -122,6 +122,7 @@ export class PdetailsPage implements OnInit {
   } );
 }
 
+
 addToFavorites() {
   const post = {
     id: this.post.post_id,

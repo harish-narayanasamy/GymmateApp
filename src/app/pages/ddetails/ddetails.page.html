@@ -1,7 +1,12 @@
-<ion-header class="lightheader" mode="ios" no-border>
+<ion-header class="lightheader" mode="ios" no-border [style.background-image]="'url(' + (diet.diet_image | image) + ')'" [ngStyle]="{'height': innerHeight}">
   <ion-toolbar mode="ios" class="ion-color" [style.background-color]="customColor">
         <ion-buttons slot="start">
           <app-backbutton color="arrow" class="arrow"></app-backbutton>
+        </ion-buttons>
+        <ion-buttons slot="end">
+          <ion-button  slot="start" [routerLink]="['/tabs/tab1']">
+            <img src="./assets/images/close.png" class="close-img"/> 
+            </ion-button>
         </ion-buttons>
     </ion-toolbar>
   </ion-header>
@@ -11,14 +16,14 @@
       <app-loading *ngIf="isLoading"></app-loading>
 
       <ion-grid class="ion-no-padding">
-          <ion-row class="header-bg" [style.background-image]="'url(' + (diet.diet_image | image) + ')'" [ngStyle]="{'height': innerHeight}">
+          <ion-row class="header-bg" >
       </ion-row>
       </ion-grid>
 
       <ion-toolbar mode="ios" class="ion-color favourite" [style.background-color]="customColor">
-        <ion-buttons slot="end">
+        <ion-buttons slot="end" class="star">
           <ion-button (click)="addToFavorites()" slot="start">
-            <ion-icon color="dark" mode="md" [name]="icon"></ion-icon>
+            <ion-icon color="primary" mode="md" [name]="icon"></ion-icon>
             </ion-button>
         </ion-buttons>
         <div class="text">
@@ -28,7 +33,7 @@
     </ion-toolbar>
 
       <ion-toolbar no-border-top class="ion-no-padding ion-color" [style.background-color]="customColor">
-      <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="segment" mode="md">
+      <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="segment" mode="md" class="diet-container">
           <ion-segment-button value="0" mode="md">
             <ion-label>{{strings.ST46}}</ion-label>
           </ion-segment-button>
@@ -82,11 +87,11 @@
             <p class="ion-color about-meal recommend-info" [style.background-color]="customColor">Recommended Recipes</p>
             <div class="recommend">
               <div class="fav">
-                <img src = "./assets/images/logo-.png" class="img-recommend">
+                <img src = "./assets/images/meal_card.png" class="img-recommend">
                 <p class="ion-color about-recommend" [style.background-color]="customColor">Tomato Meatballs</p>
               </div>
               <div class="fav">
-                <img src = "./assets/images/logo-.png" class="img-recommend">
+                <img src = "./assets/images/meal_card2.png" class="img-recommend">
                 <p class="ion-color about-recommend" [style.background-color]="customColor">Tomato Meatballs</p>
               </div>
             </div>

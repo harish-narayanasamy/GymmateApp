@@ -6,6 +6,11 @@
         <ion-buttons slot="start">
             <app-backbutton class="arrow"></app-backbutton>
         </ion-buttons>
+        <ion-buttons slot="end">
+          <ion-button  slot="start" [routerLink]="['/tabs/tab1']">
+            <img src="./assets/images/close.png" class="close-img"/> 
+            </ion-button>
+        </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
@@ -19,6 +24,11 @@
             <div class="author">
             <img src="./assets/images/avatar.png" class="author-img"/>   
             <p class="author-info">Sanjay Tarana - Fitness World</p>
+            <ion-buttons slot="end" class="star">
+              <ion-button (click)="addToFavorites()" slot="start">
+                <ion-icon color="primary" mode="md" [name]="icon"></ion-icon>
+                </ion-button>
+            </ion-buttons>
             </div>
             <app-postrating *ngIf="rating > 0" [value]="rating" color="rgba(255, 255, 255, 0.3)" [size]="18"></app-postrating>
           </div>

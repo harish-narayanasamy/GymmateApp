@@ -37,7 +37,8 @@ export class ProfilePage implements OnInit {
   isWorkouts = false;
   isPosts = false;
   isDiets = false;
-
+  subscriptiontext="Only $4.99 per month"
+  buttonname="Change to Yearly"
   constructor(
     public plt: Platform,
     private firebase: FirebaseService,
@@ -162,5 +163,20 @@ export class ProfilePage implements OnInit {
     this.isDiets = !this.isDiets;
   }
 
+  public text: string = 'Change to yearly';
+
+  public changeText(text) {
+   //alert(text)
+
+
+   if(text=="Change to Yearly"){
+    this.subscriptiontext="Only $54.99 per year"
+    this.buttonname="Change to Monthly"
+   }
+   if(text=="Change to Monthly"){
+    this.subscriptiontext="Only $4.99 per month"
+    this.buttonname="Change to Yearly"
+   }
+  }
 
 }

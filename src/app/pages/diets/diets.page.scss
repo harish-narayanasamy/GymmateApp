@@ -84,7 +84,7 @@
 
 }
 ion-header{
-    background-color:#212121 ;
+    background-color:#191919 ;
     height: 100%;
     padding: 10px 0 10px 0 !important;
     height: auto ;
@@ -92,10 +92,13 @@ ion-header{
 
 .ion-text-capitalize{
     width: 100%;
-    color: #f7474f;
+    color: #eafff7;
     font-family: Proxima-bold;
-    font-size: 20px !important;
+    font-size: 32px !important;
+    line-height: 32px;
     text-transform: none !important;
+    padding: 0 5%;
+    text-align: left;
     }
 
     ion-content{
@@ -103,7 +106,7 @@ ion-header{
     }
 
     ion-grid{
-        padding: 22px 8px;
+        padding: 10px 8px;
     }
 
     ion-col{

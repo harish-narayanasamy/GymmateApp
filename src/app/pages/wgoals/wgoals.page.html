@@ -6,6 +6,11 @@
               <ion-buttons slot="start">
                 <app-backbutton class="arrow"></app-backbutton>
               </ion-buttons>
+              <ion-buttons slot="end">
+                <ion-button  slot="start" [routerLink]="['/tabs/tab1']">
+                  <img src="./assets/images/close.png" class="close-img"/> 
+                  </ion-button>
+              </ion-buttons>
     </ion-toolbar>
   </ion-header>
   
@@ -24,7 +29,7 @@
                  <p>{{item.level_title}}</p>
                  <h1>{{item.workout_title}}</h1>
                  <div class="more-info">
-                  <h3><ion-icon name="ios-stopwatch" color="light"></ion-icon>20 minutes<ion-icon style="margin-left: 8px;" name="ios-flame" color="light"></ion-icon>Easy</h3>
+                  <h3><ion-icon name="ios-stopwatch" color="light"></ion-icon>20 minutes<img src="./assets/images/level_easy.png" class="level-easy"/>Easy</h3>
                   </div>
                  </div>
                </div>
