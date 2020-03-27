@@ -7,6 +7,8 @@ import { MuscleObject } from '../../interfaces/interfaces';
 import { AdmobService } from '../../services/admob.service';
 import { AuthService } from '../../services/auth.service';
 import { SubscriptionService } from '../../services/subscription.service';
+import {StreamingMedia, StreamingVideoOptions} from '@ionic-native/streaming-media/ngx';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 
 @Component({
@@ -15,37 +17,40 @@ import { SubscriptionService } from '../../services/subscription.service';
   styleUrls: ['./ebodyparts.page.scss'],
 })
 export class EbodypartsPage implements OnInit {
+
   show: {[key: number]: boolean} = {};
-  public strings = strings;
+  strings = strings;
   exercises: MuscleObject[] = [];
   title: string;
   isLoading = false;
   id: any;
   height: any;
-  public subscribe: any
+  subscribe: any
   et:string;
   st:string;
-  constructor(
-    private dataService: DataService,
-    private router: Router,
-    private route: ActivatedRoute,
-    public plt: Platform,
-    public admob: AdmobService,
-    public auth: AuthService,
-    public subService: SubscriptionService,
-
-  ) { }
-
   exercise: any = {};
   isInfoHidden = true;
   isInstruHidden = true;
   isTipsHidden = true;
   orientation = 'landscape';
+  exercise2: any = {};
+
+  constructor(
+    private dataService: DataService,
+    private router: Router,
+    private route: ActivatedRoute,
+    public plt: Platform,
+    private streamingMedia: StreamingMedia,
+    private admob: AdmobService,
+    private screenOrientation: ScreenOrientation,
+    public auth: AuthService,
+    public subService: SubscriptionService,
+
+  ) { }
 
   ngOnInit() {
     this.admob.BannerAd();
     this.subscribe = true;
-
   }
 
   // tslint:disable-next-line: use-lifecycle-interface
@@ -80,10 +85,29 @@ export class EbodypartsPage implements OnInit {
   }
 
 
-  toggleInfo(index: number) {
+  toggleInfo(index: number,id) {
+
+    this.dataService.getDataExerciseById(id)
+    .subscribe( resp => {
+
+      this.exercise2 = resp[0];
+      this.isLoading = false;
+
+  } );
     this.show[index] = true;
   }
-
+  play() {
+    const options: StreamingVideoOptions = {
+      successCallback: () => { console.log('Video played'); },
+      errorCallback: (e) => { console.log('Error streaming'); },
+      orientation: 'landscape',
+      shouldAutoClose: true,
+      controls: true
+    };
+  
+    // tslint:disable-next-line: max-line-length
+    this.streamingMedia.playVideo('https://firebasestorage.googleapis.com/v0/b/six-pack-app.appspot.com/o/video.mp4?alt=media&token=453512dd-f079-4355-a325-92a9b2f7e465', options);
+  }
   getExercises() {
 
     this.dataService.getDataExercisesByBodypart(this.id)

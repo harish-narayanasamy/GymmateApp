@@ -41,8 +41,8 @@
       <ion-row>
         <ion-col *ngFor="let item of equipments" size="6" [routerLink]="['/eequipments', item.equipment_id, item.equipment_title]" [ngStyle]="{'height': height}">
 
- 
-          <div class="cardcategory" [style.background-image]="'url(' + (item.equipmentpart_image | image) + ')'">
+
+          <div class="cardcategory" style="background-image: url(http://hosting.lakeba.com:8092/images/{{item.equipment_image}})">
             <div class="overlay">
             <div class="texts">
             <h1>{{item.equipment_title}}</h1>

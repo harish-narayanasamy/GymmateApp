@@ -19,6 +19,8 @@ export class EequipmentsPage implements OnInit {
   isLoading = false;
   id: any;
   height: any;
+  isInfoHidden = true;
+  exercise2: any = {};
 
   constructor(
     private dataService: DataService,
@@ -58,10 +60,17 @@ export class EequipmentsPage implements OnInit {
     }
   
   
-    toggleInfo(index: number) {
-   // this.show[index] = true;
-    }
+    toggleInfo(index: number,id) {
+
+      this.dataService.getDataExerciseById(id)
+      .subscribe( resp => {
   
+        this.exercise2 = resp[0];
+        this.isLoading = false;
+  
+    } );
+      this.show[index] = true;
+    }
   getExercises() {
 
     this.dataService.getDataExercisesByEquipment(this.id)
