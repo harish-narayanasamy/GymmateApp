@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { NavController, MenuController, ModalController, LoadingController } from '@ionic/angular';
 import { strings } from '../../config/strings';
 import { ForgotpassPage } from '../forgotpass/forgotpass.page';
+import { SignupPage } from '../signup/signup.page';
 
 @Component({
   selector: 'app-login',

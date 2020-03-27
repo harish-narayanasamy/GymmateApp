@@ -173,11 +173,11 @@ const routes: Routes = [
   {
     path: 'subscription',
     loadChildren: () => import('./modals/subscription/subscription.module').then( m => m.SubscriptionPageModule)
-  },
-  {
+  },  {
     path: 'editprofile',
-    loadChildren: () => import('./modal/editprofile/editprofile.module').then( m => m.EditprofilePageModule)
+    loadChildren: () => import('./modals/editprofile/editprofile.module').then( m => m.EditprofilePageModule)
   }
+
 
 
   

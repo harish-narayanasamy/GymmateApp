@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { PlanPage }     from './modals/plan/plan.page';
 
 import { SubscriptionPage } from './modals/subscription/subscription.page';
+import { EditprofilePage }     from './modals/editprofile/editprofile.page';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -31,10 +32,9 @@ import {StreamingMedia} from '@ionic-native/streaming-media/ngx';
 import { AdMobFree } from '@ionic-native/admob-free/ngx';
 import { AdmobService } from './services/admob.service';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
-import { EditprofilePage } from './modal/editprofile/editprofile.page';
 
 @NgModule({
-  declarations: [AppComponent,PlanPage,SubscriptionPage, EditprofilePage],
+  declarations: [AppComponent,PlanPage,SubscriptionPage,EditprofilePage],
   entryComponents: [PlanPage,SubscriptionPage,EditprofilePage],
   imports: [
     BrowserModule,

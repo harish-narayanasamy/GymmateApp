@@ -19,7 +19,7 @@ export class WdetailsPage implements OnInit {
   innerHeight: any;
   days = new Array(7);
   icon = 'star-outline';
-
+  
   constructor(
     private dataService: DataService,
     private router: Router,
