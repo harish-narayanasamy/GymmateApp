@@ -24,7 +24,6 @@
 
   <ion-list lines="none" class="ion-padding-top">
     <ng-container *ngFor="let item of exercises; index as i;">
-<<<<<<< HEAD
 
 
       <ion-item *ngIf="subscribe;else notShow " class="ion-color" [style.background-color]="customColor">
@@ -32,21 +31,6 @@
         <div class=" body-parts">
           <div class="tags" (click)=toggleInfo(i,item.exercise_id)>
 
-=======
-      <ion-item  *ngIf="subscribe;else notShow "  class="ion-color" [style.background-color]="customColor">
-<!--
-        <ion-avatar slot="start">
-          <img class="body-img" [src]="item.exercise_image | image">
-        </ion-avatar>
-        <div class="body-info">
-          <ion-label>{{item.exercise_title}}</ion-label>
-          <p>10 Reps - 4 Sets</p>
-          </div>
-          -->
-          <div class=" body-parts">
-          <div class="tags"  (click)=toggleInfo(i)>
-    
->>>>>>> 8f82b7b7fb7b2aac63fc3b04c01ac7e108d86c5b
             <ion-avatar slot="start">
 
               <img src="http://hosting.lakeba.com:8092/images/{{item.exercise_image}}" class="exer-img" />
