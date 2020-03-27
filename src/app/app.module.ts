@@ -35,7 +35,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @NgModule({
   declarations: [AppComponent,PlanPage,SubscriptionPage,EditprofilePage],
-  entryComponents: [PlanPage,SubscriptionPage,EditprofilePage],
+  entryComponents: [PlanPage,SubscriptionPage],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
