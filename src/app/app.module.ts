@@ -34,7 +34,7 @@ import { AdmobService } from './services/admob.service';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @NgModule({
-  declarations: [AppComponent,PlanPage,SubscriptionPage,EditprofilePage],
+  declarations: [AppComponent,PlanPage,SubscriptionPage],
   entryComponents: [PlanPage,SubscriptionPage],
   imports: [
     BrowserModule,
