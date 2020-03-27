@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { PlanPage }     from './modals/plan/plan.page';
 
 import { SubscriptionPage } from './modals/subscription/subscription.page';
-import { EditprofilePage }     from './modals/editprofile/editprofile.page';
+import { EditprofilePage }     from './pages/editprofile/editprofile.page';
 
 import { AppRoutingModule } from './app-routing.module';
 
