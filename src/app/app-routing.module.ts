@@ -177,7 +177,11 @@ const routes: Routes = [
   {
     path: 'editprofile',
     loadChildren: () => import('./pages/editprofile/editprofile.module').then( m => m.EditprofilePageModule)
+  },  {
+    path: 'pro',
+    loadChildren: () => import('./pages/pro/pro.module').then( m => m.ProPageModule)
   }
+
 
 
 
