@@ -1,11 +1,11 @@
 <div class="main-wrapper">
   <ion-header class="lightheader" no-border>
     <ion-toolbar mode="ios" class="ion-color" [style.background-color]="customColor">
-        <ion-title class="ion-text-capitalize">
-          {{strings.ST26}}
+        <ion-title class="ion-text-capitalize" (click)="goSignUpPage()">
+          Log In
         </ion-title>
             <ion-buttons slot="start">
-              <ion-button color="light" mode="md" (click)="goClosePage()" slot="start">
+              <ion-button color="primary" mode="md" (click)="goClosePage()" slot="start">
                 <ion-icon name="md-arrow-back"></ion-icon>
               </ion-button>
             </ion-buttons>

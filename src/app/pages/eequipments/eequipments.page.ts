@@ -31,6 +31,12 @@ export class EequipmentsPage implements OnInit {
 
     ) {}
 
+    exercise: any = {};
+    isInfoHidden = true;
+    isInstruHidden = true;
+    isTipsHidden = true;
+    orientation = 'landscape';
+
     ngOnInit() {
       this.admob.BannerAd();
     }
@@ -82,5 +88,8 @@ export class EequipmentsPage implements OnInit {
 
   } );
 }
+
+
+
 
 }

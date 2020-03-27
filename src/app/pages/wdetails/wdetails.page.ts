@@ -11,7 +11,7 @@ import { FavoriteService } from '../../services/favorite.service';
   styleUrls: ['./wdetails.page.scss'],
 })
 export class WdetailsPage implements OnInit {
-
+  show: {[key: number]: boolean} = {};
   public strings = strings;
   workout: any = {};
   isLoading = false;
@@ -27,6 +27,12 @@ export class WdetailsPage implements OnInit {
     public plt: Platform,
     private dataFavorite: FavoriteService
     ) {}
+
+    exercise: any = {};
+    isInfoHidden = true;
+    isInstruHidden = true;
+    isTipsHidden = true;
+    orientation = 'landscape';
 
     ngOnInit() {
     }
@@ -74,5 +80,11 @@ addToFavorites() {
   const exist = this.dataFavorite.saveWorkout( workout );
   this.icon = ( exist ) ? 'star' : 'star-outline';
 }
+
+toggleInfo(index: number) {
+  this.show[index] = true;
+}
+
+
 
 }
