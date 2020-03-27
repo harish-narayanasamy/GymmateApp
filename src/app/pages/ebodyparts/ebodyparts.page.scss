@@ -119,7 +119,7 @@ ion-item{
 }
 
  .body-info p, .exer-info p{
-     font-size: 14px;
+     font-size: 16px;
      color: #979797;
      line-height: 16px;
      font-family: 'Nunito-light';
@@ -207,6 +207,36 @@ ion-item{
         max-height: 16px;
     }
 
+    .further-info p{
+        color: #fafafa;
+        line-height: 20px;
+        font-size: 16px;
+        font-family: 'Proxima-regular';
+        --padding-inline-start: 0px !important;
+        padding-inline-start: 0px !important;
+    }
+
+    .further-info  span{
+        margin-left: -23px !important;
+        display: block;
+    }
+
+
+    .further-info .exer-title{
+        color: #fafafa;
+    line-height: 24px;
+    font-size: 20px;
+    font-family: 'Proxima-bold';
+    }
+
+    .further-info .subtitle{
+        color: #fafafa;
+        line-height: 20px;
+        font-size: 16px;
+        font-family: 'Proxima-bold';
+    }
+
+  
     @media only screen and (max-width: 280px) {
         ion-item ion-label, .exer-info ion-label{
             font-size: 16px;
