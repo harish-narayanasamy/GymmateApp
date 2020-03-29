@@ -13,15 +13,7 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<!--
-    <ion-buttons slot="start">
-      <app-backbutton color="light"></app-backbutton>
-    </ion-buttons>
-    <ion-buttons slot="end">
-      <ion-icon mode="md" name="md-exit" slot="end">
-      </ion-icon>
-    </ion-buttons>
--->
+
 
 <ion-content class="ion-no-padding">
 
@@ -44,14 +36,13 @@
           </div>
           <p class="info-required">Name</p>
           <div class="form-group">
-            <input required ngModel name="name" #name="ngModel" id="name" type="name"
-              pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" class="form-control form-rounded " rows="20"
+            <input required  ngModel name="name" #name="ngModel" id="name" type="text" class="form-control form-rounded " rows="20"
               placeholder="Name">
             <div class="alert alert-danger" *ngIf="name.touched && !name.valid">
               <div *ngIf="name.errors.required" class="required">
                 Name Required
               </div>
-              <div *ngIf="name.errors.pattern" class="required2">
+              <div *ngIf="name.errors.minlength" class="required2">
                 Enter a Valid Name
               </div>
             </div>
@@ -72,7 +63,7 @@
           <p class="info-required">Gender</p>
           <div class="form-group">
             <input required ngModel name="gender" #gender="ngModel" id="gender" type="gender"
-              pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" class="form-control form-rounded " rows="20"
+              class="form-control form-rounded " rows="20"
               placeholder="Gender">
             <div class="alert alert-danger" *ngIf="gender.touched && !gender.valid">
               <div *ngIf="gender.errors.required" class="required">
@@ -112,7 +103,7 @@
             </div>
           </div>
           <div class="form-group text-center submit">
-            <button class="btn btn-primary btn-block" [disabled]="!f.valid">Save</button>
+            <button class="btn btn-primary btn-block" >Save</button>
           </div>
         </form>
       </div>
