@@ -47,7 +47,7 @@ export class FirebaseService {
     console.log(weight)
     let uid = firebase.auth().currentUser.uid;
     return new Promise<any>((resolve, reject) => {
-      this.afDb.database.ref('posts/'+uid).push({
+      this.afDb.database.ref('profile/'+uid).set({
         name: name, age: age, gender: gender, height: height, weight: weight
       })
         .then(res => {
