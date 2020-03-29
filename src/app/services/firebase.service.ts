@@ -4,6 +4,9 @@ import * as firebase from 'firebase/app';
 import 'firebase/storage';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { AuthService }         from '../services/auth.service'
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -42,9 +45,9 @@ export class FirebaseService {
     console.log(gender)
     console.log(height)
     console.log(weight)
-
+    let uid = firebase.auth().currentUser.uid;
     return new Promise<any>((resolve, reject) => {
-      this.afDb.database.ref('posts/').push({
+      this.afDb.database.ref('posts/'+uid).push({
         name: name, age: age, gender: gender, height: height, weight: weight
       })
         .then(res => {
