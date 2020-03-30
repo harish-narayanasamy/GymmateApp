@@ -178,7 +178,6 @@ const routes: Routes = [
   {
     path: 'editprofile',
     loadChildren: () => import('./pages/editprofile/editprofile.module').then( m => m.EditprofilePageModule)
-<<<<<<< HEAD
   },
   {
     path: '',
@@ -356,18 +355,12 @@ const routes: Routes = [
     path: 'editprofile',
     loadChildren: () => import('./pages/editprofile/editprofile.module').then( m => m.EditprofilePageModule)
   },
-=======
-  },
+
   {
     path: 'pro',
     loadChildren: () => import('./pages/pro/pro.module').then( m => m.ProPageModule)
   }
 
-
-
-
-  
->>>>>>> b3455953909a62bdc23206392c693765f129a727
  
 ];
 

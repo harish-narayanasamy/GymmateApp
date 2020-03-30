@@ -1,9 +1,66 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>pro</ion-title>
+<ion-header class="lightheader" no-border>
+  <ion-toolbar mode="ios" class="ion-color" [style.background-color]="customColor">
+    <ion-buttons slot="end">
+      <button ion-button icon-only [routerLink]="['/tabs/tab5']">
+        <img src="./assets/images/cancel_.png" class="cancel-img"/>
+      </button>
+  </ion-buttons>
+    
   </ion-toolbar>
 </ion-header>
+<!--
+    <ion-buttons slot="start">
+      <app-backbutton color="light"></app-backbutton>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon mode="md" name="md-exit" slot="end">
+      </ion-icon>
+    </ion-buttons>
+-->
 
-<ion-content>
+<ion-content class="ion-no-padding">
+  <ion-grid class="ion-no-padding">
+    <ion-row class="header-bg" >
+      <div class="text">
+        <img src="./assets/images/gymate_pro.png" class="author-img"/>
+      </div>
+    </ion-row> 
+    <ion-row  >
+      <h1>Become a <br> PRO-member</h1>
+      <p class="price">{{ subscriptiontext}}</p>
+      <p class="money">30-day money back guarantee</p>
+      <div class="advantages">
+        <div class="advantages-info">
+        <h2> <span><img src="./assets/images/check.png" class="cancel-img">AD-Free Experience</span> </h2>
+        <h2> <span><img src="./assets/images/check.png" class="cancel-img">Exercises made only for you</span> </h2>
+        <h2> <span><img src="./assets/images/check.png" class="cancel-img">600+ recipes</span> </h2>
+        <h2> <span><img src="./assets/images/check.png" class="cancel-img">Coached Workouts by Professionals</span> </h2>
+        <h2> <span><img src="./assets/images/check.png" class="cancel-img">Unlimited Blogs </span> </h2>
+      </div>
+    </div>
+      <div class="submit">
+        <button class="btn btn-primary btn-block">Subscribe now</button>
+      </div>
+      <button (click)="changeText(buttonname)" ion-button class="price">{{buttonname}}</button> 
 
+
+
+    </ion-row>
+    <ion-row>
+      <h3>Frequently asked questions</h3>
+      <div class="freq1>">
+      <p class="question">Why choose PRO Membership ?</p>
+      <p class="answer">Pro membership includes all workout features based on user’s preference, unlimited meal recipes and a blog to get the most out of the application.</p>
+    </div>
+    <div class="freq1>">
+      <p class="question">Why choose PRO Membership ?</p>
+      <p class="answer">Pro membership includes all workout features based on user’s preference, unlimited meal recipes and a blog to get the most out of the application.</p>
+    </div>
+    <div class="freq1>">
+      <p class="question">Why choose PRO Membership ?</p>
+      <p class="answer">Pro membership includes all workout features based on user’s preference, unlimited meal recipes and a blog to get the most out of the application.</p>
+    </div>
+    </ion-row>
+  </ion-grid>
+  
 </ion-content>
