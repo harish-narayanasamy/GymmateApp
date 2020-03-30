@@ -3,6 +3,10 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import * as firebase from 'firebase/app';
 import 'firebase/storage';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { AuthService }         from '../services/auth.service'
+import { Observable, throwError } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +17,9 @@ export class FirebaseService {
 
   constructor(
     public afs: AngularFirestore,
-    public afAuth: AngularFireAuth
-  ) {}
+    public afAuth: AngularFireAuth,
+    public afDb: AngularFireDatabase
+  ) { }
 
   unsubscribeOnLogOut() {
     // remember to unsubscribe from the snapshotChanges
@@ -23,16 +28,49 @@ export class FirebaseService {
 
   getDisplayName() {
     const user = firebase.auth().currentUser;
-    if ( user != null) {
+    if (user != null) {
       return user.displayName;
     }
   }
 
   getCreationTime() {
     const user = firebase.auth().currentUser;
-    if ( user != null) {
+    if (user != null) {
       return user.metadata.creationTime;
     }
   }
+  profileData(name, age, gender, height, weight) {
+ 
+    let uid = firebase.auth().currentUser.uid;
+    return new Promise<any>((resolve, reject) => {
+      this.afDb.database.ref('profile/'+uid).set({
+        name: name, age: age, gender: gender, height: height, weight: weight
+      })
+        .then(res => {
+          resolve(res);
+        },
+          err => reject(err))
+    })
+  }
+
+ 
+
+  getData() {
+    let uid = firebase.auth().currentUser.uid;
+
+  
+      return new Promise<any>((resolve, reject) => {
+        this.afDb.database.ref('profile/'+uid).on("value", function (snapshot) {
+          console.log(snapshot.val());
+          resolve (snapshot.val());
+      
+        }, function (errorObject) {
+          console.log("The read failed: " + errorObject);
+        });
+      })
+
+  }
+
+
 
 }

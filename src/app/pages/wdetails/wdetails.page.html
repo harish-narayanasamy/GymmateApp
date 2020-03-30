@@ -1,61 +1,28 @@
-<ion-header class="lightheader" no-border>
-  <ion-toolbar mode="ios" class="ion-color" [style.background-color]="customColor">
-    <ion-title class="ion-text-capitalize">
-      Workouts
-    </ion-title>
-    <ion-buttons slot="start">
-      <app-backbutton class="arrow"></app-backbutton>
-    </ion-buttons>               
-     <ion-buttons slot="end">
-      <ion-button  slot="start" [routerLink]="['/tabs/tab1']">
-        <img src="./assets/images/close.png" class="close-img"/> 
-        </ion-button>
-    </ion-buttons>
-
+<ion-header class="darkheader" mode="ios" no-border>
+  <ion-toolbar mode="ios">
+      <ion-buttons slot="start">
+          <app-backbutton color="light"></app-backbutton>
+      </ion-buttons>
+      <ion-buttons slot="end">
+            <ion-button (click)="addToFavorites()" slot="start">
+              <ion-icon color="light" mode="md" [name]="icon"></ion-icon>
+              </ion-button>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-no-padding ion-color" [style.background-color]="customColor">
+<ion-content class="ion-no-padding">
 
     <app-loading *ngIf="isLoading"></app-loading>
 
-    <ion-grid class="ion-no-padding header-info">
-      <img src="./assets/images/blast.png" class="start-logo"/>
-        <ion-row class="header-bg" [ngStyle]="{'height': innerHeight}">
+    <ion-grid class="ion-no-padding">
+        <ion-row class="header-bg" [style.background-image]="'url(' + (workout.workout_image | image) + ')'" [ngStyle]="{'height': innerHeight}">
           <div class="text">
-            <div class="title-info">
-          <p class="name">6-DAY FLAT BLAST</p>
-          <ion-buttons slot="end" class="star">
-            <ion-button (click)="addToFavorites()" slot="start">
-              <ion-icon color="primary" mode="md" [name]="icon"></ion-icon>
-              </ion-button>
-          </ion-buttons>
-        </div>
-          <p class="author">by Margret Robbie</p>
-          <p class="further-info">There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station whether that is on the deck of your home or having a powerful but mobile telescope set up to take to the remove countryside to really get a good shot at some.</p>
-        <div class="level-info">
-          <img src="./assets/images/level_easy.png" class="level-logo"/>
-          <p class="task">Level</p>
-          <p class="task-info">Easy</p>
-        </div>
-        <div class="level-info">
-          <img src="./assets/images/sets.png" class="level-logo"/>
-          <p class="task">Sets</p>
-          <p class="task-info">4</p>
-        </div>
-        <div class="level-info">
-          <img src="./assets/images/reps.png" class="level-logo"/>
-          <p class="task">Reps</p>
-          <p class="task-info">10</p>
-        </div>
-        <div class="level-info">
-          <img src="./assets/images/rest.png" class="level-logo"/>
-          <p class="task">Rest</p>
-          <p class="task-info">1 min</p>
-        </div>
+          <p class="name">{{workout.workout_title}}</p>
+          <p class="time">{{workout.workout_duration}}</p>
         </div>
         </ion-row>
-        <ion-row class="cols" style="display: none;">
+        <ion-row class="cols">
           <ion-col size="6" class="ion-text-center">
             <p class="text">{{strings.ST16}}</p>
             <p class="value">{{workout.goal_title}}</p>
@@ -65,14 +32,9 @@
               <p class="value">{{workout.level_title}}</p>
             </ion-col>
         </ion-row>
-
-        <!--FOR EXTRACTING EXCERSISES FROM THE EXCERSISES PAGE-->
-        <ion-row>
-            <p class="exercise-header">Exercises</p>
-        </ion-row>
       </ion-grid>
 
-      <div class="days" style="display: none;">
+      <div class="days">
 
       <div *ngFor="let item of days let i = index">
             <div class="tags" [routerLink]="['/weday', workout.workout_id, i+1]">
@@ -83,53 +45,4 @@
 
     </div>
 
-      <!-- THIS PART IS REQUIRED FOR GENERATING ALL THE EQUIPMENT EXCERCISES FROM BACKEND
-    
-  <app-loading *ngIf="isLoading"></app-loading>
-
-  <app-empty *ngIf="exercises.length === 0" [title]="strings.ST140"></app-empty>
-
-  <ion-list lines="none" class="ion-padding-top">
-    <ng-container *ngFor="let item of exercises; index as i;">
-      <ion-item  *ngIf="subscribe;else notShow "  class="ion-color" [style.background-color]="customColor">
-
-      -->
-    <ion-list lines="none" class="ion-padding-top workout-exercise">
-
-
-      <ion-item   class="ion-color" [style.background-color]="customColor">
-<!--
-        <ion-avatar slot="start">
-          <img class="body-img" [src]="item.exercise_image | image">
-        </ion-avatar>
-        <div class="body-info">
-          <ion-label>{{item.exercise_title}}</ion-label>
-          <p>10 Reps - 4 Sets</p>
-          </div>
-          -->
-          <div class=" body-parts">
-          <div class="tags2"  (click)=toggleInfo(i)>
-    
-            <ion-avatar slot="start">
-
-              <img src ="./assets/images/blast.png" class="exer-img"/>
-            
-            <!--
-              <img src="./assets/images/blast.png" class="exer-img"/>
-
-            -->
-            </ion-avatar>
-            <div class="exer-info">
-            <ion-label>Testing</ion-label>
-            <p>10 Reps - 4 Sets</p>
-            <ion-icon [name]="isInfoHidden ? 'arrow-down' : 'arrow-up'"  slot="end" class="arrow-icon" ></ion-icon>
-            </div>
-        
-          </div>
-        
-       
-         </div>
-
-      </ion-item>
-  </ion-list>
 </ion-content>

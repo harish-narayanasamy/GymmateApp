@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../services/data.service';
-import { Router, ActivatedRoute } from '@angular/router';
-import { strings } from '../../config/strings';
-import {StreamingMedia, StreamingVideoOptions} from '@ionic-native/streaming-media/ngx';
-import { AdmobService } from '../../services/admob.service';
-import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+import { FirebaseService } from '../../services/firebase.service';
+import { NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -13,10 +10,33 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
   styleUrls: ['./editprofile.page.scss'],
 })
 export class EditprofilePage implements OnInit {
+  profile;
+  name;
 
-  constructor() { }
+  constructor(private dataService: FirebaseService) { }
 
   ngOnInit() {
+    this.name = "harish"
+    this.getdata()
   }
 
+  async getdata() {
+    console.log("working")
+    await this.dataService.getData()
+
+  }
+  onSubmit(f: NgForm) {
+    console.log(f)
+    this.dataService.profileData(f.value.name, f.value.age, f.value.gender, f.value.Height, f.value.Weight)
+      .then(res => {
+
+        f.reset();
+        console.log(res)
+
+      }, err => {
+        console.log(err)
+
+      })
+
+  }
 }

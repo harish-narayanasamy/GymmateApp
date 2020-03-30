@@ -18,6 +18,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 import { firebaseconfig } from './config/firebase';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -48,6 +49,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
     AngularFirestoreModule, // imports firebase/firestore
     AngularFireAuthModule, // imports firebase/auth
     AngularFireStorageModule, // imports firebase/storage
+    AngularFireDatabaseModule
   ],
   providers: [
     StatusBar,
