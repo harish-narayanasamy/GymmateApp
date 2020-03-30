@@ -17,10 +17,12 @@ export class EdetailsPage implements OnInit {
   exercise: any = {};
   isLoading = false;
   id: any;
-  isInfoHidden = true;
-  isInstruHidden = true;
-  isTipsHidden = true;
   orientation = 'landscape';
+  show: {[key: number]: boolean} = {};
+  workout: any = {};
+  innerHeight: any;
+  days = new Array(7);
+  icon = 'star-outline';
 
   constructor(
     private dataService: DataService,
@@ -28,8 +30,11 @@ export class EdetailsPage implements OnInit {
     private route: ActivatedRoute,
     private streamingMedia: StreamingMedia,
     private admob: AdmobService,
-    private screenOrientation: ScreenOrientation
+    private screenOrientation: ScreenOrientation,
+
     ) {}
+
+
 
     ngOnInit() {
       this.admob.HideBannerAd();
@@ -56,19 +61,6 @@ export class EdetailsPage implements OnInit {
     goBack() {
       this.router.navigate(['/home']);
     }
-
-    toggleInfo() {
-      this.isInfoHidden = !this.isInfoHidden;
-    }
-
-    toggleInstru() {
-      this.isInstruHidden = !this.isInstruHidden;
-    }
-
-    toggleTips() {
-      this.isTipsHidden = !this.isTipsHidden;
-    }
-
     getDetails() {
 
     this.dataService.getDataExerciseById(this.id)
@@ -96,6 +88,21 @@ play() {
 setPortrait() {
   // set to portrait
   this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
+}
+
+toggleInfo(index: number) {
+  this.show[index] = true;
+}
+
+addToFavorites() {
+  const workout = {
+    id: this.workout.workout_id,
+    title: this.workout.workout_title,
+    image: this.workout.workout_image,
+};
+
+  const exist = this.dataFavorite.saveWorkout( workout );
+  this.icon = ( exist ) ? 'star' : 'star-outline';
 }
 
 }

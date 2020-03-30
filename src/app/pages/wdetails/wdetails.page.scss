@@ -1,43 +1,84 @@
+.header-bg{
+    background-color: #191919;
+    padding: 0 25% 0 5%;
+}
 
+.time{
+    max-width: 120px;
+    width: 100%;
+    background: #f7474f;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: normal;
+    letter-spacing: normal;
+    font-family: 'Proxima-bold';
+}
+
+.tags{
+    background-color: #313235;
+    padding: 15px;
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.tags h1 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Proxima-bold';
+    color: #fafafa;
+    line-height: 18px;
+}
+.days{
+    padding: 40px 5%;
+    background-color: #191919;
+}
+
+.tags ion-icon{
+    font-size: 22px;
+}
+
+ion-grid{
+    background-color: #191919;
+}
+
+.text{
+    margin: 10px 0 30px 0;
+}
+/* */
 .cols{
 background-color: var(--ion-color-primary);
 padding: 10px 0;
+border-radius: 5px;
+margin: 0 auto;
+max-width: 90%;
 }
 
 .cols .text{
     color:#ffffff;
     font-weight: bold;
-    text-transform: uppercase;
     margin: 0;
     padding-bottom: 5px;
+    font-family: 'Nunito';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
 } 
 
 .cols .value{
-    text-transform: uppercase;
     margin: 0;
     color:#ffffff;
     font-size: 14px;
-    opacity: 0.7;
+    font-family: 'Nunito';
+    font-weight: 600;
+    line-height: 16px;
+
 } 
-
-.days{
-    padding: 16px;
-}
-
-.tags{
-    background-color: #f9f9f9;
-    border-left: 3px solid var(--ion-color-primary);
-    padding: 15px;
-    position: relative;
-    margin-bottom: 10px;
-}
-
-.tags h1{
-    font-size: 13px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin:0;
-}
 
 .tags ion-icon{
     position: absolute;
@@ -53,10 +94,6 @@ padding: 10px 0;
     font-size: 20px !important;
     text-transform: none !important;
     }   
-
-    .arrow{
-        color: #f7474f !important;
-    }
 
     .in-toolbar{
         padding: 20px 0 10px 0 !important;
@@ -75,7 +112,7 @@ padding: 10px 0;
         background: #191919 !important;
     }
 
-    .header-info ion-row, .days{
+    .header-info ion-row{
         max-width: 90%;
         margin: 0 auto !important;
         height: auto !important;
@@ -89,256 +126,18 @@ padding: 10px 0;
         margin-bottom: 0px;
         margin-top: 0px;
     }
-
-    .author, .further-info{
-font-size: 16px;
-line-height: 20px;
-font-family: 'Nunito';
-color: #979797;
-margin-top: 5px;
-margin-bottom: 25px;
-    }
-
-    .level-info{
-        display: flex;
-        flex-direction: row;
-        background-color:#313235;
-        border-radius: 5px;
-        max-width: 95%;
-        padding: 5px 15px;
-        margin-bottom: 10px;
-
-    }
-
-    .level-logo{
-       max-width: 25px;;
-        max-height: 25px;
-    }
-
-    .task, .task-info{
-        color: #fafafa;
-        font-size: 16px;
-        line-height: 20px;
-        font-family: 'Nunito-bold';
-        margin: 0px;
-    }
-    .task{
-        margin: 0 16px 0px 8px;
-    }
-
-    .text{
-        margin-bottom: 40px;
-    }
-
-    .exercise-header{
-        color: #efeeee;
-        font-size: 22px;
-        line-height: 26px;
-        font-family: 'Proxima-semi';
-        margin: 0px;
-        text-align: left;
-    }
-
-    .title-info{
-        margin-top: 35px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .star{
-        padding-left: 5px;
-        margin-left: auto;
-    }
-
     .close-img{
             max-width: 16px;
             max-height: 16px;
-        }
+    }
+        @media only screen and (max-width: 320px) {
+            .header-bg {
+                background-color: #191919;
+                padding: 0 15% 0 5%;
+            }
+            .name{
+                font-size: 25px;
+                line-height: 30px;
 
-        .body-parts {
-            display: -webkit-box !important;
-            display: flex !important;
-            -webkit-box-orient: vertical !important;
-            -webkit-box-direction: normal !important;
-            flex-direction: column !important;
-            --display: flex !important;
-            --flex-direction: column !important;
-            width: 100%;
-        }
-
-        .body-parts .tags2{
-            display: flex;
-           flex-direction: row; 
-           max-width: 100%;
-           border: 1px solid #313235;
-           border-radius: 5px;
-           }
-       
-           .body-parts  .exer-img{
-               width: 98px;
-               height: 90px;
-               display: block;
-           }
-       
-           .body-parts  .exer-info{
-               display: flex;
-               flex-direction: column;
-               justify-content: center;
-               width: 50%;
-           }
-       
-           .body-parts  .arrow-icon{
-               position: absolute;
-               right: 4%;
-               width: 20px;
-               height: 20px;
-               color:#8d8a8a !important;
-               background-color: #191919 !important;
-           }
-       
-           .body-parts  .subinfo{
-               max-width: 100%;
-               margin: 0 auto;
-           }
-       
-           .body-parts .further-info{
-              
-               margin: 0 auto;
-               border: 1px solid #313235;
-               border-top: none;
-               padding: 5%;
-           }
-       
-       
-           .body-parts .exer-title{
-               color: #fafafa;
-               line-height: 26px;
-               font-size: 22px;
-               font-family: 'Proxima-bold';
-           }
-       
-           .body-parts .subinfo .subtitle{
-               color: #fafafa;
-               line-height: 20px;
-               font-size: 16px;
-               font-family: 'Muli-Regular';
-           }
-       
-           .body-parts .sub-img{
-               display: block;
-               margin-top: -3px;
-               border-right: 1px solid #313235;
-               border-left: 1px solid #313235;
-           }
-       
-           .body-parts .body-parts{
-               display: flex !important;
-               flex-direction: column !important;
-              --display: flex !important;
-               --flex-direction: column !important;
-               width: 100%;
-           }
-       
-           .body-parts .s-ion-icon{
-               display: none !important;
-           }
-
-           .body-parts ion-item{
-            --background-focused: #fff !important;
-            --background-activated: #fff !important;
-            --detail-icon-color: var(--ion-color-primary);
-            --detail-icon-opacity: 1;
-            --detail-icon-transform: rotate(90deg) !important;
-        }
-
-        ion-avatar img {
-            border-radius: 0;
-        }
-
-        .body-parts ion-avatar{
-            width: 100% !important;
-            height: 100% !important;
-            max-width: 90px !important;
-            max-height: 98px !important;
-            border-radius: 0;
-            margin: 0 15px 0px 0 !important;
-        }
-        .body-parts   ion-item ion-label,    .body-parts ion-label{
-            padding-left: 0px;
-            white-space: normal !important;
-            color: #ffffff !important;
-            font-size: 18px;
-            line-height: 20px;
-            font-family: 'Proxima-bold';
-        }
-
-        .workout-exercise{
-            background-color:transparent !important;
-            padding-bottom: 40px;
-        }
-
-        .exer-info p{
-            font-size: 14px;
-            color: #979797;
-            line-height: 16px;
-            font-family: 'Nunito-light';
-            margin: 5px 0;
-        }
-
-        .workout-exercise ion-item{
-            --inner-padding-end: 0px;
-            --padding-start: 0px ;
-            max-width: 90%;
-            margin: 0 auto;
-        }
-        
-        .further-info p{
-            color: #fafafa;
-            line-height: 20px;
-            font-size: 16px;
-            font-family: 'Proxima-regular';
-            --padding-inline-start: 0px !important;
-            padding-inline-start: 0px !important;
-        }
-    
-        .further-info  span{
-            margin-left: -23px !important;
-            display: block;
-        }
-    
-    
-        .further-info .exer-title{
-            color: #fafafa;
-        line-height: 24px;
-        font-size: 20px;
-        font-family: 'Proxima-bold';
-        }
-    
-        .further-info .subtitle{
-            color: #fafafa;
-            line-height: 20px;
-            font-size: 16px;
-            font-family: 'Proxima-bold';
-        }
-           @media only screen and (max-width: 280px) {
-            .body-parts .exer-info ion-label{
-                   font-size: 16px;
-                   line-height: 18px;
-               }
-       
-               .body-parts ion-avatar{
-                   margin: 0 10px 0 0 !important;
-                   max-width: 75px !important;
-               }
-       
-               .body-parts .arrow-icon{
-                   right: 2%;
-               }
-           }
-       
-           @media only screen and (max-width: 250px) {
-            .body-parts   ion-avatar{
-                   max-width: 70px !important;
-               }
-           }
+            }
+          }

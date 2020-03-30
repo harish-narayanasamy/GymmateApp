@@ -1,15 +1,20 @@
-<ion-header class="lightheader" no-border>
-    <ion-toolbar mode="ios">
+  <ion-header  class="lightheader" mode="ios" no-border>
+    <ion-toolbar mode="ios" class="ion-color" [style.background-color]="customColor">
         <ion-title class="ion-text-capitalize">
           {{strings.ST87}} {{day}}
-        </ion-title>
-              <ion-buttons slot="start">
-                <app-backbutton color="dark"></app-backbutton>
-              </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
+          </ion-title>
+                <ion-buttons slot="start">
+                  <app-backbutton color="primary"></app-backbutton>
+                </ion-buttons>
+                <ion-buttons slot="end">
+                  <ion-button  slot="start" [routerLink]="['/tabs/tab1']">
+                    <img src="./assets/images/close.png" class="close-img"/> 
+                    </ion-button>
+                </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
   
-  <ion-content>
+  <ion-content class="ion-color" [style.background-color]="customColor">
     
     <app-loading *ngIf="isLoading"></app-loading>
 
@@ -17,11 +22,9 @@
   
     <ion-list lines="none" class="ion-padding-top">
   
-    <ion-item *ngFor="let item of exercises" [routerLink]="['/edetails', item.exercise_id]" style="margin-bottom: 5px;">
-        <ion-avatar slot="start">
-          <img [src]="item.exercise_image | image">
-        </ion-avatar>
+    <ion-item *ngFor="let item of exercises" [routerLink]="['/edetails', item.exercise_id]" class="ion-color" [style.background-color]="customColor" detail="false">
         <ion-label>{{item.exercise_title}}</ion-label>
+        <ion-icon name="arrow-forward" color="light" slot="end"></ion-icon>
       </ion-item>
   
     </ion-list>

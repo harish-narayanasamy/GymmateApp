@@ -15,20 +15,99 @@ ion-item ion-label{
     font-weight: bold;
     text-transform: uppercase;
     font-size: 13px;
+    line-height: 25px;
     white-space: normal !important;
+    color: #fafafa !important;
 }
 
 ion-item{
-    border-bottom: 1px solid #eee !important;
+    background-color: #313235;
+    --background-color: #313235 !important;
+    padding: 0px;
+    position: relative;
+    color: #fafafa !important;
+    --opacity: 1 !important;
+    --color: #fafafa !important;
+    opacity: 1 !important;
+    border-radius: 5px;
+    max-width: 90%;
+    margin: 0 auto 15px auto;
+ }
+
+ ion-label{
+
+    margin-top: 0px !important;
+    margin-bottom: 0px !important ;
+    margin-right: 0px !important ;
+    margin-left: 0px !important;
+    --margin-top: 0px !important;
+    --margin-bottom: 0px !important ;
+    --margin-right: 0px !important ;
+    --margin-left: 0px !important;
 }
 
-ion-item{
-    --background-focused:#fff !important;
-    --background-activated:#fff !important;
-    --detail-icon-color: var(--ion-color-primary);
-    --detail-icon-opacity: 1;
+.item .sc-ion-label-ios-h{
+    font-size: 16px !important;
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+    font-family: 'Proxima-bold' !important;
+    color: #fafafa !important;
+    line-height: 18px!important; 
+    text-transform: none !important;
  }
 
 ion-item:last-child{
     border-bottom: none !important;
+}
+
+ion-grid{
+    background-color: #191919;
+}
+
+
+
+.in-toolbar{
+    background: #191919;
+}
+
+.ion-page {
+    .in-toolbar {
+      .toolbar-background {
+        background: transparent !important;
+      }
+    }
+  }
+
+  ion-content{
+    background: #191919 !important;
+}
+
+.close-img{
+    max-width: 16px;
+    max-height: 16px;
+}
+
+.ion-text-capitalize{
+    width: 100%;
+    color: #f7474f;
+    font-family: Proxima-bold;
+    font-size: 20px !important;
+    text-transform: none !important;
+}
+
+ ion-list {
+    --background-color: #191919;
+    background-color: #191919;
+    padding-top: 20px;
+}
+
+ion-item ion-icon{
+    font-size: 22px;
+    color: #fafafa;
+}
+
+.in-toolbar{
+    padding: 20px 0 10px 0 !important;
+    background: #191919;
 }
