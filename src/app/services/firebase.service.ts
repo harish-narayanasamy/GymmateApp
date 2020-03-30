@@ -5,7 +5,7 @@ import 'firebase/storage';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { AuthService }         from '../services/auth.service'
-
+import { Observable, throwError } from 'rxjs';
 
 
 @Injectable({
@@ -39,12 +39,8 @@ export class FirebaseService {
       return user.metadata.creationTime;
     }
   }
-  postData(name, age, gender, height, weight) {
-    console.log(name)
-    console.log(age)
-    console.log(gender)
-    console.log(height)
-    console.log(weight)
+  profileData(name, age, gender, height, weight) {
+ 
     let uid = firebase.auth().currentUser.uid;
     return new Promise<any>((resolve, reject) => {
       this.afDb.database.ref('profile/'+uid).set({
@@ -56,4 +52,25 @@ export class FirebaseService {
           err => reject(err))
     })
   }
+
+ 
+
+  getData() {
+    let uid = firebase.auth().currentUser.uid;
+
+  
+      return new Promise<any>((resolve, reject) => {
+        this.afDb.database.ref('profile/'+uid).on("value", function (snapshot) {
+          console.log(snapshot.val());
+          resolve (snapshot.val());
+      
+        }, function (errorObject) {
+          console.log("The read failed: " + errorObject);
+        });
+      })
+
+  }
+
+
+
 }
