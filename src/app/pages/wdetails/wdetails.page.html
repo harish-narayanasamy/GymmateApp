@@ -19,17 +19,21 @@
 
     <ion-grid class="ion-no-padding">
       <ion-row class="header-bg" [style.background-image]="'url(' + (workout.workout_image | image) + ')'" [ngStyle]="{'height': innerHeight}">
-        <div class="text">
+        </ion-row>
+        <ion-row class="w-info">
+          <div class="w-name">
+          <div class="text">
             <p class="time">{{workout.workout_duration}}</p>
           <p class="name">{{workout.workout_title}}</p>
         </div>
-        <div>
+        <div class="star-favourite">
           <ion-buttons slot="end">
             <ion-button (click)="addToFavorites()" slot="start">
               <ion-icon color="light" mode="md" [name]="icon"></ion-icon>
               </ion-button>
       </ion-buttons>
         </div>
+      </div>
         </ion-row>
         <ion-row class="cols">
           <ion-col size="6" class="ion-text-center">
@@ -48,7 +52,7 @@
       <div *ngFor="let item of days let i = index">
             <div class="tags" [routerLink]="['/weday', workout.workout_id, i+1]">
                 <h1>{{strings.ST87}} {{i+1}}</h1>
-                <ion-icon name="arrow-forward" color="light" slot="end"></ion-icon>
+                <ion-icon name="arrow-forward" class="ion-color arrow" [style.background-color]="customColor" slot="end"></ion-icon>
             </div>
       </div>
 

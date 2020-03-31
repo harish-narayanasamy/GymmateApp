@@ -1,9 +1,8 @@
-ion-avatar  {     
-    width:100% !important;  
-    height : 100% !important;  
-    max-width: 124px !important;
-    max-height: 124px !important;
+ion-avatar  {       
+        width: 98px !important;
+   height: 90px !important;
     border-radius: 0;
+    margin: 0 15px 0 -16px ;
     }
 ion-avatar img{
     border-radius: 0;
@@ -15,9 +14,9 @@ ion-item ion-label{
     font-weight: bold;
     text-transform: uppercase;
     font-size: 13px;
-    line-height: 25px;
+    line-height: 20px;
     white-space: normal !important;
-    color: #fafafa !important;
+    color: #aeabab !important;
 }
 
 ion-item{
@@ -104,10 +103,34 @@ ion-grid{
 
 ion-item ion-icon{
     font-size: 22px;
-    color: #fafafa;
+}
+
+.arrow, ion-item{
+    --color: #aeabab !important;
+    color: #aeabab !important;
 }
 
 .in-toolbar{
     padding: 20px 0 10px 0 !important;
     background: #191919;
 }
+
+@media only screen and (max-width: 300px) {
+    ion-item ion-label {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    ion-avatar{
+        margin-right: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 280px) {
+    ion-avatar{
+        max-width: 75px;
+    }
+    ion-item ion-label {
+        line-height: 16px;
+    }
+  }

@@ -36,7 +36,7 @@
     font-weight: bold;
     margin: 0;
     font-family: 'Proxima-bold';
-    color: #fafafa;
+    color: #aeabab;
     line-height: 18px;
 }
 .days{
@@ -53,7 +53,8 @@ ion-grid{
 }
 
 .text{
-    margin: 10px 0 30px 0;
+    margin: 25px 0 30px 0;
+    width: 80%;
 }
 /* */
 .cols{
@@ -63,17 +64,6 @@ border-radius: 5px;
 margin: 0 auto;
 max-width: 90%;
 }
-
-.cols .text{
-    color:#ffffff;
-    font-weight: bold;
-    margin: 0;
-    padding-bottom: 5px;
-    font-family: 'Nunito';
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 20px;
-} 
 
 .cols .value{
     margin: 0;
@@ -130,11 +120,51 @@ max-width: 90%;
         color: #ffffff;
         margin-bottom: 0px;
         margin-top: 0px;
+        max-width: 300px;
     }
     .close-img{
             max-width: 16px;
             max-height: 16px;
     }
+
+    .w-info{
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .w-name{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .arrow, .tags{
+        --color: #aeabab !important;
+        color: #aeabab !important;
+    }
+
+    .star-favourite{
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        width: 20%;
+    }
+
+    .cols .text{
+        color:#ffffff;
+        font-weight: bold;
+        margin: 0;
+        padding-bottom: 5px;
+        font-family: 'Nunito';
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 20px;
+        width: 100%;
+    } 
+    .star-favourite .sc-ion-buttons-md-h {
+        margin-left: auto !important;
+    }
+    
         @media only screen and (max-width: 320px) {
             .header-bg {
                 background-color: #191919;

@@ -27,7 +27,7 @@
         <img [src]="item.exercise_image | image">
       </ion-avatar>  
       <ion-label>{{item.exercise_title}}</ion-label>
-        <ion-icon name="arrow-forward" color="light" slot="end"></ion-icon>
+        <ion-icon name="arrow-forward" class="ion-color arrow" [style.background-color]="customColor" slot="end"></ion-icon>
       </ion-item>
   
     </ion-list>
