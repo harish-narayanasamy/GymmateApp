@@ -3,22 +3,11 @@
     <ion-title  class="ion-text-capitalize">
       Profile
     </ion-title>
-    <!--<ion-buttons slot="start">
-              <app-backbutton color="dark"></app-backbutton>
-            </ion-buttons>
-            -->
+ 
     
   </ion-toolbar>
 </ion-header>
-<!--
-    <ion-buttons slot="start">
-      <app-backbutton color="light"></app-backbutton>
-    </ion-buttons>
-    <ion-buttons slot="end">
-      <ion-icon mode="md" name="md-exit" slot="end">
-      </ion-icon>
-    </ion-buttons>
--->
+
 
 <ion-content class="ion-no-padding">
 
@@ -35,10 +24,11 @@
     </ion-buttons></ion-row>
     <ion-row class="header-bg" >
       <div class="text">
-        <img src="./assets/images/avatar.png" class="author-img"/>
+          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" class="author-img"/>
+      <!-- <img src="./assets/images/avatar.png" class="author-img"/>--> 
         <div class="author">
            
-        <p class="author-info">Sanjay Tarana</p>
+        <p class="author-info">{{profile.name}}</p>
         <ion-buttons slot="start">
           <ion-button [routerLink]="['/pro']" style="padding: 0 !important;">
           <img src="./assets/images/pro.png" class="pro">
@@ -56,17 +46,7 @@
       </ion-button>
     
   </ion-list>
-  <!--<ion-card *ngIf="subscribe">
-    <ion-card-header>
-      <ion-card-title>Subscribe</ion-card-title>
-    </ion-card-header>
-
-   <ion-card-content>
-     
-      <ion-toggle [(ngModel)]="subscribe" (ionChange)="notify()" color="success"></ion-toggle>
-
-    </ion-card-content>
-  </ion-card>-->
+ 
 
 
 

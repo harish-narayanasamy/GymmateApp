@@ -13,15 +13,6 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<!--
-    <ion-buttons slot="start">
-      <app-backbutton color="light"></app-backbutton>
-    </ion-buttons>
-    <ion-buttons slot="end">
-      <ion-icon mode="md" name="md-exit" slot="end">
-      </ion-icon>
-    </ion-buttons>
--->
 
 <ion-content class="ion-no-padding">
 
@@ -29,7 +20,8 @@
   <ion-grid class="ion-no-padding">
     <ion-row class="header-bg" >
       <div class="text">
-        <img src="./assets/images/avatar.png" class="author-img"/>
+          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" class="author-img"/>
+       <!--<img src="./assets/images/avatar.png" class="author-img"/>--> 
         <p class="author-info">Edit</p>
       </div>
     </ion-row> 
@@ -44,8 +36,8 @@
           </div>
           <p class="info-required">Name</p>
           <div class="form-group">
-            <input required ngModel name="name" #name="ngModel" id="name" type="name"
-              pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" class="form-control form-rounded " rows="20"
+            <input required [(ngModel)] ="profile.name" name="name" #name="ngModel" id="name" type="text"
+              class="form-control form-rounded " rows="20"
               placeholder="Name">
             <div class="alert alert-danger" *ngIf="name.touched && !name.valid">
               <div *ngIf="name.errors.required" class="required">
@@ -58,7 +50,7 @@
           </div>
           <p class="info-required">Age</p>
           <div class="form-group">
-            <input required minlength="6" ngModel name="age" #age="ngModel" id="age" type="age"
+            <input required  [(ngModel)] ="profile.age" name="age" #age="ngModel" id="age" type="number"
               class="form-control form-rounded" rows="20" placeholder="Age">
              <div class="alert alert-danger" *ngIf="age.touched && !age.valid">
               <div *ngIf="age.errors.required" class="required">
@@ -71,8 +63,8 @@
           </div>
           <p class="info-required">Gender</p>
           <div class="form-group">
-            <input required ngModel name="gender" #gender="ngModel" id="gender" type="gender"
-              pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" class="form-control form-rounded " rows="20"
+            <input required [(ngModel)] ="profile.gender" name="gender" #gender="ngModel" id="gender" type="text"
+               class="form-control form-rounded " rows="20"
               placeholder="Gender">
             <div class="alert alert-danger" *ngIf="gender.touched && !gender.valid">
               <div *ngIf="gender.errors.required" class="required">
@@ -85,8 +77,8 @@
           </div>
           <p class="info-required">Height</p>
           <div class="form-group">
-            <input required ngModel name="Height" #height="ngModel" id="height" type="height"
-              pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" class="form-control form-rounded " rows="20"
+            <input required [(ngModel)] ="profile.height" name="Height" #height="ngModel" id="height" type="number"
+               class="form-control form-rounded " rows="20"
               placeholder="Height">
             <div class="alert alert-danger" *ngIf="height.touched && !height.valid">
               <div *ngIf="height.errors.required" class="required">
@@ -99,8 +91,8 @@
           </div>
           <p class="info-required">Weight</p>
           <div class="form-group">
-            <input required ngModel name="Weight" #weight="ngModel" id="weight" type="weight"
-              pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" class="form-control form-rounded " rows="20"
+            <input required [(ngModel)] ="profile.weight" name="Weight" #weight="ngModel" id="weight" type="number"
+               class="form-control form-rounded " rows="20"
               placeholder="Weight">
             <div class="alert alert-danger" *ngIf="weight.touched && !weight.valid">
               <div *ngIf="weight.errors.required" class="required">
@@ -120,6 +112,8 @@
  
 
   </div>
+
+
 </div>
     </ion-row>
   </ion-grid>

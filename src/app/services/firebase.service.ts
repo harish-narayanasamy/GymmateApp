@@ -39,9 +39,9 @@ export class FirebaseService {
       return user.metadata.creationTime;
     }
   }
-  profileData(name, age, gender, height, weight) {
+  async profileData(name, age, gender, height, weight) {
  
-    let uid = firebase.auth().currentUser.uid;
+    let uid = await firebase.auth().currentUser.uid;
     return new Promise<any>((resolve, reject) => {
       this.afDb.database.ref('profile/'+uid).set({
         name: name, age: age, gender: gender, height: height, weight: weight
@@ -55,8 +55,8 @@ export class FirebaseService {
 
  
 
-  getData() {
-    let uid = firebase.auth().currentUser.uid;
+  async getData() {
+    let uid = await firebase.auth().currentUser.uid;
 
   
       return new Promise<any>((resolve, reject) => {

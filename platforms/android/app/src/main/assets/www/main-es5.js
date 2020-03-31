@@ -497,15 +497,15 @@ var routes = [
     },
     {
         path: 'start',
-        loadChildren: function () { return Promise.all(/*! import() | pages-start-start-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("default~pages-forgotpass-forgotpass-module~pages-login-login-module~pages-start-start-module"), __webpack_require__.e("default~pages-signup-signup-module~pages-start-start-module"), __webpack_require__.e("default~pages-login-login-module~pages-start-start-module"), __webpack_require__.e("pages-start-start-module")]).then(__webpack_require__.bind(null, /*! ./pages/start/start.module */ "./src/app/pages/start/start.module.ts")).then(function (m) { return m.StartPageModule; }); }
+        loadChildren: function () { return Promise.all(/*! import() | pages-start-start-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("default~pages-login-login-module~pages-signup-signup-module~pages-start-start-module"), __webpack_require__.e("default~pages-forgotpass-forgotpass-module~pages-login-login-module~pages-start-start-module"), __webpack_require__.e("default~pages-login-login-module~pages-start-start-module"), __webpack_require__.e("common"), __webpack_require__.e("pages-start-start-module")]).then(__webpack_require__.bind(null, /*! ./pages/start/start.module */ "./src/app/pages/start/start.module.ts")).then(function (m) { return m.StartPageModule; }); }
     },
     {
         path: 'login',
-        loadChildren: function () { return Promise.all(/*! import() | pages-login-login-module */[__webpack_require__.e("default~pages-forgotpass-forgotpass-module~pages-login-login-module~pages-start-start-module"), __webpack_require__.e("default~pages-login-login-module~pages-start-start-module")]).then(__webpack_require__.bind(null, /*! ./pages/login/login.module */ "./src/app/pages/login/login.module.ts")).then(function (m) { return m.LoginPageModule; }); }
+        loadChildren: function () { return Promise.all(/*! import() | pages-login-login-module */[__webpack_require__.e("default~pages-login-login-module~pages-signup-signup-module~pages-start-start-module"), __webpack_require__.e("default~pages-forgotpass-forgotpass-module~pages-login-login-module~pages-start-start-module"), __webpack_require__.e("default~pages-login-login-module~pages-start-start-module")]).then(__webpack_require__.bind(null, /*! ./pages/login/login.module */ "./src/app/pages/login/login.module.ts")).then(function (m) { return m.LoginPageModule; }); }
     },
     {
         path: 'signup',
-        loadChildren: function () { return Promise.all(/*! import() | pages-signup-signup-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("default~pages-signup-signup-module~pages-start-start-module")]).then(__webpack_require__.bind(null, /*! ./pages/signup/signup.module */ "./src/app/pages/signup/signup.module.ts")).then(function (m) { return m.SignupPageModule; }); }
+        loadChildren: function () { return Promise.all(/*! import() | pages-signup-signup-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("default~pages-login-login-module~pages-signup-signup-module~pages-start-start-module"), __webpack_require__.e("common")]).then(__webpack_require__.bind(null, /*! ./pages/signup/signup.module */ "./src/app/pages/signup/signup.module.ts")).then(function (m) { return m.SignupPageModule; }); }
     },
     {
         path: 'tabs',
@@ -521,7 +521,7 @@ var routes = [
     },
     {
         path: 'termsguest',
-        loadChildren: function () { return Promise.all(/*! import() | pages-termsguest-termsguest-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-termsguest-termsguest-module")]).then(__webpack_require__.bind(null, /*! ./pages/termsguest/termsguest.module */ "./src/app/pages/termsguest/termsguest.module.ts")).then(function (m) { return m.TermsguestPageModule; }); }
+        loadChildren: function () { return Promise.all(/*! import() | pages-termsguest-termsguest-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("common"), __webpack_require__.e("pages-termsguest-termsguest-module")]).then(__webpack_require__.bind(null, /*! ./pages/termsguest/termsguest.module */ "./src/app/pages/termsguest/termsguest.module.ts")).then(function (m) { return m.TermsguestPageModule; }); }
     },
     {
         path: 'forgotpass',
@@ -658,6 +658,187 @@ var routes = [
     {
         path: 'subscription',
         loadChildren: function () { return __webpack_require__.e(/*! import() | modals-subscription-subscription-module */ "modals-subscription-subscription-module").then(__webpack_require__.bind(null, /*! ./modals/subscription/subscription.module */ "./src/app/modals/subscription/subscription.module.ts")).then(function (m) { return m.SubscriptionPageModule; }); }
+    },
+    {
+        path: 'editprofile',
+        loadChildren: function () { return __webpack_require__.e(/*! import() | pages-editprofile-editprofile-module */ "pages-editprofile-editprofile-module").then(__webpack_require__.bind(null, /*! ./pages/editprofile/editprofile.module */ "./src/app/pages/editprofile/editprofile.module.ts")).then(function (m) { return m.EditprofilePageModule; }); }
+    },
+    {
+        path: '',
+        redirectTo: 'loader',
+        pathMatch: 'full'
+    },
+    {
+        path: 'start',
+        loadChildren: function () { return Promise.all(/*! import() | pages-start-start-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("default~pages-login-login-module~pages-signup-signup-module~pages-start-start-module"), __webpack_require__.e("default~pages-forgotpass-forgotpass-module~pages-login-login-module~pages-start-start-module"), __webpack_require__.e("default~pages-login-login-module~pages-start-start-module"), __webpack_require__.e("common"), __webpack_require__.e("pages-start-start-module")]).then(__webpack_require__.bind(null, /*! ./pages/start/start.module */ "./src/app/pages/start/start.module.ts")).then(function (m) { return m.StartPageModule; }); }
+    },
+    {
+        path: 'login',
+        loadChildren: function () { return Promise.all(/*! import() | pages-login-login-module */[__webpack_require__.e("default~pages-login-login-module~pages-signup-signup-module~pages-start-start-module"), __webpack_require__.e("default~pages-forgotpass-forgotpass-module~pages-login-login-module~pages-start-start-module"), __webpack_require__.e("default~pages-login-login-module~pages-start-start-module")]).then(__webpack_require__.bind(null, /*! ./pages/login/login.module */ "./src/app/pages/login/login.module.ts")).then(function (m) { return m.LoginPageModule; }); }
+    },
+    {
+        path: 'signup',
+        loadChildren: function () { return Promise.all(/*! import() | pages-signup-signup-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("default~pages-login-login-module~pages-signup-signup-module~pages-start-start-module"), __webpack_require__.e("common")]).then(__webpack_require__.bind(null, /*! ./pages/signup/signup.module */ "./src/app/pages/signup/signup.module.ts")).then(function (m) { return m.SignupPageModule; }); }
+    },
+    {
+        path: 'tabs',
+        loadChildren: function () { return __webpack_require__.e(/*! import() | tabs-tabs-module */ "tabs-tabs-module").then(__webpack_require__.bind(null, /*! ./tabs/tabs.module */ "./src/app/tabs/tabs.module.ts")).then(function (m) { return m.TabsPageModule; }); }
+    },
+    {
+        path: 'goals',
+        loadChildren: function () { return Promise.all(/*! import() | pages-goals-goals-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-goals-goals-module")]).then(__webpack_require__.bind(null, /*! ./pages/goals/goals.module */ "./src/app/pages/goals/goals.module.ts")).then(function (m) { return m.GoalsPageModule; }); }
+    },
+    {
+        path: 'home',
+        loadChildren: function () { return Promise.all(/*! import() | pages-home-home-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-home-home-module")]).then(__webpack_require__.bind(null, /*! ./pages/home/home.module */ "./src/app/pages/home/home.module.ts")).then(function (m) { return m.HomePageModule; }); }
+    },
+    {
+        path: 'termsguest',
+        loadChildren: function () { return Promise.all(/*! import() | pages-termsguest-termsguest-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("common"), __webpack_require__.e("pages-termsguest-termsguest-module")]).then(__webpack_require__.bind(null, /*! ./pages/termsguest/termsguest.module */ "./src/app/pages/termsguest/termsguest.module.ts")).then(function (m) { return m.TermsguestPageModule; }); }
+    },
+    {
+        path: 'forgotpass',
+        loadChildren: function () { return __webpack_require__.e(/*! import() | pages-forgotpass-forgotpass-module */ "default~pages-forgotpass-forgotpass-module~pages-login-login-module~pages-start-start-module").then(__webpack_require__.bind(null, /*! ./pages/forgotpass/forgotpass.module */ "./src/app/pages/forgotpass/forgotpass.module.ts")).then(function (m) { return m.ForgotpassPageModule; }); }
+    },
+    {
+        path: 'workouts',
+        loadChildren: function () { return Promise.all(/*! import() | pages-workouts-workouts-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-workouts-workouts-module")]).then(__webpack_require__.bind(null, /*! ./pages/workouts/workouts.module */ "./src/app/pages/workouts/workouts.module.ts")).then(function (m) { return m.WorkoutsPageModule; }); }
+    },
+    {
+        path: 'exercises',
+        loadChildren: function () { return Promise.all(/*! import() | pages-exercises-exercises-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-exercises-exercises-module")]).then(__webpack_require__.bind(null, /*! ./pages/exercises/exercises.module */ "./src/app/pages/exercises/exercises.module.ts")).then(function (m) { return m.ExercisesPageModule; }); }
+    },
+    {
+        path: 'profile',
+        loadChildren: function () { return Promise.all(/*! import() | pages-profile-profile-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-profile-profile-module")]).then(__webpack_require__.bind(null, /*! ./pages/profile/profile.module */ "./src/app/pages/profile/profile.module.ts")).then(function (m) { return m.ProfilePageModule; }); }
+    },
+    {
+        path: 'motivation',
+        loadChildren: function () { return Promise.all(/*! import() | pages-motivation-motivation-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-motivation-motivation-module")]).then(__webpack_require__.bind(null, /*! ./pages/motivation/motivation.module */ "./src/app/pages/motivation/motivation.module.ts")).then(function (m) { return m.MotivationPageModule; }); }
+    },
+    {
+        path: 'calculator',
+        loadChildren: function () { return Promise.all(/*! import() | pages-calculator-calculator-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-calculator-calculator-module")]).then(__webpack_require__.bind(null, /*! ./pages/calculator/calculator.module */ "./src/app/pages/calculator/calculator.module.ts")).then(function (m) { return m.CalculatorPageModule; }); }
+    },
+    {
+        path: 'bmiinfo',
+        loadChildren: function () { return Promise.all(/*! import() | pages-bmiinfo-bmiinfo-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-bmiinfo-bmiinfo-module")]).then(__webpack_require__.bind(null, /*! ./pages/bmiinfo/bmiinfo.module */ "./src/app/pages/bmiinfo/bmiinfo.module.ts")).then(function (m) { return m.BmiinfoPageModule; }); }
+    },
+    {
+        path: 'diets',
+        loadChildren: function () { return Promise.all(/*! import() | pages-diets-diets-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-diets-diets-module")]).then(__webpack_require__.bind(null, /*! ./pages/diets/diets.module */ "./src/app/pages/diets/diets.module.ts")).then(function (m) { return m.DietsPageModule; }); }
+    },
+    {
+        path: 'posts',
+        loadChildren: function () { return Promise.all(/*! import() | pages-posts-posts-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-posts-posts-module")]).then(__webpack_require__.bind(null, /*! ./pages/posts/posts.module */ "./src/app/pages/posts/posts.module.ts")).then(function (m) { return m.PostsPageModule; }); }
+    },
+    {
+        path: 'goals',
+        loadChildren: function () { return Promise.all(/*! import() | pages-goals-goals-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-goals-goals-module")]).then(__webpack_require__.bind(null, /*! ./pages/goals/goals.module */ "./src/app/pages/goals/goals.module.ts")).then(function (m) { return m.GoalsPageModule; }); }
+    },
+    {
+        path: 'levels',
+        loadChildren: function () { return Promise.all(/*! import() | pages-levels-levels-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-levels-levels-module")]).then(__webpack_require__.bind(null, /*! ./pages/levels/levels.module */ "./src/app/pages/levels/levels.module.ts")).then(function (m) { return m.LevelsPageModule; }); }
+    },
+    {
+        path: 'tags',
+        loadChildren: function () { return Promise.all(/*! import() | pages-tags-tags-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-tags-tags-module")]).then(__webpack_require__.bind(null, /*! ./pages/tags/tags.module */ "./src/app/pages/tags/tags.module.ts")).then(function (m) { return m.TagsPageModule; }); }
+    },
+    {
+        path: 'categories',
+        loadChildren: function () { return Promise.all(/*! import() | pages-categories-categories-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-categories-categories-module")]).then(__webpack_require__.bind(null, /*! ./pages/categories/categories.module */ "./src/app/pages/categories/categories.module.ts")).then(function (m) { return m.CategoriesPageModule; }); }
+    },
+    {
+        path: 'equipments',
+        loadChildren: function () { return Promise.all(/*! import() | pages-equipments-equipments-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-equipments-equipments-module")]).then(__webpack_require__.bind(null, /*! ./pages/equipments/equipments.module */ "./src/app/pages/equipments/equipments.module.ts")).then(function (m) { return m.EquipmentsPageModule; }); }
+    },
+    {
+        path: 'bodyparts',
+        loadChildren: function () { return Promise.all(/*! import() | pages-bodyparts-bodyparts-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-bodyparts-bodyparts-module")]).then(__webpack_require__.bind(null, /*! ./pages/bodyparts/bodyparts.module */ "./src/app/pages/bodyparts/bodyparts.module.ts")).then(function (m) { return m.BodypartsPageModule; }); }
+    },
+    {
+        path: 'wgoals/:id/:title',
+        loadChildren: function () { return Promise.all(/*! import() | pages-wgoals-wgoals-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-wgoals-wgoals-module")]).then(__webpack_require__.bind(null, /*! ./pages/wgoals/wgoals.module */ "./src/app/pages/wgoals/wgoals.module.ts")).then(function (m) { return m.WgoalsPageModule; }); }
+    },
+    {
+        path: 'wlevels/:id/:title',
+        loadChildren: function () { return Promise.all(/*! import() | pages-wlevels-wlevels-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-wlevels-wlevels-module")]).then(__webpack_require__.bind(null, /*! ./pages/wlevels/wlevels.module */ "./src/app/pages/wlevels/wlevels.module.ts")).then(function (m) { return m.WlevelsPageModule; }); }
+    },
+    {
+        path: 'ebodyparts/:id/:title',
+        loadChildren: function () { return Promise.all(/*! import() | pages-ebodyparts-ebodyparts-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-ebodyparts-ebodyparts-module")]).then(__webpack_require__.bind(null, /*! ./pages/ebodyparts/ebodyparts.module */ "./src/app/pages/ebodyparts/ebodyparts.module.ts")).then(function (m) { return m.EbodypartsPageModule; }); }
+    },
+    {
+        path: 'cdiets/:id/:title',
+        loadChildren: function () { return Promise.all(/*! import() | pages-cdiets-cdiets-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-cdiets-cdiets-module")]).then(__webpack_require__.bind(null, /*! ./pages/cdiets/cdiets.module */ "./src/app/pages/cdiets/cdiets.module.ts")).then(function (m) { return m.CdietsPageModule; }); }
+    },
+    {
+        path: 'tposts/:id/:title',
+        loadChildren: function () { return Promise.all(/*! import() | pages-tposts-tposts-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-tposts-tposts-module")]).then(__webpack_require__.bind(null, /*! ./pages/tposts/tposts.module */ "./src/app/pages/tposts/tposts.module.ts")).then(function (m) { return m.TpostsPageModule; }); }
+    },
+    {
+        path: 'eequipments/:id/:title',
+        loadChildren: function () { return Promise.all(/*! import() | pages-eequipments-eequipments-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-eequipments-eequipments-module")]).then(__webpack_require__.bind(null, /*! ./pages/eequipments/eequipments.module */ "./src/app/pages/eequipments/eequipments.module.ts")).then(function (m) { return m.EequipmentsPageModule; }); }
+    },
+    {
+        path: 'edetails/:id',
+        loadChildren: function () { return Promise.all(/*! import() | pages-edetails-edetails-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-edetails-edetails-module")]).then(__webpack_require__.bind(null, /*! ./pages/edetails/edetails.module */ "./src/app/pages/edetails/edetails.module.ts")).then(function (m) { return m.EdetailsPageModule; }); }
+    },
+    {
+        path: 'wdetails/:id',
+        loadChildren: function () { return Promise.all(/*! import() | pages-wdetails-wdetails-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-wdetails-wdetails-module")]).then(__webpack_require__.bind(null, /*! ./pages/wdetails/wdetails.module */ "./src/app/pages/wdetails/wdetails.module.ts")).then(function (m) { return m.WdetailsPageModule; }); }
+    },
+    {
+        path: 'ddetails/:id',
+        loadChildren: function () { return Promise.all(/*! import() | pages-ddetails-ddetails-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-ddetails-ddetails-module")]).then(__webpack_require__.bind(null, /*! ./pages/ddetails/ddetails.module */ "./src/app/pages/ddetails/ddetails.module.ts")).then(function (m) { return m.DdetailsPageModule; }); }
+    },
+    {
+        path: 'pdetails/:id',
+        loadChildren: function () { return Promise.all(/*! import() | pages-pdetails-pdetails-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-pdetails-pdetails-module")]).then(__webpack_require__.bind(null, /*! ./pages/pdetails/pdetails.module */ "./src/app/pages/pdetails/pdetails.module.ts")).then(function (m) { return m.PdetailsPageModule; }); }
+    },
+    {
+        path: 'weday/:id/:day',
+        loadChildren: function () { return Promise.all(/*! import() | pages-weday-weday-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-weday-weday-module")]).then(__webpack_require__.bind(null, /*! ./pages/weday/weday.module */ "./src/app/pages/weday/weday.module.ts")).then(function (m) { return m.WedayPageModule; }); }
+    },
+    {
+        path: 'aboutus',
+        loadChildren: function () { return Promise.all(/*! import() | pages-aboutus-aboutus-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-aboutus-aboutus-module")]).then(__webpack_require__.bind(null, /*! ./pages/aboutus/aboutus.module */ "./src/app/pages/aboutus/aboutus.module.ts")).then(function (m) { return m.AboutusPageModule; }); }
+    },
+    {
+        path: 'about',
+        loadChildren: function () { return Promise.all(/*! import() | pages-about-about-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-about-about-module")]).then(__webpack_require__.bind(null, /*! ./pages/about/about.module */ "./src/app/pages/about/about.module.ts")).then(function (m) { return m.AboutPageModule; }); }
+    },
+    {
+        path: 'terms',
+        loadChildren: function () { return Promise.all(/*! import() | pages-terms-terms-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-terms-terms-module")]).then(__webpack_require__.bind(null, /*! ./pages/terms/terms.module */ "./src/app/pages/terms/terms.module.ts")).then(function (m) { return m.TermsPageModule; }); }
+    },
+    {
+        path: 'contact',
+        loadChildren: function () { return Promise.all(/*! import() | pages-contact-contact-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-contact-contact-module")]).then(__webpack_require__.bind(null, /*! ./pages/contact/contact.module */ "./src/app/pages/contact/contact.module.ts")).then(function (m) { return m.ContactPageModule; }); }
+    },
+    {
+        path: 'loader',
+        loadChildren: function () { return Promise.all(/*! import() | pages-loader-loader-module */[__webpack_require__.e("default~pages-about-about-module~pages-aboutus-aboutus-module~pages-bmiinfo-bmiinfo-module~pages-bod~9dbe5797"), __webpack_require__.e("pages-loader-loader-module")]).then(__webpack_require__.bind(null, /*! ./pages/loader/loader.module */ "./src/app/pages/loader/loader.module.ts")).then(function (m) { return m.LoaderPageModule; }); }
+    },
+    {
+        path: 'plan',
+        loadChildren: function () { return __webpack_require__.e(/*! import() | modals-plan-plan-module */ "modals-plan-plan-module").then(__webpack_require__.bind(null, /*! ./modals/plan/plan.module */ "./src/app/modals/plan/plan.module.ts")).then(function (m) { return m.PlanPageModule; }); }
+    },
+    {
+        path: 'subscription',
+        loadChildren: function () { return __webpack_require__.e(/*! import() | modals-subscription-subscription-module */ "modals-subscription-subscription-module").then(__webpack_require__.bind(null, /*! ./modals/subscription/subscription.module */ "./src/app/modals/subscription/subscription.module.ts")).then(function (m) { return m.SubscriptionPageModule; }); }
+    },
+    {
+        path: 'subscription',
+        loadChildren: function () { return __webpack_require__.e(/*! import() | modals-subscription-subscription-module */ "modals-subscription-subscription-module").then(__webpack_require__.bind(null, /*! ./modals/subscription/subscription.module */ "./src/app/modals/subscription/subscription.module.ts")).then(function (m) { return m.SubscriptionPageModule; }); }
+    },
+    {
+        path: 'editprofile',
+        loadChildren: function () { return __webpack_require__.e(/*! import() | pages-editprofile-editprofile-module */ "pages-editprofile-editprofile-module").then(__webpack_require__.bind(null, /*! ./pages/editprofile/editprofile.module */ "./src/app/pages/editprofile/editprofile.module.ts")).then(function (m) { return m.EditprofilePageModule; }); }
+    },
+    {
+        path: 'pro',
+        loadChildren: function () { return __webpack_require__.e(/*! import() | pages-pro-pro-module */ "pages-pro-pro-module").then(__webpack_require__.bind(null, /*! ./pages/pro/pro.module */ "./src/app/pages/pro/pro.module.ts")).then(function (m) { return m.ProPageModule; }); }
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -863,17 +1044,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
 /* harmony import */ var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/fire/storage */ "./node_modules/@angular/fire/storage/index.js");
 /* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/index.js");
-/* harmony import */ var _config_firebase__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./config/firebase */ "./src/app/config/firebase.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./services/auth.service */ "./src/app/services/auth.service.ts");
-/* harmony import */ var _ionic_native_facebook_ngx__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @ionic-native/facebook/ngx */ "./node_modules/@ionic-native/facebook/ngx/index.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm5/ionic-storage.js");
-/* harmony import */ var _ionic_native_screen_orientation_ngx__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @ionic-native/screen-orientation/ngx */ "./node_modules/@ionic-native/screen-orientation/ngx/index.js");
-/* harmony import */ var _ionic_native_streaming_media_ngx__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @ionic-native/streaming-media/ngx */ "./node_modules/@ionic-native/streaming-media/ngx/index.js");
-/* harmony import */ var _ionic_native_admob_free_ngx__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @ionic-native/admob-free/ngx */ "./node_modules/@ionic-native/admob-free/ngx/index.js");
-/* harmony import */ var _services_admob_service__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./services/admob.service */ "./src/app/services/admob.service.ts");
-/* harmony import */ var _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @ionic-native/in-app-browser/ngx */ "./node_modules/@ionic-native/in-app-browser/ngx/index.js");
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
+/* harmony import */ var _config_firebase__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./config/firebase */ "./src/app/config/firebase.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var _ionic_native_facebook_ngx__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @ionic-native/facebook/ngx */ "./node_modules/@ionic-native/facebook/ngx/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm5/ionic-storage.js");
+/* harmony import */ var _ionic_native_screen_orientation_ngx__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @ionic-native/screen-orientation/ngx */ "./node_modules/@ionic-native/screen-orientation/ngx/index.js");
+/* harmony import */ var _ionic_native_streaming_media_ngx__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @ionic-native/streaming-media/ngx */ "./node_modules/@ionic-native/streaming-media/ngx/index.js");
+/* harmony import */ var _ionic_native_admob_free_ngx__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @ionic-native/admob-free/ngx */ "./node_modules/@ionic-native/admob-free/ngx/index.js");
+/* harmony import */ var _services_admob_service__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./services/admob.service */ "./src/app/services/admob.service.ts");
+/* harmony import */ var _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @ionic-native/in-app-browser/ngx */ "./node_modules/@ionic-native/in-app-browser/ngx/index.js");
+
 
 
 
@@ -910,27 +1093,28 @@ var AppModule = /** @class */ (function () {
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
                 _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(),
-                _ionic_storage__WEBPACK_IMPORTED_MODULE_20__["IonicStorageModule"].forRoot(),
+                _ionic_storage__WEBPACK_IMPORTED_MODULE_21__["IonicStorageModule"].forRoot(),
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_10__["AppRoutingModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_16__["FormsModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_16__["ReactiveFormsModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpClientModule"],
-                _angular_fire__WEBPACK_IMPORTED_MODULE_11__["AngularFireModule"].initializeApp(_config_firebase__WEBPACK_IMPORTED_MODULE_15__["firebaseconfig"].firebase),
+                _angular_forms__WEBPACK_IMPORTED_MODULE_17__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_17__["ReactiveFormsModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_20__["HttpClientModule"],
+                _angular_fire__WEBPACK_IMPORTED_MODULE_11__["AngularFireModule"].initializeApp(_config_firebase__WEBPACK_IMPORTED_MODULE_16__["firebaseconfig"].firebase),
                 _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_12__["AngularFirestoreModule"],
                 _angular_fire_auth__WEBPACK_IMPORTED_MODULE_14__["AngularFireAuthModule"],
                 _angular_fire_storage__WEBPACK_IMPORTED_MODULE_13__["AngularFireStorageModule"],
+                _angular_fire_database__WEBPACK_IMPORTED_MODULE_15__["AngularFireDatabaseModule"]
             ],
             providers: [
                 _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
                 _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],
                 _modals_plan_plan_page__WEBPACK_IMPORTED_MODULE_8__["PlanPage"],
-                _ionic_native_facebook_ngx__WEBPACK_IMPORTED_MODULE_18__["Facebook"],
-                _services_auth_service__WEBPACK_IMPORTED_MODULE_17__["AuthService"],
-                _ionic_native_streaming_media_ngx__WEBPACK_IMPORTED_MODULE_22__["StreamingMedia"],
-                _ionic_native_admob_free_ngx__WEBPACK_IMPORTED_MODULE_23__["AdMobFree"],
-                _services_admob_service__WEBPACK_IMPORTED_MODULE_24__["AdmobService"],
-                _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_25__["InAppBrowser"],
-                _ionic_native_screen_orientation_ngx__WEBPACK_IMPORTED_MODULE_21__["ScreenOrientation"],
+                _ionic_native_facebook_ngx__WEBPACK_IMPORTED_MODULE_19__["Facebook"],
+                _services_auth_service__WEBPACK_IMPORTED_MODULE_18__["AuthService"],
+                _ionic_native_streaming_media_ngx__WEBPACK_IMPORTED_MODULE_23__["StreamingMedia"],
+                _ionic_native_admob_free_ngx__WEBPACK_IMPORTED_MODULE_24__["AdMobFree"],
+                _services_admob_service__WEBPACK_IMPORTED_MODULE_25__["AdmobService"],
+                _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_26__["InAppBrowser"],
+                _ionic_native_screen_orientation_ngx__WEBPACK_IMPORTED_MODULE_22__["ScreenOrientation"],
                 { provide: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_12__["FirestoreSettingsToken"], useValue: {} },
                 { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] }
             ],
@@ -1770,6 +1954,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var firebase_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! firebase/storage */ "./node_modules/firebase/storage/dist/index.esm.js");
 /* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/index.js");
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
+
 
 
 
@@ -1777,9 +1963,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var FirebaseService = /** @class */ (function () {
-    function FirebaseService(afs, afAuth) {
+    function FirebaseService(afs, afAuth, afDb) {
         this.afs = afs;
         this.afAuth = afAuth;
+        this.afDb = afDb;
     }
     FirebaseService.prototype.unsubscribeOnLogOut = function () {
         // remember to unsubscribe from the snapshotChanges
@@ -1797,16 +1984,42 @@ var FirebaseService = /** @class */ (function () {
             return user.metadata.creationTime;
         }
     };
+    FirebaseService.prototype.profileData = function (name, age, gender, height, weight) {
+        var _this = this;
+        var uid = firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
+        return new Promise(function (resolve, reject) {
+            _this.afDb.database.ref('profile/' + uid).set({
+                name: name, age: age, gender: gender, height: height, weight: weight
+            })
+                .then(function (res) {
+                resolve(res);
+            }, function (err) { return reject(err); });
+        });
+    };
+    FirebaseService.prototype.getData = function () {
+        var _this = this;
+        var uid = firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
+        return new Promise(function (resolve, reject) {
+            _this.afDb.database.ref('profile/' + uid).on("value", function (snapshot) {
+                console.log(snapshot.val());
+                resolve(snapshot.val());
+            }, function (errorObject) {
+                console.log("The read failed: " + errorObject);
+            });
+        });
+    };
     FirebaseService.ctorParameters = function () { return [
         { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"] },
-        { type: _angular_fire_auth__WEBPACK_IMPORTED_MODULE_5__["AngularFireAuth"] }
+        { type: _angular_fire_auth__WEBPACK_IMPORTED_MODULE_5__["AngularFireAuth"] },
+        { type: _angular_fire_database__WEBPACK_IMPORTED_MODULE_6__["AngularFireDatabase"] }
     ]; };
     FirebaseService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"],
-            _angular_fire_auth__WEBPACK_IMPORTED_MODULE_5__["AngularFireAuth"]])
+            _angular_fire_auth__WEBPACK_IMPORTED_MODULE_5__["AngularFireAuth"],
+            _angular_fire_database__WEBPACK_IMPORTED_MODULE_6__["AngularFireDatabase"]])
     ], FirebaseService);
     return FirebaseService;
 }());

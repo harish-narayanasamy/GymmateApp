@@ -39,6 +39,9 @@ export class ProfilePage implements OnInit {
   isDiets = false;
   subscriptiontext="Only $4.99 per month"
   buttonname="Change to Yearly"
+  profile={name:""}
+  profilePicture: any = "https://www.gravatar.com/avatar/"
+
   constructor(
     public plt: Platform,
     private firebase: FirebaseService,
@@ -131,8 +134,12 @@ export class ProfilePage implements OnInit {
     await alert.present();
   }
   async ionViewWillEnter() {
+    console.log("view")
+    let det = await this.firebase.getData()
+    this.profile.name = det.name;
     this.isLoading = true;
     this.useremail = this.authService.getUserEmail();
+
     this.userid = this.authService.getUserId();
 
     this.subService.getStatus(this.userid).subscribe((data: any) => {

@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-tabs>\r\n\r\n  <ion-tab-bar slot=\"bottom\">\r\n    <ion-tab-button tab=\"tab1\">\r\n      <ion-icon name=\"home\"></ion-icon>\r\n    </ion-tab-button>\r\n\r\n    <ion-tab-button tab=\"tab2\">\r\n      <ion-icon name=\"bicycle\"></ion-icon>\r\n    </ion-tab-button>\r\n\r\n    <ion-tab-button tab=\"tab3\">\r\n      <ion-icon name=\"wine\"></ion-icon>\r\n    </ion-tab-button>\r\n    <ion-tab-button tab=\"tab4\">\r\n      <ion-icon name=\"create\"></ion-icon>\r\n    </ion-tab-button>\r\n    <ion-tab-button tab=\"tab5\">\r\n      <ion-icon name=\"person\"></ion-icon>\r\n    </ion-tab-button>\r\n  </ion-tab-bar>\r\n\r\n</ion-tabs>"
+module.exports = "<ion-tabs>\r\n\r\n  <ion-tab-bar slot=\"bottom\">\r\n    <ion-tab-button tab=\"tab1\" >\r\n      <img src=\"./assets/images/workout.png\" class=\"tab-img\"/> \r\n    </ion-tab-button>\r\n\r\n    <ion-tab-button tab=\"tab2\">\r\n      <img src=\"./assets/images/exercises_.png\" class=\"tab-img\">\r\n    </ion-tab-button>\r\n\r\n    <ion-tab-button tab=\"tab3\">\r\n      <img src=\"./assets/images/diet_.png\" class=\"tab-img\">\r\n    </ion-tab-button>\r\n    <ion-tab-button tab=\"tab4\">\r\n      <img src=\"./assets/images/blog_.png\" class=\"tab-img\">\r\n    </ion-tab-button>\r\n    <ion-tab-button tab=\"tab5\">\r\n      <img src=\"./assets/images/profile_.png\" class=\"tab-img\">\r\n    </ion-tab-button>\r\n  </ion-tab-bar>\r\n\r\n</ion-tabs>"
 
 /***/ }),
 
@@ -170,7 +170,7 @@ var TabsPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3RhYnMvdGFicy5wYWdlLnNjc3MifQ== */"
+module.exports = "ion-tab-button {\n  background-color: #313235; }\n\nion-tab-bar {\n  border: none; }\n\nimg {\n  max-width: 27px !important;\n  max-height: 27px !important; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGFicy9DOlxcVXNlcnNcXEhhcmlzaFxcTG9jYWxfZGV2XFxHeW1tYXRlQXBwL3NyY1xcYXBwXFx0YWJzXFx0YWJzLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHlCQUF5QixFQUFBOztBQUc3QjtFQUNJLFlBQVksRUFBQTs7QUFHaEI7RUFDSSwwQkFBMEI7RUFDMUIsMkJBQTJCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC90YWJzL3RhYnMucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLXRhYi1idXR0b257XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMzEzMjM1O1xyXG59XHJcblxyXG5pb24tdGFiLWJhcntcclxuICAgIGJvcmRlcjogbm9uZTtcclxufVxyXG5cclxuaW1ne1xyXG4gICAgbWF4LXdpZHRoOiAyN3B4ICFpbXBvcnRhbnQ7XHJcbiAgICBtYXgtaGVpZ2h0OiAyN3B4ICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbiJdfQ== */"
 
 /***/ }),
 
