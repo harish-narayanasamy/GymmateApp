@@ -105,38 +105,35 @@
 -->
 
 <ion-grid class="ion-no-padding header-info">
-  <img src="./assets/images/blast.png" class="start-logo"/>
+  <img [src]="exercise.exercise_image | image" class="start-logo">
     <ion-row class="header-bg" [ngStyle]="{'height': innerHeight}">
       <div class="text">
         <div class="title-info">
-      <p class="name">6-DAY FLAT BLAST</p>
-      <ion-buttons slot="end" class="star">
-        <ion-button (click)="addToFavorites()" slot="start">
-          <ion-icon color="primary" mode="md" [name]="icon"></ion-icon>
-          </ion-button>
-      </ion-buttons>
+      <p class="name">{{ exercise.exercise_title }}</p>
+     
     </div>
-      <p class="author">by Margret Robbie</p>
-      <p class="further-info">There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station whether that is on the deck of your home or having a powerful but mobile telescope set up to take to the remove countryside to really get a good shot at some.</p>
+      <p class="author">{{ exercise_title }}</p>
+      <p class="further-info"><span [innerHTML]="exercise.exercise_tips"></span></p>
+
     <div class="level-info">
       <img src="./assets/images/level_easy.png" class="level-logo"/>
       <p class="task">Level</p>
-      <p class="task-info">Easy</p>
+      <p class="task-info">{{ exercise.exercise_level }}</p>
     </div>
     <div class="level-info">
       <img src="./assets/images/sets.png" class="level-logo"/>
       <p class="task">Sets</p>
-      <p class="task-info">4</p>
+      <p class="task-info">{{ exercise.exercise_sets }}</p>
     </div>
     <div class="level-info">
       <img src="./assets/images/reps.png" class="level-logo"/>
       <p class="task">Reps</p>
-      <p class="task-info">10</p>
+      <p class="task-info">{{ exercise.exercise_reps }}</p>
     </div>
     <div class="level-info">
       <img src="./assets/images/rest.png" class="level-logo"/>
       <p class="task">Rest</p>
-      <p class="task-info">1 min</p>
+      <p class="task-info">{{ exercise.exercise_rest }}</p>
     </div>
     </div>
     </ion-row>

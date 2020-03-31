@@ -1,8 +1,7 @@
 <ion-header  class="lightheader" mode="ios" no-border>
   <ion-toolbar mode="ios" class="ion-color" [style.background-color]="customColor">
       <ion-title class="ion-text-capitalize">
-          Title
-        </ion-title>
+        Workout        </ion-title>
               <ion-buttons slot="start">
                 <app-backbutton color="primary"></app-backbutton>
               </ion-buttons>
@@ -19,10 +18,17 @@
     <app-loading *ngIf="isLoading"></app-loading>
 
     <ion-grid class="ion-no-padding">
-        <ion-row class="header-bg">
-          <div class="text">
+      <ion-row class="header-bg" [style.background-image]="'url(' + (workout.workout_image | image) + ')'" [ngStyle]="{'height': innerHeight}">
+        <div class="text">
             <p class="time">{{workout.workout_duration}}</p>
           <p class="name">{{workout.workout_title}}</p>
+        </div>
+        <div>
+          <ion-buttons slot="end">
+            <ion-button (click)="addToFavorites()" slot="start">
+              <ion-icon color="light" mode="md" [name]="icon"></ion-icon>
+              </ion-button>
+      </ion-buttons>
         </div>
         </ion-row>
         <ion-row class="cols">

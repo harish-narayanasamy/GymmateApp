@@ -23,7 +23,7 @@ export class EdetailsPage implements OnInit {
   innerHeight: any;
   days = new Array(7);
   icon = 'star-outline';
-
+  dataFavorite;
   constructor(
     private dataService: DataService,
     private router: Router,

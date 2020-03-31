@@ -23,7 +23,10 @@
     <ion-list lines="none" class="ion-padding-top">
   
     <ion-item *ngFor="let item of exercises" [routerLink]="['/edetails', item.exercise_id]" class="ion-color" [style.background-color]="customColor" detail="false">
-        <ion-label>{{item.exercise_title}}</ion-label>
+      <ion-avatar slot="start">
+        <img [src]="item.exercise_image | image">
+      </ion-avatar>  
+      <ion-label>{{item.exercise_title}}</ion-label>
         <ion-icon name="arrow-forward" color="light" slot="end"></ion-icon>
       </ion-item>
   
