@@ -359,7 +359,11 @@ const routes: Routes = [
   {
     path: 'pro',
     loadChildren: () => import('./pages/pro/pro.module').then( m => m.ProPageModule)
+  },  {
+    path: 'newwdetails',
+    loadChildren: () => import('./pages/newwdetails/newwdetails.module').then( m => m.NewwdetailsPageModule)
   }
+
 
  
 ];
