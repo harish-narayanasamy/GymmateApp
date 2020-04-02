@@ -1,9 +1,277 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>newwdetails</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-header  class="lightheader" mode="ios" no-border>
+  <ion-toolbar mode="ios" class="ion-color" [style.background-color]="customColor">
+      <ion-title class="ion-text-capitalize">
+        Workout        </ion-title>
+        <!-- This should have been here for the previous page
+        <ion-buttons slot="start">
+          <app-backbutton class="arrow"></app-backbutton>
+        </ion-buttons>
+        -->
+                <ion-buttons slot="start">
+                  <ion-icon name="arrow-back" [routerLink]="['/wgoals']" color="primary" class="arrow-back"></ion-icon>
+                </ion-buttons>
+              <ion-buttons slot="end">
+                <ion-button  slot="start" [routerLink]="['/tabs/tab1']">
+                  <img src="./assets/images/close.png" class="close-img"/> 
+                  </ion-button>
+              </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  <!--
+    <div class="details">
+  
+    <img [src]="exercise.exercise_image | image">
+  
+    <ion-grid fixed>
+      <ion-row>
+          <ion-col size="4" class="col-icon">
+          <ion-icon name="md-list" color="primary"></ion-icon>
+          <p class="name">{{strings.ST97}}</p>
+          <p class="value">{{exercise.exercise_sets}}</p>
+          </ion-col>
+  
+          <ion-col size="4" class="col-icon">
+            <ion-icon name="md-sync" color="primary"></ion-icon>
+            <p class="name">{{strings.ST98}}</p>
+            <p class="value">{{exercise.exercise_reps}}</p>
+          </ion-col>
+  
+          <ion-col size="4" class="col-icon">
+              <ion-icon name="md-stopwatch" color="primary"></ion-icon>
+              <p class="name">{{strings.ST99}}</p>
+              <p class="value">{{exercise.exercise_rest}}</p>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+  
+      <div class="tags" (click)=toggleInfo()>
+          <h1>{{strings.ST112}}</h1>
+          <ion-icon [name]="isInfoHidden ? 'arrow-forward' : 'arrow-down'" color="primary" slot="end"></ion-icon>
+        </div>
+      
+        <div class="animated fadeIn subinfo" [hidden]="isInfoHidden">
+        <p class="title">{{strings.ST111}}</p>
+        <p class="subtitle">{{exercise.exercise_title}}</p>
+  
+        <p class="title">{{strings.ST17}}</p>
+        <p class="subtitle">{{exercise.level_title}}</p>
+  
+        </div> 
+      
+        <div class="tags" (click)=toggleInstru()>
+            <h1>{{strings.ST113}}</h1>
+            <ion-icon [name]="isInstruHidden ? 'arrow-forward' : 'arrow-down'" color="primary" slot="end"></ion-icon>
+          </div>
+        
+          <div class="animated fadeIn subinfo" [hidden]="isInstruHidden">
+          <app-html [htmlcontent]="exercise.exercise_instructions"></app-html>
+          </div> 
+  
+  
+          <div class="tags" (click)=toggleTips()>
+              <h1>{{strings.ST114}}</h1>
+              <ion-icon [name]="isTipsHidden ? 'arrow-forward' : 'arrow-down'" color="primary" slot="end"></ion-icon>
+            </div>
+          
+            <div class="animated fadeIn subinfo" [hidden]="isTipsHidden">
+            <app-html [htmlcontent]="exercise.exercise_tips"></app-html>
+            </div> 
+  
+  </div>
+  
+  
+  </ion-content>
+  
+  <ion-footer mode="ios" no-border>
+      <ion-button (click)="play()" class="primary ion-text-uppercase ion-text-bold" mode="ios" expand="block">
+        {{strings.ST102}}
+          <ion-icon slot="start" name="md-arrow-dropright-circle"></ion-icon>
+      </ion-button>
+    </ion-footer>
+  -->
+  
+  <ion-grid class="ion-no-padding header-info">
+    <div class="click-button">
+      <p class="single">Single Day</p>
+      <p class="multiple">Multiple Days</p>
+    </div>
+    <img src="./assets/images/blast.png"class="start-logo">
+      <ion-row class="header-bg" [ngStyle]="{'height': innerHeight}">
+        <div class="text">
+          <div class="title-info">
+        <p class="name"> exercise.exercise_title </p>
+       
+      </div>
+        <p class="author"> by Margret Robbie</p>
+        <p class="further-info">There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station whether that is on the deck of your home or having a powerful but mobile telescope set up to take to the remove countryside to really get a good shot at some.</p>
+  
+      <div class="level-info">
+        <img src="./assets/images/level_easy.png" class="level-logo"/>
+        <p class="task">Level</p>
+        <p class="task-info"> exercise.exercise_level </p>
+      </div>
+      <div class="level-info">
+        <img src="./assets/images/sets.png" class="level-logo"/>
+        <p class="task">Sets</p>
+        <p class="task-info"> exercise.exercise_sets </p>
+      </div>
+      <div class="level-info">
+        <img src="./assets/images/reps.png" class="level-logo"/>
+        <p class="task">Reps</p>
+        <p class="task-info"> exercise.exercise_reps </p>
+      </div>
+      <div class="level-info">
+        <img src="./assets/images/rest.png" class="level-logo"/>
+        <p class="task">Rest</p>
+        <p class="task-info"> exercise.exercise_rest </p>
+      </div>
+      </div>
+      </ion-row>
+      <ion-row class="cols" style="display: none;">
+        <ion-col size="6" class="ion-text-center">
+          <p class="text">strings.ST16</p>
+          <p class="value">workout.goal_title</p>
+        </ion-col>
+        <ion-col size="6" class="ion-text-center">
+            <p class="text">strings.ST17</p>
+            <p class="value">workout.level_title</p>
+          </ion-col>
+      </ion-row>
+        <ion-list lines="none" class="ion-padding-top">
+          <ng-container>
+      
+      
+            <ion-item class="ion-color" [style.background-color]="customColor">
+        
+              <div class=" body-parts">
+                <div class="tags2" (click)=toggleInfo(i)>
+                  
+                  <div class="tags">
+                    <h1>Day 1</h1>
+                    <ion-icon name="arrow-forward" class="ion-color arrow" [style.background-color]="customColor" slot="end"></ion-icon>
+                </div>
+      
+                </div>
+      
+                <div *ngIf="show[i]" class="animated fadeIn subinfo">
+                  <div class=" body-parts2">
+                    <div class="tags" (click)="hide()">
+          
+                      <ion-avatar slot="start">
+          
+                        <img src="./assets/images/blast.png" class="exer-img" />
+          
+                      </ion-avatar>
+                      <div class="exer-info">
+                        <ion-label>item.exercise_title</ion-label>
+                        <p>item.bodypart_title</p>
+          
+                        <ion-icon [name]="isInfoHidden ? 'arrow-down' : 'arrow-up'" slot="end" class="arrow-icon"></ion-icon>
+                      </div>
+          
+                    </div>
+          
+                    <div *ngIf="hideMe" class="animated fadeIn subinfo">
+                      <div class="test">
+              
+                        <div class="further-info">
+                
+                          <p class="exer-title">Barbell Hang Pull</p>
+                          <p class="subtitle">by Margret Robbie</p>
+                          <ion-button (click)="play()" class="primary ion-text-uppercase ion-text-bold play-button" mode="ios"
+                          expand="block">
+                          strings.ST102
+                          <ion-icon slot="start" name="md-arrow-dropright-circle"></ion-icon>
+                        </ion-button>
+                          <div class="detail-info">
+                            <p class="exer-title">How to</p>
+                            <p class="subtitle sub-info">There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station whether that is on the deck of your home or having a powerful but mobile telescope set up to take to the remove countryside to really get a good shot at some.</p>
+                          </div>
+      
+                          <ion-footer mode="ios" no-border>
+    
+                          </ion-footer>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class=" body-parts2">
+                    <div class="tags" (click)="hide()">
+          
+                      <ion-avatar slot="start">
+          
+                        <img src="./assets/images/blast.png" class="exer-img" />
+          
+                      </ion-avatar>
+                      <div class="exer-info">
+                        <ion-label>item.exercise_title</ion-label>
+                        <p>item.bodypart_title</p>
+          
+                        <ion-icon [name]="isInfoHidden ? 'arrow-down' : 'arrow-up'" slot="end" class="arrow-icon"></ion-icon>
+                      </div>
+          
+                    </div>
+          
+                    <div *ngIf="hideMe" class="animated fadeIn subinfo">
+                      <div class="test">
+              
+                        <div class="further-info">
+                
+                          <p class="exer-title">Barbell Hang Pull</p>
+                          <p class="subtitle">by Margret Robbie</p>
+                          <ion-button (click)="play()" class="primary ion-text-uppercase ion-text-bold play-button" mode="ios"
+                          expand="block">
+                          strings.ST102
+                          <ion-icon slot="start" name="md-arrow-dropright-circle"></ion-icon>
+                        </ion-button>
+                          <div class="detail-info">
+                            <p class="exer-title">How to</p>
+                            <p class="subtitle sub-info">There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station whether that is on the deck of your home or having a powerful but mobile telescope set up to take to the remove countryside to really get a good shot at some.</p>
+                          </div>
+      
+                          <ion-footer mode="ios" no-border>
+    
+                          </ion-footer>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+            </ion-item>
+            
+            <!--
+            <ng-template #notShow >
+              <ion-item class="disabled" [routerLink]="['/profile']">
+      
+                <ion-avatar slot="stat">
+                  <img class="body-img" [src]="item.exercise_image | image">
+                </ion-avatar>
+                <div class="body-info">
+                <ion-label>{{item.exercise_title}}</ion-label>
+                <p>10 Reps - 4 Sets</p>
+                </div>
+              </ion-item>
+            </ng-template>
+            -->
+          </ng-container>
+        </ion-list>
+      </ion-grid>
+      <!--FOR EXTRACTING EXCERSISES FROM THE EXCERSISES PAGE
 
-<ion-content>
+      <div class="days">
 
-</ion-content>
+      <div>
+            <div class="tags">
+                <h1>Day 1</h1>
+                <ion-icon name="arrow-forward" class="ion-color arrow" [style.background-color]="customColor" slot="end"></ion-icon>
+            </div>
+      </div>
+
+    </div>
+    -->
+  </ion-content>
