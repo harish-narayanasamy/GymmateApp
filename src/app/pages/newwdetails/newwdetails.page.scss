@@ -73,7 +73,7 @@ ion-item {
 
 ion-list{
     background-color:#191919 ;
-    padding-top: 20px;
+    padding-top: 12px;
 }
 ion-item{
     --background: none !important;
@@ -353,8 +353,8 @@ ion-item{
             color: #fafafa;
             margin-bottom: 0px;
             margin-top: 0px;
+            width: 100%;
         }
-    
         .author, .further-info{
     font-size: 16px;
     line-height: 20px;
@@ -393,6 +393,7 @@ ion-item{
     
         .text{
             margin-bottom: 40px;
+            width: 100%;
         }
     
         .exercise-header{
@@ -518,7 +519,37 @@ ion-item{
             font-size: 22px !important;
         }
 
+        .week-exercise{
+            font-family: 'Proxima-semi';
+            font-size: 18px;
+            line-height: 22px;
+            color: #efeeee;
+            text-align: left;
+            padding: 0;
+        }
 
+        @media only screen and (max-width: 320px) {
+            .task, .task-info{
+                font-size: 14px;
+                line-height: 16px;
+            }
+
+            .task{
+                margin-right: 10px;
+            }
+
+            .level-logo{
+                max-width: 18px;
+                max-height: 18px;
+            }
+            .level-info{
+                max-width: 100%;
+                padding: 5px 10px;
+            }
+            .animated .body-parts2 .tags ion-icon{
+             right: 4px;
+            }
+        }
         @media only screen and (max-width: 280px) {
             ion-item ion-label, .exer-info ion-label{
                 font-size: 16px;
@@ -533,11 +564,29 @@ ion-item{
             .arrow-icon{
                 right: 2%;
             }
+            .level-info{
+                padding: 5px 8px;
+            }
+       
+            .level-logo{
+                max-width: 16px;
+                max-height: 16px;
+            }
+            .animated .body-parts2 .tags ion-icon{
+                right: 2px;
+               }
         }
     
         @media only screen and (max-width: 250px) {
             ion-avatar{
                 max-width: 70px !important;
+            }
+            .level-info{
+                padding: 5px;
+            }
+            .task, .task-info{
+                font-size: 12px;
+                line-height: 14px;
             }
         }
 
