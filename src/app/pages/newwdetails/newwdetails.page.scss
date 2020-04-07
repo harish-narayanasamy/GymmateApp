@@ -510,6 +510,15 @@ ion-item{
             padding: 0px !important;
         }
 
+        .animated .body-parts2 .tags ion-icon{
+            top: inherit !important;
+        }
+
+        .arrow-back{
+            font-size: 22px !important;
+        }
+
+
         @media only screen and (max-width: 280px) {
             ion-item ion-label, .exer-info ion-label{
                 font-size: 16px;
