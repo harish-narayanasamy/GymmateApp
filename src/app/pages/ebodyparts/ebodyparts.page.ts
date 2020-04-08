@@ -9,6 +9,7 @@ import { AuthService } from '../../services/auth.service';
 import { SubscriptionService } from '../../services/subscription.service';
 import {StreamingMedia, StreamingVideoOptions} from '@ionic-native/streaming-media/ngx';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+import { DATABASE_URL } from '@angular/fire';
 
 
 @Component({
@@ -60,11 +61,24 @@ export class EbodypartsPage implements OnInit {
 
   async ionViewWillEnter() {
     let userid = this.auth.getUserId();
-
+/*
     this.subService.getStatus(userid).subscribe((data: any) => {
-      this.subscribe = data.status;
+      if(!data.status){
+        this.subscribe = false;
+
+      }else{
+        this.subscribe = true;
+
+        //this.subscribe = data.status;
+
+      }
+   //   this.subscribe = data.status;
     }, err => { console.log(err) },
     );
+
+*/
+
+
     this.isLoading = true;
 
     this.route.params.subscribe(

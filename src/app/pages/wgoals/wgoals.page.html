@@ -22,9 +22,11 @@
   
     <ion-grid>
         <ion-row>
-          <ion-col size="12" *ngFor="let item of workouts" [routerLink]="['/newwdetails']" [ngStyle]="{'height': height}">
-<!--
           <ion-col size="12" *ngFor="let item of workouts" [routerLink]="['/wdetails', item.workout_id]" [ngStyle]="{'height': height}">
+
+<!--
+            <ion-col size="12" *ngFor="let item of workouts" [routerLink]="['/newwdetails']" [ngStyle]="{'height': height}">
+
 
 -->
              <div class="cardcategory" [style.background-image]="'url(' + (item.workout_image | image) + ')'">
