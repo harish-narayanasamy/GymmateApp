@@ -5,6 +5,7 @@ import { ToastController } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
 import { config } from '../../config/config';
 import { SubscriptionService } from '../../services/subscription.service';
+import { Router } from '@angular/router';
 
 declare var Stripe;
 const stripePublicKey = config.stripePublicKey;
@@ -29,7 +30,9 @@ export class PlanPage implements OnInit {
     public loadingController: LoadingController,
     public toastController: ToastController,
     private navCtrl: NavController,
-    private subService: SubscriptionService
+    private subService: SubscriptionService,
+    private router: Router,
+
   ) {
   }
 
@@ -87,7 +90,7 @@ export class PlanPage implements OnInit {
       }
     };
     this.card = elements.create('card', {
-      // hidePostalCode: false,
+      hidePostalCode: true,
       style: style
     });
     this.card.mount('#card-element');
@@ -137,13 +140,17 @@ export class PlanPage implements OnInit {
                       console.log(result)
                       await this.presentToast("Success", "success");
                       this.dismissModal();
-                      this.navCtrl.back()
+                   //   this.navCtrl.back()
+                   this.router.navigate(['/tabs/tab1']);
+
                     }
                   });
                 } else {
                   await this.presentToast("Success", "success");
                   this.dismissModal();
-                  this.navCtrl.back()
+                //  this.navCtrl.back()
+                  this.router.navigate(['/tabs/tab1']);
+
                 }
               }
             }, err => {

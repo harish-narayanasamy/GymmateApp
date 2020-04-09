@@ -29,7 +29,7 @@
         <div class="author">
            
         <p class="author-info">{{profile.name}}</p>
-        <ion-buttons *ngIf="subscribe !== 'active'" slot="start">
+        <ion-buttons *ngIf="subscribe != 'active'" slot="start">
           <ion-button [routerLink]="['/pro']" style="padding: 0 !important;">
           <img src="./assets/images/pro.png" class="pro">
               </ion-button>
@@ -81,7 +81,7 @@
 
   </ion-card>
 -->
-  <ion-card *ngIf="subscribe === 'active'">
+  <ion-card *ngIf="subscribe == 'active'">
     <!--<ion-img src="../../../assets/images/demo-image.png"></ion-img>-->
     <ion-card-content>
       <ion-card-header>
