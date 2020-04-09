@@ -833,6 +833,10 @@ const routes = [
     {
         path: 'pro',
         loadChildren: () => __webpack_require__.e(/*! import() | pages-pro-pro-module */ "pages-pro-pro-module").then(__webpack_require__.bind(null, /*! ./pages/pro/pro.module */ "./src/app/pages/pro/pro.module.ts")).then(m => m.ProPageModule)
+    },
+    {
+        path: 'newwdetails',
+        loadChildren: () => __webpack_require__.e(/*! import() | pages-newwdetails-newwdetails-module */ "pages-newwdetails-newwdetails-module").then(__webpack_require__.bind(null, /*! ./pages/newwdetails/newwdetails.module */ "./src/app/pages/newwdetails/newwdetails.module.ts")).then(m => m.NewwdetailsPageModule)
     }
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -1118,7 +1122,7 @@ __webpack_require__.r(__webpack_exports__);
 const config = {
     // backend url
     Url: 'http://hosting.lakeba.com:8092',
-    nodeURL: 'http://localhost:5000',
+    nodeURL: 'https://gymmatenode.herokuapp.com/',
     stripePublicKey: "pk_test_TaOKgLRElOgR0ieuNfU1udQQ00A4x4cqnr",
     // facebook page url
     Facebook: 'https://facebook.com',
@@ -1151,7 +1155,7 @@ const firebaseconfig = {
         authDomain: "ionic-8534a.firebaseapp.com",
         databaseURL: "https://ionic-8534a.firebaseio.com",
         projectId: "ionic-8534a",
-        storageBucket: '',
+        storageBucket: "ionic-8534a.appspot.com",
         messagingSenderId: ''
     }
 };
@@ -1897,24 +1901,54 @@ let FirebaseService = class FirebaseService {
         }
     }
     profileData(name, age, gender, height, weight) {
-        let uid = firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
-        return new Promise((resolve, reject) => {
-            this.afDb.database.ref('profile/' + uid).set({
-                name: name, age: age, gender: gender, height: height, weight: weight
-            })
-                .then(res => {
-                resolve(res);
-            }, err => reject(err));
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            let uid = yield firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
+            return new Promise((resolve, reject) => {
+                this.afDb.database.ref('profile/' + uid).set({
+                    name: name, age: age, gender: gender, height: height, weight: weight
+                })
+                    .then(res => {
+                    resolve(res);
+                }, err => reject(err));
+            });
+        });
+    }
+    profileImage(url) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            let uid = yield firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
+            return new Promise((resolve, reject) => {
+                this.afDb.database.ref('profileImage/' + uid).set({
+                    url: url
+                })
+                    .then(res => {
+                    resolve(res);
+                }, err => reject(err));
+            });
+        });
+    }
+    getprofileImage() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            let uid = yield firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
+            return new Promise((resolve, reject) => {
+                this.afDb.database.ref('profileImage/' + uid).on("value", function (snapshot) {
+                    console.log(snapshot.val());
+                    resolve(snapshot.val());
+                }, function (errorObject) {
+                    console.log("The read failed: " + errorObject);
+                });
+            });
         });
     }
     getData() {
-        let uid = firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
-        return new Promise((resolve, reject) => {
-            this.afDb.database.ref('profile/' + uid).on("value", function (snapshot) {
-                console.log(snapshot.val());
-                resolve(snapshot.val());
-            }, function (errorObject) {
-                console.log("The read failed: " + errorObject);
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            let uid = yield firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
+            return new Promise((resolve, reject) => {
+                this.afDb.database.ref('profile/' + uid).on("value", function (snapshot) {
+                    console.log(snapshot.val());
+                    resolve(snapshot.val());
+                }, function (errorObject) {
+                    console.log("The read failed: " + errorObject);
+                });
             });
         });
     }

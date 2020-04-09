@@ -26,7 +26,7 @@
     <ng-container *ngFor="let item of exercises; index as i;">
 
 
-      <ion-item *ngIf="item.premium=='0';else notShow " class="ion-color" [style.background-color]="customColor">
+      <ion-item *ngIf="subscribe || item.premium=='0';else notShow " class="ion-color" [style.background-color]="customColor">
   
         <div class=" body-parts">
           <div class="tags" (click)=toggleInfo(i,item.exercise_id)>
@@ -71,7 +71,7 @@
       </ion-item>
       
       <ng-template #notShow >
-        <ion-item class="disabled" [routerLink]="['/profile']">
+        <ion-item class="disabled" [routerLink]="['/tabs/tab5']">
 
           <ion-avatar slot="start">
             <img class="body-img" [src]="item.exercise_image | image">

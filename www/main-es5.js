@@ -839,6 +839,10 @@ var routes = [
     {
         path: 'pro',
         loadChildren: function () { return __webpack_require__.e(/*! import() | pages-pro-pro-module */ "pages-pro-pro-module").then(__webpack_require__.bind(null, /*! ./pages/pro/pro.module */ "./src/app/pages/pro/pro.module.ts")).then(function (m) { return m.ProPageModule; }); }
+    },
+    {
+        path: 'newwdetails',
+        loadChildren: function () { return __webpack_require__.e(/*! import() | pages-newwdetails-newwdetails-module */ "pages-newwdetails-newwdetails-module").then(__webpack_require__.bind(null, /*! ./pages/newwdetails/newwdetails.module */ "./src/app/pages/newwdetails/newwdetails.module.ts")).then(function (m) { return m.NewwdetailsPageModule; }); }
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -1141,7 +1145,7 @@ __webpack_require__.r(__webpack_exports__);
 var config = {
     // backend url
     Url: 'http://hosting.lakeba.com:8092',
-    nodeURL: 'http://localhost:5000',
+    nodeURL: 'https://gymmatenode.herokuapp.com/',
     stripePublicKey: "pk_test_TaOKgLRElOgR0ieuNfU1udQQ00A4x4cqnr",
     // facebook page url
     Facebook: 'https://facebook.com',
@@ -1174,7 +1178,7 @@ var firebaseconfig = {
         authDomain: "ionic-8534a.firebaseapp.com",
         databaseURL: "https://ionic-8534a.firebaseio.com",
         projectId: "ionic-8534a",
-        storageBucket: '',
+        storageBucket: "ionic-8534a.appspot.com",
         messagingSenderId: ''
     }
 };
@@ -1985,26 +1989,86 @@ var FirebaseService = /** @class */ (function () {
         }
     };
     FirebaseService.prototype.profileData = function (name, age, gender, height, weight) {
-        var _this = this;
-        var uid = firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
-        return new Promise(function (resolve, reject) {
-            _this.afDb.database.ref('profile/' + uid).set({
-                name: name, age: age, gender: gender, height: height, weight: weight
-            })
-                .then(function (res) {
-                resolve(res);
-            }, function (err) { return reject(err); });
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var uid;
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid];
+                    case 1:
+                        uid = _a.sent();
+                        return [2 /*return*/, new Promise(function (resolve, reject) {
+                                _this.afDb.database.ref('profile/' + uid).set({
+                                    name: name, age: age, gender: gender, height: height, weight: weight
+                                })
+                                    .then(function (res) {
+                                    resolve(res);
+                                }, function (err) { return reject(err); });
+                            })];
+                }
+            });
+        });
+    };
+    FirebaseService.prototype.profileImage = function (url) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var uid;
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid];
+                    case 1:
+                        uid = _a.sent();
+                        return [2 /*return*/, new Promise(function (resolve, reject) {
+                                _this.afDb.database.ref('profileImage/' + uid).set({
+                                    url: url
+                                })
+                                    .then(function (res) {
+                                    resolve(res);
+                                }, function (err) { return reject(err); });
+                            })];
+                }
+            });
+        });
+    };
+    FirebaseService.prototype.getprofileImage = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var uid;
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid];
+                    case 1:
+                        uid = _a.sent();
+                        return [2 /*return*/, new Promise(function (resolve, reject) {
+                                _this.afDb.database.ref('profileImage/' + uid).on("value", function (snapshot) {
+                                    console.log(snapshot.val());
+                                    resolve(snapshot.val());
+                                }, function (errorObject) {
+                                    console.log("The read failed: " + errorObject);
+                                });
+                            })];
+                }
+            });
         });
     };
     FirebaseService.prototype.getData = function () {
-        var _this = this;
-        var uid = firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
-        return new Promise(function (resolve, reject) {
-            _this.afDb.database.ref('profile/' + uid).on("value", function (snapshot) {
-                console.log(snapshot.val());
-                resolve(snapshot.val());
-            }, function (errorObject) {
-                console.log("The read failed: " + errorObject);
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var uid;
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid];
+                    case 1:
+                        uid = _a.sent();
+                        return [2 /*return*/, new Promise(function (resolve, reject) {
+                                _this.afDb.database.ref('profile/' + uid).on("value", function (snapshot) {
+                                    console.log(snapshot.val());
+                                    resolve(snapshot.val());
+                                }, function (errorObject) {
+                                    console.log("The read failed: " + errorObject);
+                                });
+                            })];
+                }
             });
         });
     };

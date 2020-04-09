@@ -51,7 +51,7 @@ export class EbodypartsPage implements OnInit {
 
   ngOnInit() {
     this.admob.BannerAd();
-    this.subscribe = true;
+    this.subscribe = false;
   }
 
   // tslint:disable-next-line: use-lifecycle-interface
@@ -61,22 +61,16 @@ export class EbodypartsPage implements OnInit {
 
   async ionViewWillEnter() {
     let userid = this.auth.getUserId();
-/*
+
     this.subService.getStatus(userid).subscribe((data: any) => {
-      if(!data.status){
+      if(data.status!="active"){
         this.subscribe = false;
-
-      }else{
+      } if(data.status=="active"){
         this.subscribe = true;
-
-        //this.subscribe = data.status;
-
       }
-   //   this.subscribe = data.status;
     }, err => { console.log(err) },
     );
 
-*/
 
 
     this.isLoading = true;

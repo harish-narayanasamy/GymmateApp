@@ -24,12 +24,12 @@
     </ion-buttons></ion-row>
     <ion-row class="header-bg" >
       <div class="text">
-          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" class="author-img"/>
+          <img src={{profilePicture}} class="author-img"/>
       <!-- <img src="./assets/images/avatar.png" class="author-img"/>--> 
         <div class="author">
            
         <p class="author-info">{{profile.name}}</p>
-        <ion-buttons slot="start">
+        <ion-buttons *ngIf="subscribe !== 'active'" slot="start">
           <ion-button [routerLink]="['/pro']" style="padding: 0 !important;">
           <img src="./assets/images/pro.png" class="pro">
               </ion-button>
@@ -49,9 +49,9 @@
  
 
 
+<!--
 
   <ion-card *ngIf="subscribe !== 'active'" else cancelSub>
-
 
     <ion-card-content class="plans">
       <ion-list>
@@ -80,7 +80,7 @@
     </ion-card-content>
 
   </ion-card>
-
+-->
   <ion-card *ngIf="subscribe === 'active'">
     <!--<ion-img src="../../../assets/images/demo-image.png"></ion-img>-->
     <ion-card-content>

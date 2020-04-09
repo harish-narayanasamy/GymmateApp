@@ -20,9 +20,14 @@
   <ion-grid class="ion-no-padding">
     <ion-row class="header-bg" >
       <div class="text">
-          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" class="author-img"/>
-       <!--<img src="./assets/images/avatar.png" class="author-img"/>--> 
-        <p class="author-info">Edit</p>
+          <img src= {{url}} class="author-img"/>
+       <!--<img src="./assets/images/avatar.png" class="author-img"/>
+              <p class="author-info">Edit</p>
+
+      --> 
+        <label>
+          <input (change)="uploadImage($event)" type="file" class="image-upload" accept="image/*">
+        </label>
       </div>
     </ion-row> 
     <ion-row  >

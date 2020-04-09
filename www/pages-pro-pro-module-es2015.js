@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header class=\"lightheader\" no-border>\r\n  <ion-toolbar mode=\"ios\" class=\"ion-color\" [style.background-color]=\"customColor\">\r\n    <ion-buttons slot=\"end\">\r\n      <button ion-button icon-only [routerLink]=\"['/tabs/tab5']\">\r\n        <img src=\"./assets/images/cancel_.png\" class=\"cancel-img\"/>\r\n      </button>\r\n  </ion-buttons>\r\n    \r\n  </ion-toolbar>\r\n</ion-header>\r\n<!--\r\n    <ion-buttons slot=\"start\">\r\n      <app-backbutton color=\"light\"></app-backbutton>\r\n    </ion-buttons>\r\n    <ion-buttons slot=\"end\">\r\n      <ion-icon mode=\"md\" name=\"md-exit\" slot=\"end\">\r\n      </ion-icon>\r\n    </ion-buttons>\r\n-->\r\n\r\n<ion-content class=\"ion-no-padding\">\r\n  <ion-grid class=\"ion-no-padding\">\r\n    <ion-row class=\"header-bg\" >\r\n      <div class=\"text\">\r\n        <img src=\"./assets/images/gymate_pro.png\" class=\"author-img\"/>\r\n      </div>\r\n    </ion-row> \r\n    <ion-row  >\r\n      <h1>Become a <br> PRO-member</h1>\r\n      <p class=\"price\">{{ subscriptiontext}}</p>\r\n      <p class=\"money\">30-day money back guarantee</p>\r\n      <div class=\"advantages\">\r\n        <div class=\"advantages-info\">\r\n        <h2> <span><img src=\"./assets/images/check.png\" class=\"cancel-img\">AD-Free Experience</span> </h2>\r\n        <h2> <span><img src=\"./assets/images/check.png\" class=\"cancel-img\">Exercises made only for you</span> </h2>\r\n        <h2> <span><img src=\"./assets/images/check.png\" class=\"cancel-img\">600+ recipes</span> </h2>\r\n        <h2> <span><img src=\"./assets/images/check.png\" class=\"cancel-img\">Coached Workouts by Professionals</span> </h2>\r\n        <h2> <span><img src=\"./assets/images/check.png\" class=\"cancel-img\">Unlimited Blogs </span> </h2>\r\n      </div>\r\n    </div>\r\n      <div class=\"submit\">\r\n        <button class=\"btn btn-primary btn-block\">Subscribe now</button>\r\n      </div>\r\n      <button (click)=\"changeText(buttonname)\" ion-button class=\"price\">{{buttonname}}</button> \r\n\r\n\r\n\r\n    </ion-row>\r\n    <ion-row>\r\n      <h3>Frequently asked questions</h3>\r\n      <div class=\"freq1>\">\r\n      <p class=\"question\">Why choose PRO Membership ?</p>\r\n      <p class=\"answer\">Pro membership includes all workout features based on user’s preference, unlimited meal recipes and a blog to get the most out of the application.</p>\r\n    </div>\r\n    <div class=\"freq1>\">\r\n      <p class=\"question\">Why choose PRO Membership ?</p>\r\n      <p class=\"answer\">Pro membership includes all workout features based on user’s preference, unlimited meal recipes and a blog to get the most out of the application.</p>\r\n    </div>\r\n    <div class=\"freq1>\">\r\n      <p class=\"question\">Why choose PRO Membership ?</p>\r\n      <p class=\"answer\">Pro membership includes all workout features based on user’s preference, unlimited meal recipes and a blog to get the most out of the application.</p>\r\n    </div>\r\n    </ion-row>\r\n  </ion-grid>\r\n  \r\n</ion-content>"
+module.exports = "<ion-header class=\"lightheader\" no-border>\r\n  <ion-toolbar mode=\"ios\" class=\"ion-color\" [style.background-color]=\"customColor\">\r\n    <ion-buttons slot=\"end\">\r\n      <button ion-button icon-only [routerLink]=\"['/tabs/tab5']\">\r\n        <img src=\"./assets/images/cancel_.png\" class=\"cancel-img\"/>\r\n      </button>\r\n  </ion-buttons>\r\n    \r\n  </ion-toolbar>\r\n</ion-header>\r\n<!--\r\n    <ion-buttons slot=\"start\">\r\n      <app-backbutton color=\"light\"></app-backbutton>\r\n    </ion-buttons>\r\n    <ion-buttons slot=\"end\">\r\n      <ion-icon mode=\"md\" name=\"md-exit\" slot=\"end\">\r\n      </ion-icon>\r\n    </ion-buttons>\r\n-->\r\n\r\n<ion-content class=\"ion-no-padding\">\r\n  <ion-grid class=\"ion-no-padding\">\r\n    <ion-row class=\"header-bg\" >\r\n      <div class=\"text\">\r\n        <img src=\"./assets/images/gymate_pro.png\" class=\"author-img\"/>\r\n      </div>\r\n    </ion-row> \r\n    <ion-row  >\r\n      <h1>Become a <br> PRO-member</h1>\r\n      <p class=\"price\">{{ subscriptiontext}}</p>\r\n      <p class=\"money\">30-day money back guarantee</p>\r\n      <div class=\"advantages\">\r\n        <div class=\"advantages-info\">\r\n        <h2> <span><img src=\"./assets/images/check.png\" class=\"cancel-img\">AD-Free Experience</span> </h2>\r\n        <h2> <span><img src=\"./assets/images/check.png\" class=\"cancel-img\">Exercises made only for you</span> </h2>\r\n        <h2> <span><img src=\"./assets/images/check.png\" class=\"cancel-img\">600+ recipes</span> </h2>\r\n        <h2> <span><img src=\"./assets/images/check.png\" class=\"cancel-img\">Coached Workouts by Professionals</span> </h2>\r\n        <h2> <span><img src=\"./assets/images/check.png\" class=\"cancel-img\">Unlimited Blogs </span> </h2>\r\n      </div>\r\n    </div>\r\n      <div class=\"submit\">\r\n        <button (click)=\"premium()\"class=\"btn btn-primary btn-block\">Subscribe now</button>\r\n      </div>\r\n      <button (click)=\"changeText(buttonname)\" ion-button class=\"price\">{{buttonname}}</button> \r\n\r\n\r\n\r\n    </ion-row>\r\n    <ion-row>\r\n      <h3>Frequently asked questions</h3>\r\n      <div class=\"freq1>\">\r\n      <p class=\"question\">Why choose PRO Membership ?</p>\r\n      <p class=\"answer\">Pro membership includes all workout features based on user’s preference, unlimited meal recipes and a blog to get the most out of the application.</p>\r\n    </div>\r\n    <div class=\"freq1>\">\r\n      <p class=\"question\">Why choose PRO Membership ?</p>\r\n      <p class=\"answer\">Pro membership includes all workout features based on user’s preference, unlimited meal recipes and a blog to get the most out of the application.</p>\r\n    </div>\r\n    <div class=\"freq1>\">\r\n      <p class=\"question\">Why choose PRO Membership ?</p>\r\n      <p class=\"answer\">Pro membership includes all workout features based on user’s preference, unlimited meal recipes and a blog to get the most out of the application.</p>\r\n    </div>\r\n    </ion-row>\r\n  </ion-grid>\r\n  \r\n</ion-content>"
 
 /***/ }),
 
@@ -113,35 +113,167 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProPage", function() { return ProPage; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _services_firebase_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/firebase.service */ "./src/app/services/firebase.service.ts");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var _modals_plan_plan_page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../modals/plan/plan.page */ "./src/app/modals/plan/plan.page.ts");
+/* harmony import */ var _services_subscription_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../services/subscription.service */ "./src/app/services/subscription.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
+
+
+
+
+
+
+
+
 
 
 let ProPage = class ProPage {
-    constructor() {
+    constructor(plt, firebase, authService, subService, modalController, alertController, toastController, router, navCtrl) {
+        this.plt = plt;
+        this.firebase = firebase;
+        this.authService = authService;
+        this.subService = subService;
+        this.modalController = modalController;
+        this.alertController = alertController;
+        this.toastController = toastController;
+        this.router = router;
+        this.navCtrl = navCtrl;
+        this.profile = { name: "GymateUser" };
+        this.isLoading = true;
         this.subscriptiontext = "Only $4.99 per month";
         this.buttonname = "Change to Yearly";
+        this.defaultplan = "monthly";
         this.text = 'Change to yearly';
     }
     ngOnInit() {
+    }
+    ionViewWillEnter() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            console.log("view");
+            let det = yield this.firebase.getData();
+            this.profile.name = det.name;
+            this.isLoading = true;
+            this.useremail = this.authService.getUserEmail();
+            this.userid = this.authService.getUserId();
+            this.subService.getStatus(this.userid).subscribe((data) => {
+                this.subscribe = data.status;
+                this.type = data.type;
+                this.subid = data.subid;
+                this.cusid = data.cusid;
+            }, err => { console.log(err); });
+            this.name = yield this.firebase.getDisplayName();
+            this.since = yield this.firebase.getCreationTime();
+            this.innerHeight = this.plt.height() / 3 + 'px';
+            this.isLoading = false;
+        });
     }
     changeText(text) {
         //alert(text)
         if (text == "Change to Yearly") {
             this.subscriptiontext = "Only $54.99 per year";
+            this.defaultplan = "yearly";
             this.buttonname = "Change to Monthly";
         }
         if (text == "Change to Monthly") {
             this.subscriptiontext = "Only $4.99 per month";
+            this.defaultplan = "monthly";
             this.buttonname = "Change to Yearly";
         }
     }
+    premium() {
+        this.presentModal(this.defaultplan, this.useremail, this.userid, _modals_plan_plan_page__WEBPACK_IMPORTED_MODULE_5__["PlanPage"]);
+    }
+    presentModal(value, email, userid, page) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            const modal = yield this.modalController.create({
+                component: page,
+                componentProps: {
+                    'value': value,
+                    'email': email,
+                    'userid': userid
+                }
+            });
+            return yield modal.present();
+        });
+    }
+    presentToast(msg, color) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            const toast = yield this.toastController.create({
+                message: msg,
+                duration: 2000,
+                color: color,
+                position: "top"
+            });
+            toast.present();
+        });
+    }
+    presentAlert() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            const alert = yield this.alertController.create({
+                header: 'Confirm!',
+                message: 'Cancel <strong>Subscription</strong>!!!',
+                buttons: [
+                    {
+                        text: 'Cancel',
+                        role: 'cancel',
+                        cssClass: 'secondary',
+                        handler: (blah) => {
+                            console.log('Confirm Cancel: blah');
+                        }
+                    }, {
+                        text: 'Okay',
+                        handler: () => {
+                            console.log('Confirm Okay');
+                            console.log(this.useremail, this.userid, this.subid, this.cusid, this.type);
+                            this.subService.deleteSubscription(this.useremail, this.userid, this.subid, this.cusid, this.type)
+                                .subscribe((data) => {
+                                console.log(data);
+                                this.presentToast("Success", "success");
+                                //  this.navCtrl.navigateBack('/profile');
+                                //  this.router.navi
+                                this.router.navigate(['/tabs/tab1']);
+                            }, err => {
+                                this.presentToast("failed", "danger");
+                                console.log(err);
+                            });
+                        }
+                    }
+                ]
+            });
+            yield alert.present();
+        });
+    }
 };
+ProPage.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"] },
+    { type: _services_firebase_service__WEBPACK_IMPORTED_MODULE_3__["FirebaseService"] },
+    { type: _services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"] },
+    { type: _services_subscription_service__WEBPACK_IMPORTED_MODULE_6__["SubscriptionService"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["AlertController"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_7__["Router"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"] }
+];
 ProPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-pro',
         template: __webpack_require__(/*! raw-loader!./pro.page.html */ "./node_modules/raw-loader/index.js!./src/app/pages/pro/pro.page.html"),
         styles: [__webpack_require__(/*! ./pro.page.scss */ "./src/app/pages/pro/pro.page.scss")]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"],
+        _services_firebase_service__WEBPACK_IMPORTED_MODULE_3__["FirebaseService"],
+        _services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"],
+        _services_subscription_service__WEBPACK_IMPORTED_MODULE_6__["SubscriptionService"],
+        _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"],
+        _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["AlertController"],
+        _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_7__["Router"],
+        _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"]])
 ], ProPage);
 
 
