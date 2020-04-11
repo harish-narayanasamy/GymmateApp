@@ -35,6 +35,7 @@ import {StreamingMedia} from '@ionic-native/streaming-media/ngx';
 import { AdMobFree } from '@ionic-native/admob-free/ngx';
 import { AdmobService } from './services/admob.service';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent,PlanPage,SubscriptionPage],
@@ -51,7 +52,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
     AngularFirestoreModule, // imports firebase/firestore
     AngularFireAuthModule, // imports firebase/auth
     AngularFireStorageModule, // imports firebase/storage
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule, BrowserAnimationsModule
   ],
   providers: [
     StatusBar,

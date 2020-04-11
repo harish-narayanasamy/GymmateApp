@@ -134,3 +134,40 @@ ion-item ion-icon{
         line-height: 16px;
     }
   }
+  .further-info {
+
+    margin: 0 auto;
+    border: 1px solid #313235;
+    border-top: none;
+    padding: 5%;
+}
+
+  .further-info p {
+    color: #fafafa;
+    line-height: 20px;
+    font-size: 16px;
+    font-family: 'Proxima-regular';
+    --padding-inline-start: 0px !important;
+    padding-inline-start: 0px !important;
+}
+
+.further-info span {
+    margin-left: -23px !important;
+    display: block;
+}
+
+
+.further-info .exer-title {
+    color: #fafafa;
+    line-height: 24px;
+    font-size: 20px;
+    font-family: 'Proxima-bold';
+}
+
+.further-info .subtitle {
+    color: #fafafa;
+    line-height: 20px;
+    font-size: 16px;
+    font-family: 'Proxima-bold';
+}
+

@@ -40,17 +40,23 @@
               <ion-label>{{item.exercise_title}}</ion-label>
               <p>{{item.bodypart_title}}</p>
 
-              <ion-icon [name]="isInfoHidden ? 'arrow-down' : 'arrow-up'" slot="end" class="arrow-icon"></ion-icon>
+              <ion-icon  *ngIf="enabledID!=i" name="arrow-down" slot="end" class="arrow-icon"></ion-icon>
+              <ion-icon *ngIf="enabledID==i" name="arrow-up" slot="end" class="arrow-icon"></ion-icon>
+
+              <!--
+                <ion-icon [name]="isInfoHidden ? 'arrow-down' : 'arrow-up'" slot="end" class="arrow-icon"></ion-icon>
+
+-->
             </div>
 
           </div>
 
-          <div *ngIf="show[i]" class="animated fadeIn subinfo">
+          <div *ngIf="enabledID==i" class="animated fadeIn subinfo">
             <div class="test">
     
               <div class="further-info">
 
-                <p class="exer-title">{{exercise2.exercise_title}}</p>
+                <p class="exer-title">{{item.exercise_title}}</p>
                 <p class="subtitle">{{exercise2.level_title}}</p>
                 <p>{{exercise2.exercise_reps}} Reps - {{exercise2.exercise_sets}} Sets</p>
 
@@ -66,6 +72,8 @@
               </div>
             </div>
           </div>
+
+
         </div>
 
       </ion-item>

@@ -1366,6 +1366,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _config_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/config */ "./src/app/config/config.ts");
 /* harmony import */ var _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/subscription.service */ "./src/app/services/subscription.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 
@@ -1376,12 +1378,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var stripePublicKey = _config_config__WEBPACK_IMPORTED_MODULE_3__["config"].stripePublicKey;
 var PlanPage = /** @class */ (function () {
-    function PlanPage(modalController, loadingController, toastController, navCtrl, subService) {
+    function PlanPage(modalController, loadingController, toastController, navCtrl, subService, router) {
         this.modalController = modalController;
         this.loadingController = loadingController;
         this.toastController = toastController;
         this.navCtrl = navCtrl;
         this.subService = subService;
+        this.router = router;
         this.stripe = Stripe(stripePublicKey);
     }
     PlanPage.prototype.ngOnInit = function () {
@@ -1457,7 +1460,7 @@ var PlanPage = /** @class */ (function () {
             }
         };
         this.card = elements.create('card', {
-            // hidePostalCode: false,
+            hidePostalCode: true,
             style: style
         });
         this.card.mount('#card-element');
@@ -1513,7 +1516,8 @@ var PlanPage = /** @class */ (function () {
                                                 case 2:
                                                     _a.sent();
                                                     this.dismissModal();
-                                                    this.navCtrl.back();
+                                                    //   this.navCtrl.back()
+                                                    this.router.navigate(['/tabs/tab1']);
                                                     _a.label = 3;
                                                 case 3: return [2 /*return*/];
                                             }
@@ -1524,7 +1528,8 @@ var PlanPage = /** @class */ (function () {
                                 case 2:
                                     _a.sent();
                                     this.dismissModal();
-                                    this.navCtrl.back();
+                                    //  this.navCtrl.back()
+                                    this.router.navigate(['/tabs/tab1']);
                                     _a.label = 3;
                                 case 3: return [2 /*return*/];
                             }
@@ -1542,7 +1547,8 @@ var PlanPage = /** @class */ (function () {
         { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"] },
         { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"] },
         { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"] },
-        { type: _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"] }
+        { type: _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
     ]; };
     PlanPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1554,7 +1560,8 @@ var PlanPage = /** @class */ (function () {
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"],
-            _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"]])
+            _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
     ], PlanPage);
     return PlanPage;
 }());
@@ -1589,6 +1596,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _config_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/config */ "./src/app/config/config.ts");
 /* harmony import */ var _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/subscription.service */ "./src/app/services/subscription.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 
@@ -1599,12 +1608,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var stripePublicKey = _config_config__WEBPACK_IMPORTED_MODULE_3__["config"].stripePublicKey;
 var SubscriptionPage = /** @class */ (function () {
-    function SubscriptionPage(modalController, loadingController, toastController, navCtrl, subService) {
+    function SubscriptionPage(modalController, loadingController, toastController, navCtrl, subService, router) {
         this.modalController = modalController;
         this.loadingController = loadingController;
         this.toastController = toastController;
         this.navCtrl = navCtrl;
         this.subService = subService;
+        this.router = router;
         this.stripe = Stripe(stripePublicKey);
     }
     SubscriptionPage.prototype.ngOnInit = function () {
@@ -1713,7 +1723,8 @@ var SubscriptionPage = /** @class */ (function () {
                         console.log(data);
                         _this.presentToast("Success", "success");
                         _this.dismissModal();
-                        _this.navCtrl.back();
+                        //  this.navCtrl.back()
+                        _this.router.navigate(['/tabs/tab1']);
                     }, function (err) {
                         _this.presentToast("Please provide valid details", "danger");
                         //  this.dismissModal()
@@ -1729,7 +1740,8 @@ var SubscriptionPage = /** @class */ (function () {
         { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"] },
         { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"] },
         { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"] },
-        { type: _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"] }
+        { type: _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
     ]; };
     SubscriptionPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1741,7 +1753,8 @@ var SubscriptionPage = /** @class */ (function () {
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"],
-            _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"]])
+            _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
     ], SubscriptionPage);
     return SubscriptionPage;
 }());
