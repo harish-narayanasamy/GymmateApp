@@ -3,7 +3,7 @@ export const config = {
     // backend url
     Url: 'http://hosting.lakeba.com:8092',
 
-    nodeURL: 'http://localhost:5000',
+    nodeURL: 'https://gymmatenode.herokuapp.com',
 
     stripePublicKey:"pk_test_TaOKgLRElOgR0ieuNfU1udQQ00A4x4cqnr",
 

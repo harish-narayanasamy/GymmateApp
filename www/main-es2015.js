@@ -833,6 +833,10 @@ const routes = [
     {
         path: 'pro',
         loadChildren: () => __webpack_require__.e(/*! import() | pages-pro-pro-module */ "pages-pro-pro-module").then(__webpack_require__.bind(null, /*! ./pages/pro/pro.module */ "./src/app/pages/pro/pro.module.ts")).then(m => m.ProPageModule)
+    },
+    {
+        path: 'newwdetails',
+        loadChildren: () => __webpack_require__.e(/*! import() | pages-newwdetails-newwdetails-module */ "pages-newwdetails-newwdetails-module").then(__webpack_require__.bind(null, /*! ./pages/newwdetails/newwdetails.module */ "./src/app/pages/newwdetails/newwdetails.module.ts")).then(m => m.NewwdetailsPageModule)
     }
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -1118,7 +1122,7 @@ __webpack_require__.r(__webpack_exports__);
 const config = {
     // backend url
     Url: 'http://hosting.lakeba.com:8092',
-    nodeURL: 'http://localhost:5000',
+    nodeURL: 'https://gymmatenode.herokuapp.com',
     stripePublicKey: "pk_test_TaOKgLRElOgR0ieuNfU1udQQ00A4x4cqnr",
     // facebook page url
     Facebook: 'https://facebook.com',
@@ -1151,7 +1155,7 @@ const firebaseconfig = {
         authDomain: "ionic-8534a.firebaseapp.com",
         databaseURL: "https://ionic-8534a.firebaseio.com",
         projectId: "ionic-8534a",
-        storageBucket: '',
+        storageBucket: "ionic-8534a.appspot.com",
         messagingSenderId: ''
     }
 };
@@ -1339,6 +1343,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _config_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/config */ "./src/app/config/config.ts");
 /* harmony import */ var _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/subscription.service */ "./src/app/services/subscription.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
 
 
 
@@ -1349,12 +1355,13 @@ __webpack_require__.r(__webpack_exports__);
 
 const stripePublicKey = _config_config__WEBPACK_IMPORTED_MODULE_3__["config"].stripePublicKey;
 let PlanPage = class PlanPage {
-    constructor(modalController, loadingController, toastController, navCtrl, subService) {
+    constructor(modalController, loadingController, toastController, navCtrl, subService, router) {
         this.modalController = modalController;
         this.loadingController = loadingController;
         this.toastController = toastController;
         this.navCtrl = navCtrl;
         this.subService = subService;
+        this.router = router;
         this.stripe = Stripe(stripePublicKey);
     }
     ngOnInit() {
@@ -1409,7 +1416,7 @@ let PlanPage = class PlanPage {
             }
         };
         this.card = elements.create('card', {
-            // hidePostalCode: false,
+            hidePostalCode: true,
             style: style
         });
         this.card.mount('#card-element');
@@ -1455,14 +1462,16 @@ let PlanPage = class PlanPage {
                                         console.log(result);
                                         yield this.presentToast("Success", "success");
                                         this.dismissModal();
-                                        this.navCtrl.back();
+                                        //   this.navCtrl.back()
+                                        this.router.navigate(['/tabs/tab1']);
                                     }
                                 }));
                             }
                             else {
                                 yield this.presentToast("Success", "success");
                                 this.dismissModal();
-                                this.navCtrl.back();
+                                //  this.navCtrl.back()
+                                this.router.navigate(['/tabs/tab1']);
                             }
                         }
                     }), err => {
@@ -1479,7 +1488,8 @@ PlanPage.ctorParameters = () => [
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"] },
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"] },
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"] },
-    { type: _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"] }
+    { type: _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
 ];
 PlanPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1491,7 +1501,8 @@ PlanPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"],
         _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"],
         _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"],
-        _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"]])
+        _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
 ], PlanPage);
 
 
@@ -1524,6 +1535,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _config_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/config */ "./src/app/config/config.ts");
 /* harmony import */ var _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/subscription.service */ "./src/app/services/subscription.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
 
 
 
@@ -1534,12 +1547,13 @@ __webpack_require__.r(__webpack_exports__);
 
 const stripePublicKey = _config_config__WEBPACK_IMPORTED_MODULE_3__["config"].stripePublicKey;
 let SubscriptionPage = class SubscriptionPage {
-    constructor(modalController, loadingController, toastController, navCtrl, subService) {
+    constructor(modalController, loadingController, toastController, navCtrl, subService, router) {
         this.modalController = modalController;
         this.loadingController = loadingController;
         this.toastController = toastController;
         this.navCtrl = navCtrl;
         this.subService = subService;
+        this.router = router;
         this.stripe = Stripe(stripePublicKey);
     }
     ngOnInit() {
@@ -1627,7 +1641,8 @@ let SubscriptionPage = class SubscriptionPage {
                         console.log(data);
                         this.presentToast("Success", "success");
                         this.dismissModal();
-                        this.navCtrl.back();
+                        //  this.navCtrl.back()
+                        this.router.navigate(['/tabs/tab1']);
                     }, err => {
                         this.presentToast("Please provide valid details", "danger");
                         //  this.dismissModal()
@@ -1644,7 +1659,8 @@ SubscriptionPage.ctorParameters = () => [
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"] },
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"] },
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"] },
-    { type: _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"] }
+    { type: _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
 ];
 SubscriptionPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1656,7 +1672,8 @@ SubscriptionPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"],
         _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"],
         _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"],
-        _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"]])
+        _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
 ], SubscriptionPage);
 
 
@@ -1897,24 +1914,54 @@ let FirebaseService = class FirebaseService {
         }
     }
     profileData(name, age, gender, height, weight) {
-        let uid = firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
-        return new Promise((resolve, reject) => {
-            this.afDb.database.ref('profile/' + uid).set({
-                name: name, age: age, gender: gender, height: height, weight: weight
-            })
-                .then(res => {
-                resolve(res);
-            }, err => reject(err));
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            let uid = yield firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
+            return new Promise((resolve, reject) => {
+                this.afDb.database.ref('profile/' + uid).set({
+                    name: name, age: age, gender: gender, height: height, weight: weight
+                })
+                    .then(res => {
+                    resolve(res);
+                }, err => reject(err));
+            });
+        });
+    }
+    profileImage(url) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            let uid = yield firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
+            return new Promise((resolve, reject) => {
+                this.afDb.database.ref('profileImage/' + uid).set({
+                    url: url
+                })
+                    .then(res => {
+                    resolve(res);
+                }, err => reject(err));
+            });
+        });
+    }
+    getprofileImage() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            let uid = yield firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
+            return new Promise((resolve, reject) => {
+                this.afDb.database.ref('profileImage/' + uid).on("value", function (snapshot) {
+                    console.log(snapshot.val());
+                    resolve(snapshot.val());
+                }, function (errorObject) {
+                    console.log("The read failed: " + errorObject);
+                });
+            });
         });
     }
     getData() {
-        let uid = firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
-        return new Promise((resolve, reject) => {
-            this.afDb.database.ref('profile/' + uid).on("value", function (snapshot) {
-                console.log(snapshot.val());
-                resolve(snapshot.val());
-            }, function (errorObject) {
-                console.log("The read failed: " + errorObject);
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            let uid = yield firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
+            return new Promise((resolve, reject) => {
+                this.afDb.database.ref('profile/' + uid).on("value", function (snapshot) {
+                    console.log(snapshot.val());
+                    resolve(snapshot.val());
+                }, function (errorObject) {
+                    console.log("The read failed: " + errorObject);
+                });
             });
         });
     }

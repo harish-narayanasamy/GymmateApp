@@ -26,7 +26,7 @@
     <ng-container *ngFor="let item of exercises; index as i;">
 
 
-      <ion-item *ngIf="item.premium=='0';else notShow " class="ion-color" [style.background-color]="customColor">
+      <ion-item *ngIf="subscribe || item.premium=='0';else notShow " class="ion-color" [style.background-color]="customColor">
   
         <div class=" body-parts">
           <div class="tags" (click)=toggleInfo(i,item.exercise_id)>
@@ -40,17 +40,23 @@
               <ion-label>{{item.exercise_title}}</ion-label>
               <p>{{item.bodypart_title}}</p>
 
-              <ion-icon [name]="isInfoHidden ? 'arrow-down' : 'arrow-up'" slot="end" class="arrow-icon"></ion-icon>
+              <ion-icon  *ngIf="enabledID!=i" name="arrow-down" slot="end" class="arrow-icon"></ion-icon>
+              <ion-icon *ngIf="enabledID==i" name="arrow-up" slot="end" class="arrow-icon"></ion-icon>
+
+              <!--
+                <ion-icon [name]="isInfoHidden ? 'arrow-down' : 'arrow-up'" slot="end" class="arrow-icon"></ion-icon>
+
+-->
             </div>
 
           </div>
 
-          <div *ngIf="show[i]" class="animated fadeIn subinfo">
+          <div *ngIf="enabledID==i" class="animated fadeIn subinfo">
             <div class="test">
     
               <div class="further-info">
 
-                <p class="exer-title">{{exercise2.exercise_title}}</p>
+                <p class="exer-title">{{item.exercise_title}}</p>
                 <p class="subtitle">{{exercise2.level_title}}</p>
                 <p>{{exercise2.exercise_reps}} Reps - {{exercise2.exercise_sets}} Sets</p>
 
@@ -66,12 +72,14 @@
               </div>
             </div>
           </div>
+
+
         </div>
 
       </ion-item>
       
       <ng-template #notShow >
-        <ion-item class="disabled" [routerLink]="['/profile']">
+        <ion-item class="disabled" [routerLink]="['/tabs/tab5']">
 
           <ion-avatar slot="start">
             <img class="body-img" [src]="item.exercise_image | image">

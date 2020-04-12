@@ -53,7 +53,35 @@ export class FirebaseService {
     })
   }
 
+  async profileImage(url) {
  
+    let uid = await firebase.auth().currentUser.uid;
+    return new Promise<any>((resolve, reject) => {
+      this.afDb.database.ref('profileImage/'+uid).set({
+        url:url
+      })
+        .then(res => {
+          resolve(res);
+        },
+          err => reject(err))
+    })
+  }
+
+  async getprofileImage() {
+    let uid = await firebase.auth().currentUser.uid;
+
+  
+      return new Promise<any>((resolve, reject) => {
+        this.afDb.database.ref('profileImage/'+uid).on("value", function (snapshot) {
+          console.log(snapshot.val());
+          resolve (snapshot.val());
+      
+        }, function (errorObject) {
+          console.log("The read failed: " + errorObject);
+        });
+      })
+
+  }
 
   async getData() {
     let uid = await firebase.auth().currentUser.uid;

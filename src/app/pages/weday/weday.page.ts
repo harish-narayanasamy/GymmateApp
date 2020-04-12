@@ -83,17 +83,5 @@ export class WedayPage implements OnInit {
 }
 
 
-toggleInfo(index: number) {
-  this.show[index] = true;
-}
-
- toggleInfo(y: boolean) {
-  this.show[y] = true;
-}
-
-hide() {
-  this.hideMe = true;
-}
-
 
 }

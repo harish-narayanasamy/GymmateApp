@@ -5,6 +5,7 @@ import { ToastController } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
 import { config } from '../../config/config';
 import { SubscriptionService } from '../../services/subscription.service';
+import { Router } from '@angular/router';
 
 declare var Stripe;
 const stripePublicKey = config.stripePublicKey;
@@ -26,7 +27,8 @@ export class SubscriptionPage implements OnInit {
     public loadingController: LoadingController,
     public toastController: ToastController,
     private navCtrl: NavController,
-    private subService: SubscriptionService
+    private subService: SubscriptionService,
+    private router: Router,
 
   ) { }
 
@@ -120,7 +122,9 @@ export class SubscriptionPage implements OnInit {
 
                 this.presentToast("Success","success");
                 this.dismissModal()
-                this.navCtrl.back()
+              //  this.navCtrl.back()
+              this.router.navigate(['/tabs/tab1']);
+
 
 
             }, err => {

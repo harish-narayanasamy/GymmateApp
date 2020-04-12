@@ -10,6 +10,7 @@ import { SubscriptionService } from '../../services/subscription.service';
 import {StreamingMedia, StreamingVideoOptions} from '@ionic-native/streaming-media/ngx';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import { DATABASE_URL } from '@angular/fire';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @Component({
@@ -19,6 +20,7 @@ import { DATABASE_URL } from '@angular/fire';
 })
 export class EbodypartsPage implements OnInit {
 
+  enabledID = null;
   show: {[key: number]: boolean} = {};
   strings = strings;
   exercises: MuscleObject[] = [];
@@ -51,7 +53,7 @@ export class EbodypartsPage implements OnInit {
 
   ngOnInit() {
     this.admob.BannerAd();
-    this.subscribe = true;
+    this.subscribe = false;
   }
 
   // tslint:disable-next-line: use-lifecycle-interface
@@ -61,22 +63,16 @@ export class EbodypartsPage implements OnInit {
 
   async ionViewWillEnter() {
     let userid = this.auth.getUserId();
-/*
+
     this.subService.getStatus(userid).subscribe((data: any) => {
-      if(!data.status){
+      if(data.status!="active"){
         this.subscribe = false;
-
-      }else{
+      } if(data.status=="active"){
         this.subscribe = true;
-
-        //this.subscribe = data.status;
-
       }
-   //   this.subscribe = data.status;
     }, err => { console.log(err) },
     );
 
-*/
 
 
     this.isLoading = true;
@@ -101,14 +97,21 @@ export class EbodypartsPage implements OnInit {
 
   toggleInfo(index: number,id) {
 
-    this.dataService.getDataExerciseById(id)
-    .subscribe( resp => {
+    if(this.enabledID==index){
+      this.enabledID =null;
 
-      this.exercise2 = resp[0];
-      this.isLoading = false;
-
-  } );
-    this.show[index] = true;
+    }else{
+      this.dataService.getDataExerciseById(id)
+      .subscribe( resp => {
+  
+        this.exercise2 = resp[0];
+        this.isLoading = false;
+  
+    } );
+      this.show[index] = true;
+      this.enabledID =index;
+    }
+   
   }
   play() {
     const options: StreamingVideoOptions = {

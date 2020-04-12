@@ -839,6 +839,10 @@ var routes = [
     {
         path: 'pro',
         loadChildren: function () { return __webpack_require__.e(/*! import() | pages-pro-pro-module */ "pages-pro-pro-module").then(__webpack_require__.bind(null, /*! ./pages/pro/pro.module */ "./src/app/pages/pro/pro.module.ts")).then(function (m) { return m.ProPageModule; }); }
+    },
+    {
+        path: 'newwdetails',
+        loadChildren: function () { return __webpack_require__.e(/*! import() | pages-newwdetails-newwdetails-module */ "pages-newwdetails-newwdetails-module").then(__webpack_require__.bind(null, /*! ./pages/newwdetails/newwdetails.module */ "./src/app/pages/newwdetails/newwdetails.module.ts")).then(function (m) { return m.NewwdetailsPageModule; }); }
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -1141,7 +1145,7 @@ __webpack_require__.r(__webpack_exports__);
 var config = {
     // backend url
     Url: 'http://hosting.lakeba.com:8092',
-    nodeURL: 'http://localhost:5000',
+    nodeURL: 'https://gymmatenode.herokuapp.com',
     stripePublicKey: "pk_test_TaOKgLRElOgR0ieuNfU1udQQ00A4x4cqnr",
     // facebook page url
     Facebook: 'https://facebook.com',
@@ -1174,7 +1178,7 @@ var firebaseconfig = {
         authDomain: "ionic-8534a.firebaseapp.com",
         databaseURL: "https://ionic-8534a.firebaseio.com",
         projectId: "ionic-8534a",
-        storageBucket: '',
+        storageBucket: "ionic-8534a.appspot.com",
         messagingSenderId: ''
     }
 };
@@ -1362,6 +1366,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _config_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/config */ "./src/app/config/config.ts");
 /* harmony import */ var _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/subscription.service */ "./src/app/services/subscription.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 
@@ -1372,12 +1378,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var stripePublicKey = _config_config__WEBPACK_IMPORTED_MODULE_3__["config"].stripePublicKey;
 var PlanPage = /** @class */ (function () {
-    function PlanPage(modalController, loadingController, toastController, navCtrl, subService) {
+    function PlanPage(modalController, loadingController, toastController, navCtrl, subService, router) {
         this.modalController = modalController;
         this.loadingController = loadingController;
         this.toastController = toastController;
         this.navCtrl = navCtrl;
         this.subService = subService;
+        this.router = router;
         this.stripe = Stripe(stripePublicKey);
     }
     PlanPage.prototype.ngOnInit = function () {
@@ -1453,7 +1460,7 @@ var PlanPage = /** @class */ (function () {
             }
         };
         this.card = elements.create('card', {
-            // hidePostalCode: false,
+            hidePostalCode: true,
             style: style
         });
         this.card.mount('#card-element');
@@ -1509,7 +1516,8 @@ var PlanPage = /** @class */ (function () {
                                                 case 2:
                                                     _a.sent();
                                                     this.dismissModal();
-                                                    this.navCtrl.back();
+                                                    //   this.navCtrl.back()
+                                                    this.router.navigate(['/tabs/tab1']);
                                                     _a.label = 3;
                                                 case 3: return [2 /*return*/];
                                             }
@@ -1520,7 +1528,8 @@ var PlanPage = /** @class */ (function () {
                                 case 2:
                                     _a.sent();
                                     this.dismissModal();
-                                    this.navCtrl.back();
+                                    //  this.navCtrl.back()
+                                    this.router.navigate(['/tabs/tab1']);
                                     _a.label = 3;
                                 case 3: return [2 /*return*/];
                             }
@@ -1538,7 +1547,8 @@ var PlanPage = /** @class */ (function () {
         { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"] },
         { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"] },
         { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"] },
-        { type: _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"] }
+        { type: _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
     ]; };
     PlanPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1550,7 +1560,8 @@ var PlanPage = /** @class */ (function () {
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"],
-            _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"]])
+            _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
     ], PlanPage);
     return PlanPage;
 }());
@@ -1585,6 +1596,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _config_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/config */ "./src/app/config/config.ts");
 /* harmony import */ var _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/subscription.service */ "./src/app/services/subscription.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 
@@ -1595,12 +1608,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var stripePublicKey = _config_config__WEBPACK_IMPORTED_MODULE_3__["config"].stripePublicKey;
 var SubscriptionPage = /** @class */ (function () {
-    function SubscriptionPage(modalController, loadingController, toastController, navCtrl, subService) {
+    function SubscriptionPage(modalController, loadingController, toastController, navCtrl, subService, router) {
         this.modalController = modalController;
         this.loadingController = loadingController;
         this.toastController = toastController;
         this.navCtrl = navCtrl;
         this.subService = subService;
+        this.router = router;
         this.stripe = Stripe(stripePublicKey);
     }
     SubscriptionPage.prototype.ngOnInit = function () {
@@ -1709,7 +1723,8 @@ var SubscriptionPage = /** @class */ (function () {
                         console.log(data);
                         _this.presentToast("Success", "success");
                         _this.dismissModal();
-                        _this.navCtrl.back();
+                        //  this.navCtrl.back()
+                        _this.router.navigate(['/tabs/tab1']);
                     }, function (err) {
                         _this.presentToast("Please provide valid details", "danger");
                         //  this.dismissModal()
@@ -1725,7 +1740,8 @@ var SubscriptionPage = /** @class */ (function () {
         { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"] },
         { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"] },
         { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"] },
-        { type: _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"] }
+        { type: _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
     ]; };
     SubscriptionPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1737,7 +1753,8 @@ var SubscriptionPage = /** @class */ (function () {
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"],
-            _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"]])
+            _services_subscription_service__WEBPACK_IMPORTED_MODULE_4__["SubscriptionService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
     ], SubscriptionPage);
     return SubscriptionPage;
 }());
@@ -1985,26 +2002,86 @@ var FirebaseService = /** @class */ (function () {
         }
     };
     FirebaseService.prototype.profileData = function (name, age, gender, height, weight) {
-        var _this = this;
-        var uid = firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
-        return new Promise(function (resolve, reject) {
-            _this.afDb.database.ref('profile/' + uid).set({
-                name: name, age: age, gender: gender, height: height, weight: weight
-            })
-                .then(function (res) {
-                resolve(res);
-            }, function (err) { return reject(err); });
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var uid;
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid];
+                    case 1:
+                        uid = _a.sent();
+                        return [2 /*return*/, new Promise(function (resolve, reject) {
+                                _this.afDb.database.ref('profile/' + uid).set({
+                                    name: name, age: age, gender: gender, height: height, weight: weight
+                                })
+                                    .then(function (res) {
+                                    resolve(res);
+                                }, function (err) { return reject(err); });
+                            })];
+                }
+            });
+        });
+    };
+    FirebaseService.prototype.profileImage = function (url) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var uid;
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid];
+                    case 1:
+                        uid = _a.sent();
+                        return [2 /*return*/, new Promise(function (resolve, reject) {
+                                _this.afDb.database.ref('profileImage/' + uid).set({
+                                    url: url
+                                })
+                                    .then(function (res) {
+                                    resolve(res);
+                                }, function (err) { return reject(err); });
+                            })];
+                }
+            });
+        });
+    };
+    FirebaseService.prototype.getprofileImage = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var uid;
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid];
+                    case 1:
+                        uid = _a.sent();
+                        return [2 /*return*/, new Promise(function (resolve, reject) {
+                                _this.afDb.database.ref('profileImage/' + uid).on("value", function (snapshot) {
+                                    console.log(snapshot.val());
+                                    resolve(snapshot.val());
+                                }, function (errorObject) {
+                                    console.log("The read failed: " + errorObject);
+                                });
+                            })];
+                }
+            });
         });
     };
     FirebaseService.prototype.getData = function () {
-        var _this = this;
-        var uid = firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid;
-        return new Promise(function (resolve, reject) {
-            _this.afDb.database.ref('profile/' + uid).on("value", function (snapshot) {
-                console.log(snapshot.val());
-                resolve(snapshot.val());
-            }, function (errorObject) {
-                console.log("The read failed: " + errorObject);
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var uid;
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, firebase_app__WEBPACK_IMPORTED_MODULE_3__["auth"]().currentUser.uid];
+                    case 1:
+                        uid = _a.sent();
+                        return [2 /*return*/, new Promise(function (resolve, reject) {
+                                _this.afDb.database.ref('profile/' + uid).on("value", function (snapshot) {
+                                    console.log(snapshot.val());
+                                    resolve(snapshot.val());
+                                }, function (errorObject) {
+                                    console.log("The read failed: " + errorObject);
+                                });
+                            })];
+                }
             });
         });
     };

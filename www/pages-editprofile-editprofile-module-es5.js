@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header class=\"lightheader\" no-border>\r\n  <ion-toolbar mode=\"ios\" class=\"ion-color\" [style.background-color]=\"customColor\">\r\n    <ion-title class=\"ion-text-capitalize\">\r\n      Edit Profile\r\n    </ion-title>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-icon name=\"arrow-back\" [routerLink]=\"['/tabs/tab5']\" color=\"primary\" class=\"arrow-back\"></ion-icon>\r\n    </ion-buttons>\r\n    <ion-buttons slot=\"end\">\r\n      <ion-button  slot=\"start\" [routerLink]=\"['/tabs/tab1']\">\r\n        <img src=\"./assets/images/close.png\" class=\"close-img\"/> \r\n        </ion-button>\r\n    </ion-buttons>\r\n  </ion-toolbar>\r\n</ion-header>\r\n<!--\r\n    <ion-buttons slot=\"start\">\r\n      <app-backbutton color=\"light\"></app-backbutton>\r\n    </ion-buttons>\r\n    <ion-buttons slot=\"end\">\r\n      <ion-icon mode=\"md\" name=\"md-exit\" slot=\"end\">\r\n      </ion-icon>\r\n    </ion-buttons>\r\n-->\r\n\r\n<ion-content class=\"ion-no-padding\">\r\n\r\n\r\n  <ion-grid class=\"ion-no-padding\">\r\n    <ion-row class=\"header-bg\" >\r\n      <div class=\"text\">\r\n        <img src=\"./assets/images/avatar.png\" class=\"author-img\"/>\r\n        <p class=\"author-info\">Edit</p>\r\n      </div>\r\n    </ion-row> \r\n    <ion-row  >\r\n  <div class=\"hero-image\">\r\n \r\n  <div  class=\"container bg-text\" >\r\n    <div style=\"margin:0 auto;width:90%\">\r\n        <form #f=\"ngForm\" (ngSubmit)=\"onSubmit(f)\">\r\n          <div class=\"alert alert-danger\" *ngIf=\"serverError\">\r\n            {{ serverMessage }}\r\n          </div>\r\n          <p class=\"info-required\">Name</p>\r\n          <div class=\"form-group\">\r\n            <input required ngModel name=\"name\" #name=\"ngModel\" id=\"name\" type=\"name\"\r\n              pattern=\"[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}\" class=\"form-control form-rounded \" rows=\"20\"\r\n              placeholder=\"Name\">\r\n            <div class=\"alert alert-danger\" *ngIf=\"name.touched && !name.valid\">\r\n              <div *ngIf=\"name.errors.required\" class=\"required\">\r\n                Name Required\r\n              </div>\r\n              <div *ngIf=\"name.errors.pattern\" class=\"required2\">\r\n                Enter a Valid Name\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <p class=\"info-required\">Age</p>\r\n          <div class=\"form-group\">\r\n            <input required minlength=\"6\" ngModel name=\"age\" #age=\"ngModel\" id=\"age\" type=\"age\"\r\n              class=\"form-control form-rounded\" rows=\"20\" placeholder=\"Age\">\r\n             <div class=\"alert alert-danger\" *ngIf=\"age.touched && !age.valid\">\r\n              <div *ngIf=\"age.errors.required\" class=\"required\">\r\n                Age Required\r\n              </div>\r\n              <div *ngIf=\"age.errors.minlength\" class=\"required2\">\r\n                Enter a Valid Age\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <p class=\"info-required\">Gender</p>\r\n          <div class=\"form-group\">\r\n            <input required ngModel name=\"gender\" #gender=\"ngModel\" id=\"gender\" type=\"gender\"\r\n              pattern=\"[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}\" class=\"form-control form-rounded \" rows=\"20\"\r\n              placeholder=\"Gender\">\r\n            <div class=\"alert alert-danger\" *ngIf=\"gender.touched && !gender.valid\">\r\n              <div *ngIf=\"gender.errors.required\" class=\"required\">\r\n                Gender Required\r\n              </div>\r\n              <div *ngIf=\"gender.errors.pattern\" class=\"required2\">\r\n                Enter a Valid gender\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <p class=\"info-required\">Height</p>\r\n          <div class=\"form-group\">\r\n            <input required ngModel name=\"Height\" #height=\"ngModel\" id=\"height\" type=\"height\"\r\n              pattern=\"[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}\" class=\"form-control form-rounded \" rows=\"20\"\r\n              placeholder=\"Height\">\r\n            <div class=\"alert alert-danger\" *ngIf=\"height.touched && !height.valid\">\r\n              <div *ngIf=\"height.errors.required\" class=\"required\">\r\n                Height Required\r\n              </div>\r\n              <div *ngIf=\"height.errors.pattern\" class=\"required2\">\r\n                Enter a valid height\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <p class=\"info-required\">Weight</p>\r\n          <div class=\"form-group\">\r\n            <input required ngModel name=\"Weight\" #weight=\"ngModel\" id=\"weight\" type=\"weight\"\r\n              pattern=\"[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}\" class=\"form-control form-rounded \" rows=\"20\"\r\n              placeholder=\"Weight\">\r\n            <div class=\"alert alert-danger\" *ngIf=\"weight.touched && !weight.valid\">\r\n              <div *ngIf=\"weight.errors.required\" class=\"required\">\r\n                Weight Required\r\n              </div>\r\n              <div *ngIf=\"weight.errors.pattern\" class=\"required2\">\r\n                Enter a Valid weight\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group text-center submit\">\r\n            <button class=\"btn btn-primary btn-block\" [disabled]=\"!f.valid\">Save</button>\r\n          </div>\r\n        </form>\r\n      </div>\r\n\r\n \r\n\r\n  </div>\r\n</div>\r\n    </ion-row>\r\n  </ion-grid>\r\n  \r\n</ion-content>"
+module.exports = "<ion-header class=\"lightheader\" no-border>\r\n  <ion-toolbar mode=\"ios\" class=\"ion-color\" [style.background-color]=\"customColor\">\r\n    <ion-title class=\"ion-text-capitalize\">\r\n      Edit Profile\r\n    </ion-title>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-icon name=\"arrow-back\" [routerLink]=\"['/tabs/tab5']\" color=\"primary\" class=\"arrow-back\"></ion-icon>\r\n    </ion-buttons>\r\n    <ion-buttons slot=\"end\">\r\n      <ion-button  slot=\"start\" [routerLink]=\"['/tabs/tab1']\">\r\n        <img src=\"./assets/images/close.png\" class=\"close-img\"/> \r\n        </ion-button>\r\n    </ion-buttons>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content class=\"ion-no-padding\">\r\n\r\n\r\n  <ion-grid class=\"ion-no-padding\">\r\n    <ion-row class=\"header-bg\" >\r\n      <div class=\"text\">\r\n          <img src= {{url}} class=\"author-img\"/>\r\n       <!--<img src=\"./assets/images/avatar.png\" class=\"author-img\"/>\r\n              <p class=\"author-info\">Edit</p>\r\n\r\n      --> \r\n        <label>\r\n          <input (change)=\"uploadImage($event)\" type=\"file\" class=\"image-upload\" accept=\"image/*\">\r\n        </label>\r\n      </div>\r\n    </ion-row> \r\n    <ion-row  >\r\n  <div class=\"hero-image\">\r\n \r\n  <div  class=\"container bg-text\" >\r\n    <div style=\"margin:0 auto;width:90%\">\r\n        <form #f=\"ngForm\" (ngSubmit)=\"onSubmit(f)\">\r\n          <div class=\"alert alert-danger\" *ngIf=\"serverError\">\r\n            {{ serverMessage }}\r\n          </div>\r\n          <p class=\"info-required\">Name</p>\r\n          <div class=\"form-group\">\r\n            <input required [(ngModel)] =\"profile.name\" name=\"name\" #name=\"ngModel\" id=\"name\" type=\"text\"\r\n              class=\"form-control form-rounded \" rows=\"20\"\r\n              placeholder=\"Name\">\r\n            <div class=\"alert alert-danger\" *ngIf=\"name.touched && !name.valid\">\r\n              <div *ngIf=\"name.errors.required\" class=\"required\">\r\n                Name Required\r\n              </div>\r\n              <div *ngIf=\"name.errors.pattern\" class=\"required2\">\r\n                Enter a Valid Name\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <p class=\"info-required\">Age</p>\r\n          <div class=\"form-group\">\r\n            <input required  [(ngModel)] =\"profile.age\" name=\"age\" #age=\"ngModel\" id=\"age\" type=\"number\"\r\n              class=\"form-control form-rounded\" rows=\"20\" placeholder=\"Age\">\r\n             <div class=\"alert alert-danger\" *ngIf=\"age.touched && !age.valid\">\r\n              <div *ngIf=\"age.errors.required\" class=\"required\">\r\n                Age Required\r\n              </div>\r\n              <div *ngIf=\"age.errors.minlength\" class=\"required2\">\r\n                Enter a Valid Age\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <p class=\"info-required\">Gender</p>\r\n          <div class=\"form-group\">\r\n            <input required [(ngModel)] =\"profile.gender\" name=\"gender\" #gender=\"ngModel\" id=\"gender\" type=\"text\"\r\n               class=\"form-control form-rounded \" rows=\"20\"\r\n              placeholder=\"Gender\">\r\n            <div class=\"alert alert-danger\" *ngIf=\"gender.touched && !gender.valid\">\r\n              <div *ngIf=\"gender.errors.required\" class=\"required\">\r\n                Gender Required\r\n              </div>\r\n              <div *ngIf=\"gender.errors.pattern\" class=\"required2\">\r\n                Enter a Valid gender\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <p class=\"info-required\">Height</p>\r\n          <div class=\"form-group\">\r\n            <input required [(ngModel)] =\"profile.height\" name=\"Height\" #height=\"ngModel\" id=\"height\" type=\"number\"\r\n               class=\"form-control form-rounded \" rows=\"20\"\r\n              placeholder=\"Height\">\r\n            <div class=\"alert alert-danger\" *ngIf=\"height.touched && !height.valid\">\r\n              <div *ngIf=\"height.errors.required\" class=\"required\">\r\n                Height Required\r\n              </div>\r\n              <div *ngIf=\"height.errors.pattern\" class=\"required2\">\r\n                Enter a valid height\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <p class=\"info-required\">Weight</p>\r\n          <div class=\"form-group\">\r\n            <input required [(ngModel)] =\"profile.weight\" name=\"Weight\" #weight=\"ngModel\" id=\"weight\" type=\"number\"\r\n               class=\"form-control form-rounded \" rows=\"20\"\r\n              placeholder=\"Weight\">\r\n            <div class=\"alert alert-danger\" *ngIf=\"weight.touched && !weight.valid\">\r\n              <div *ngIf=\"weight.errors.required\" class=\"required\">\r\n                Weight Required\r\n              </div>\r\n              <div *ngIf=\"weight.errors.pattern\" class=\"required2\">\r\n                Enter a Valid weight\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group text-center submit\">\r\n            <button class=\"btn btn-primary btn-block\" [disabled]=\"!f.valid\">Save</button>\r\n          </div>\r\n        </form>\r\n      </div>\r\n\r\n \r\n\r\n  </div>\r\n\r\n\r\n</div>\r\n    </ion-row>\r\n  </ion-grid>\r\n  \r\n</ion-content>"
 
 /***/ }),
 
@@ -120,43 +120,116 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_firebase_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/firebase.service */ "./src/app/services/firebase.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
+/* harmony import */ var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/fire/storage */ "./node_modules/@angular/fire/storage/index.js");
+
+
+
+
 
 
 
 var EditprofilePage = /** @class */ (function () {
-    function EditprofilePage(dataService) {
+    function EditprofilePage(dataService, router, navCtrl, afs, storage) {
         this.dataService = dataService;
+        this.router = router;
+        this.navCtrl = navCtrl;
+        this.afs = afs;
+        this.storage = storage;
+        this.profile = { name: '', age: '', gender: '', height: '', weight: '' };
+        this.url = "";
+        this.newImage = {
+            id: this.afs.createId(), image: ''
+        };
+        this.loading = false;
     }
     EditprofilePage.prototype.ngOnInit = function () {
-        this.name = "harish";
-        this.getdata();
+    };
+    EditprofilePage.prototype.ionViewWillEnter = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                this.getdata();
+                return [2 /*return*/];
+            });
+        });
     };
     EditprofilePage.prototype.getdata = function () {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var det, iurl;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
-                    case 0:
-                        console.log("working");
-                        return [4 /*yield*/, this.dataService.getData()];
+                    case 0: return [4 /*yield*/, this.dataService.getData()];
                     case 1:
-                        _a.sent();
+                        det = _a.sent();
+                        return [4 /*yield*/, this.dataService.getprofileImage()];
+                    case 2:
+                        iurl = _a.sent();
+                        this.url = iurl.url;
+                        this.profile.name = det.name;
+                        this.profile.age = det.age;
+                        this.profile.gender = det.gender;
+                        this.profile.height = det.height;
+                        this.profile.weight = det.weight;
                         return [2 /*return*/];
                 }
             });
         });
     };
     EditprofilePage.prototype.onSubmit = function (f) {
-        console.log(f);
+        var _this = this;
+        console.log(f.value.name, f.value.age, f.value.gender, f.value.Height, f.value.Weight);
         this.dataService.profileData(f.value.name, f.value.age, f.value.gender, f.value.Height, f.value.Weight)
             .then(function (res) {
             f.reset();
+            _this.navCtrl.navigateBack('/profile');
             console.log(res);
         }, function (err) {
             console.log(err);
         });
     };
+    EditprofilePage.prototype.uploadImage = function (event) {
+        var _this = this;
+        this.loading = true;
+        if (event.target.files && event.target.files[0]) {
+            var reader = new FileReader();
+            reader.readAsDataURL(event.target.files[0]);
+            // For Preview Of Image
+            reader.onload = function (e) {
+                _this.url = e.target.result;
+                // For Uploading Image To Firebase
+                var fileraw = event.target.files[0];
+                console.log(fileraw);
+                var filePath = '/Image/' + _this.newImage.id + '/' + 'Image' + (Math.floor(1000 + Math.random() * 9000) + 1);
+                var result = _this.SaveImageRef(filePath, fileraw);
+                var ref = result.ref;
+                result.task.then(function (a) {
+                    ref.getDownloadURL().subscribe(function (a) {
+                        console.log(a);
+                        _this.newImage.image = a;
+                        _this.loading = false;
+                        _this.dataService.profileImage(a);
+                    });
+                    //  this.afs.collection('Image').doc(this.newImage.id).set(this.newImage);
+                });
+            }, function (error) {
+                alert("Error");
+            };
+        }
+    };
+    EditprofilePage.prototype.SaveImageRef = function (filePath, file) {
+        return {
+            task: this.storage.upload(filePath, file),
+            ref: this.storage.ref(filePath)
+        };
+    };
     EditprofilePage.ctorParameters = function () { return [
-        { type: _services_firebase_service__WEBPACK_IMPORTED_MODULE_2__["FirebaseService"] }
+        { type: _services_firebase_service__WEBPACK_IMPORTED_MODULE_2__["FirebaseService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+        { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["NavController"] },
+        { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_5__["AngularFirestore"] },
+        { type: _angular_fire_storage__WEBPACK_IMPORTED_MODULE_6__["AngularFireStorage"] }
     ]; };
     EditprofilePage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -164,7 +237,11 @@ var EditprofilePage = /** @class */ (function () {
             template: __webpack_require__(/*! raw-loader!./editprofile.page.html */ "./node_modules/raw-loader/index.js!./src/app/pages/editprofile/editprofile.page.html"),
             styles: [__webpack_require__(/*! ./editprofile.page.scss */ "./src/app/pages/editprofile/editprofile.page.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_firebase_service__WEBPACK_IMPORTED_MODULE_2__["FirebaseService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_firebase_service__WEBPACK_IMPORTED_MODULE_2__["FirebaseService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["NavController"],
+            _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_5__["AngularFirestore"],
+            _angular_fire_storage__WEBPACK_IMPORTED_MODULE_6__["AngularFireStorage"]])
     ], EditprofilePage);
     return EditprofilePage;
 }());

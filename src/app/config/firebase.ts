@@ -5,7 +5,7 @@ export const firebaseconfig = {
         authDomain: "ionic-8534a.firebaseapp.com",
         databaseURL: "https://ionic-8534a.firebaseio.com",
         projectId: "ionic-8534a",
-        storageBucket: '',
+        storageBucket: "ionic-8534a.appspot.com",
         messagingSenderId: ''
       }
 

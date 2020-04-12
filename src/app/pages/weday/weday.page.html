@@ -72,6 +72,7 @@
           </div> 
   
   
+<<<<<<< HEAD
           <div class="tags" (click)=toggleTips()>
               <h1>{{strings.ST114}}</h1>
               <ion-icon [name]="isTipsHidden ? 'arrow-forward' : 'arrow-down'" color="primary" slot="end"></ion-icon>
@@ -80,6 +81,16 @@
             <div class="animated fadeIn subinfo" [hidden]="isTipsHidden">
             <app-html [htmlcontent]="exercise.exercise_tips"></app-html>
             </div> 
+=======
+    <ion-item *ngFor="let item of exercises" [routerLink]="['/edetails', item.exercise_id]" class="ion-color" [style.background-color]="customColor" detail="false">
+      <ion-avatar slot="start">
+        <img [src]="item.exercise_image | image">
+      </ion-avatar>  
+      <ion-label>{{item.exercise_title}}</ion-label>
+        <ion-icon name="arrow-forward" class="ion-color arrow" [style.background-color]="customColor" slot="end"></ion-icon>
+    
+      </ion-item>
+>>>>>>> 65baba8d296f3ac2e0d78477c93c9c47c4b7f7b1
   
   </div>
   
