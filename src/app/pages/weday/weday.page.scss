@@ -49,6 +49,7 @@ ion-item {
     opacity: 1; //This grays it out to look disabled
     position: relative;
     z-index: 1000;
+    filter: blur(1px);
 }
 
 .item-native{
