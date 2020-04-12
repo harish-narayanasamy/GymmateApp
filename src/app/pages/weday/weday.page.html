@@ -3,11 +3,7 @@
       <ion-title class="ion-text-capitalize">
         {{strings.ST87}} {{day}}
       </ion-title>
-        <!-- This should have been here for the previous page
-        <ion-buttons slot="start">
-          <app-backbutton class="arrow"></app-backbutton>
-        </ion-buttons>
-        -->
+       
         <ion-buttons slot="start">
           <app-backbutton color="primary"></app-backbutton>
         </ion-buttons>
@@ -20,125 +16,41 @@
   </ion-header>
   
   <ion-content>
-  <!--
-    <div class="details">
-  
-    <img [src]="exercise.exercise_image | image">
-  
-    <ion-grid fixed>
-      <ion-row>
-          <ion-col size="4" class="col-icon">
-          <ion-icon name="md-list" color="primary"></ion-icon>
-          <p class="name">{{strings.ST97}}</p>
-          <p class="value">{{exercise.exercise_sets}}</p>
-          </ion-col>
-  
-          <ion-col size="4" class="col-icon">
-            <ion-icon name="md-sync" color="primary"></ion-icon>
-            <p class="name">{{strings.ST98}}</p>
-            <p class="value">{{exercise.exercise_reps}}</p>
-          </ion-col>
-  
-          <ion-col size="4" class="col-icon">
-              <ion-icon name="md-stopwatch" color="primary"></ion-icon>
-              <p class="name">{{strings.ST99}}</p>
-              <p class="value">{{exercise.exercise_rest}}</p>
-          </ion-col>
-      </ion-row>
-    </ion-grid>
-  
-  
-      <div class="tags" (click)=toggleInfo()>
-          <h1>{{strings.ST112}}</h1>
-          <ion-icon [name]="isInfoHidden ? 'arrow-forward' : 'arrow-down'" color="primary" slot="end"></ion-icon>
-        </div>
-      
-        <div class="animated fadeIn subinfo" [hidden]="isInfoHidden">
-        <p class="title">{{strings.ST111}}</p>
-        <p class="subtitle">{{exercise.exercise_title}}</p>
-  
-        <p class="title">{{strings.ST17}}</p>
-        <p class="subtitle">{{exercise.level_title}}</p>
-  
-        </div> 
-      
-        <div class="tags" (click)=toggleInstru()>
-            <h1>{{strings.ST113}}</h1>
-            <ion-icon [name]="isInstruHidden ? 'arrow-forward' : 'arrow-down'" color="primary" slot="end"></ion-icon>
-          </div>
-        
-          <div class="animated fadeIn subinfo" [hidden]="isInstruHidden">
-          <app-html [htmlcontent]="exercise.exercise_instructions"></app-html>
-          </div> 
-  
-  
-<<<<<<< HEAD
-          <div class="tags" (click)=toggleTips()>
-              <h1>{{strings.ST114}}</h1>
-              <ion-icon [name]="isTipsHidden ? 'arrow-forward' : 'arrow-down'" color="primary" slot="end"></ion-icon>
-            </div>
-          
-            <div class="animated fadeIn subinfo" [hidden]="isTipsHidden">
-            <app-html [htmlcontent]="exercise.exercise_tips"></app-html>
-            </div> 
-=======
-    <ion-item *ngFor="let item of exercises" [routerLink]="['/edetails', item.exercise_id]" class="ion-color" [style.background-color]="customColor" detail="false">
-      <ion-avatar slot="start">
-        <img [src]="item.exercise_image | image">
-      </ion-avatar>  
-      <ion-label>{{item.exercise_title}}</ion-label>
-        <ion-icon name="arrow-forward" class="ion-color arrow" [style.background-color]="customColor" slot="end"></ion-icon>
-    
-      </ion-item>
->>>>>>> 65baba8d296f3ac2e0d78477c93c9c47c4b7f7b1
-  
-  </div>
-  
-  
-  </ion-content>
-  
-  <ion-footer mode="ios" no-border>
-      <ion-button (click)="play()" class="primary ion-text-uppercase ion-text-bold" mode="ios" expand="block">
-        {{strings.ST102}}
-          <ion-icon slot="start" name="md-arrow-dropright-circle"></ion-icon>
-      </ion-button>
-    </ion-footer>
-  -->
+
   
   <ion-grid class="ion-no-padding header-info">
 
         <ion-list lines="none" class="ion-padding-top">
-          <ng-container>
+          <ng-container *ngFor="let item of exercises; index as i;">
       
       
             <ion-item class="ion-color" [style.background-color]="customColor">
               <div class=" body-parts">
-                  <div class=" body-parts2">
-                    <div class="tags" (click)="hide()">
+                    <div class="tags"  (click)=toggleInfo(i,item.exercise_id)>
           
                       <ion-avatar slot="start">
-          
-                        <img src="./assets/images/blast.png" class="exer-img" />
+                        <img class="exer-img" [src]="item.exercise_image | image">
+
           
                       </ion-avatar>
                       <div class="exer-info">
-                        <ion-label>item.exercise_title</ion-label>
-                        <p>item.bodypart_title</p>
+                        <ion-label>{{item.exercise_title}}</ion-label>
           
-                        <ion-icon [name]="isInfoHidden ? 'arrow-down' : 'arrow-up'" slot="end" class="arrow-icon"></ion-icon>
-                      </div>
+                        <ion-icon  *ngIf="enabledID!=i" name="arrow-down" slot="end" class="arrow-icon"></ion-icon>
+                        <ion-icon *ngIf="enabledID==i" name="arrow-up" slot="end" class="arrow-icon"></ion-icon>                      </div>
           
                     </div>
           
-                    <div *ngIf="hideMe" class="animated fadeIn subinfo">
+                    <div *ngIf="enabledID==i" class="animated fadeIn subinfo">
                       <div class="test">
               
                         <div class="further-info">
 
-                          <p class="exer-title">Single-arm Neutral-grip Dumbbell Row</p>
-                          <p class="subtitle">Beginner</p>
-                          <p>10 Reps - 3 Sets</p>
-          <!--SPAN EXTRACTION--><p><span [innerHTML]="exercise2.exercise_instructions"></span></p>
+                          <p class="exer-title">{{item.exercise_title}}</p>
+                          <p class="subtitle">{{exercise2.level_title}}</p>
+                          <p>{{exercise2.exercise_reps}} Reps - {{exercise2.exercise_sets}} Sets</p>
+          
+                          <p><span [innerHTML]="exercise2.exercise_instructions"></span></p>
                           <ion-footer mode="ios" no-border>
                             <ion-button (click)="play()" class="primary ion-text-uppercase ion-text-bold" mode="ios"
                               expand="block">
@@ -149,90 +61,13 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class=" body-parts2">
-                    <div class="tags" (click)="hide()">
-          
-                      <ion-avatar slot="start">
-          
-                        <img src="./assets/images/blast.png" class="exer-img" />
-          
-                      </ion-avatar>
-                      <div class="exer-info">
-                        <ion-label>item.exercise_title</ion-label>
-                        <p>item.bodypart_title</p>
-          
-                        <ion-icon [name]="isInfoHidden ? 'arrow-down' : 'arrow-up'" slot="end" class="arrow-icon"></ion-icon>
-                      </div>
-          
-                    </div>
-          
-                    <div *ngIf="hideMe" class="animated fadeIn subinfo">
-                      <div class="test">
               
-                        <div class="further-info">
-
-                          <p class="exer-title">Single-arm Neutral-grip Dumbbell Row</p>
-                          <p class="subtitle">Beginner</p>
-                          <p>10 Reps - 3 Sets</p>
-          
-            <!--SPAN EXTRACTION-->              <p><span [innerHTML]="exercise2.exercise_instructions"></span></p>
-          
-                          <ion-footer mode="ios" no-border>
-                            <ion-button (click)="play()" class="primary ion-text-uppercase ion-text-bold" mode="ios"
-                              expand="block">
-                              {{strings.ST102}}
-                              <ion-icon slot="start" name="md-arrow-dropright-circle"></ion-icon>
-                            </ion-button>
-                          </ion-footer>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
       
             </ion-item>
             
-            <!--
-            <ng-template #notShow >
-              <ion-item class="disabled" [routerLink]="['/profile']">
-      
-                <ion-avatar slot="stat">
-                  <img class="body-img" [src]="item.exercise_image | image">
-                </ion-avatar>
-                <div class="body-info">
-                <ion-label>{{item.exercise_title}}</ion-label>
-                <p>10 Reps - 4 Sets</p>
-                </div>
-              </ion-item>
-            </ng-template>
-            -->
-            <ng-template #notShow >
-              <ion-item class="disabled" [routerLink]="['/profile']">
-      
-                <ion-avatar slot="start">
-                  <img class="body-img" [src]="item.exercise_image | image">
-                </ion-avatar>
-                <div class="body-info">
-                <ion-label>{{item.exercise_title}}</ion-label>
-                <p>10 Reps - 4 Sets</p>
-                </div>
-              </ion-item>
-            </ng-template>
           </ng-container>
         </ion-list>
       </ion-grid>
-      <!--FOR EXTRACTING EXCERSISES FROM THE EXCERSISES PAGE
 
-      <div class="days">
-
-      <div>
-            <div class="tags">
-                <h1>Day 1</h1>
-                <ion-icon name="arrow-forward" class="ion-color arrow" [style.background-color]="customColor" slot="end"></ion-icon>
-            </div>
-      </div>
-
-    </div>
-    -->
   </ion-content>
