@@ -19,6 +19,17 @@ export class WedayPage implements OnInit {
   isLoading = false;
   id: any;
   height: any;
+  show: {[key: number]: boolean} = {};
+  title: string;
+  subscribe: any
+  et:string;
+  st:string;
+  exercise: any = {};
+  isInfoHidden = true;
+  isInstruHidden = true;
+  isTipsHidden = true;
+  orientation = 'landscape';
+  exercise2: any = {};
 
 
   constructor(
@@ -26,7 +37,7 @@ export class WedayPage implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     public plt: Platform,
-    public admob: AdmobService
+    public admob: AdmobService,
 
     ) {}
 
@@ -70,5 +81,19 @@ export class WedayPage implements OnInit {
 
   } );
 }
+
+
+toggleInfo(index: number) {
+  this.show[index] = true;
+}
+
+ toggleInfo(y: boolean) {
+  this.show[y] = true;
+}
+
+hide() {
+  this.hideMe = true;
+}
+
 
 }

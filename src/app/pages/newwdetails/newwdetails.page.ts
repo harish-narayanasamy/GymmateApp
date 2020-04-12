@@ -50,7 +50,7 @@ export class NewwdetailsPage implements OnInit {
 
   ngOnInit() {
   }
-/*
+
   toggleInfo(index: number) {
     this.show[index] = true;
   }
@@ -62,5 +62,5 @@ export class NewwdetailsPage implements OnInit {
   hide() {
     this.hideMe = true;
   }
-  */
+
 }
