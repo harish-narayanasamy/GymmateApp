@@ -85,8 +85,6 @@ export class WedayPage implements OnInit {
 
   } );
 }
-<<<<<<< HEAD
-=======
 
 
 toggleInfo(index: number,id) {
@@ -121,5 +119,4 @@ play() {
   this.streamingMedia.playVideo('https://firebasestorage.googleapis.com/v0/b/six-pack-app.appspot.com/o/video.mp4?alt=media&token=453512dd-f079-4355-a325-92a9b2f7e465', options);
 }
 
->>>>>>> 067e61251a391667c0a4cb5743fe6e1ade1c1256
 }
