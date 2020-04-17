@@ -29,7 +29,7 @@ import { AuthService } from './services/auth.service';
 import { Facebook } from '@ionic-native/facebook/ngx';
 import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
-import {ScrollingHeaderModule} from 'ionic-scrolling-header';
+
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import {StreamingMedia} from '@ionic-native/streaming-media/ngx';
 import { AdMobFree } from '@ionic-native/admob-free/ngx';
@@ -38,7 +38,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [AppComponent,PlanPage,SubscriptionPage,],
+  declarations: [AppComponent,PlanPage,SubscriptionPage],
   entryComponents: [PlanPage,SubscriptionPage],
   imports: [
     BrowserModule,
@@ -47,7 +47,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    ScrollingHeaderModule,
     HttpClientModule,
     AngularFireModule.initializeApp(firebaseconfig.firebase), // imports firebase/app
     AngularFirestoreModule, // imports firebase/firestore
