@@ -1,4 +1,4 @@
-<ion-header class="lightheader" mode="ios" no-border [style.background-image]="'url(' + (diet.diet_image | image) + ')'" [ngStyle]="{'height': innerHeight}">
+<ion-header [scrollingHeader]='content' class="lightheader" mode="ios" no-border [style.background-image]="'url(' + (diet.diet_image | image) + ')'" [ngStyle]="{'height': innerHeight}">
   <ion-toolbar mode="ios" class="ion-color" [style.background-color]="customColor">
         <ion-buttons slot="start">
           <app-backbutton color="arrow" class="arrow"></app-backbutton>
