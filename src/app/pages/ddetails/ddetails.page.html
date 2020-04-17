@@ -1,24 +1,21 @@
-<ion-header class="lightheader" mode="ios" no-border >
+<ion-header class="lightheader" mode="ios" no-border [style.background-image]="'url(' + (diet.diet_image | image) + ')'" [ngStyle]="{'height': innerHeight}">
+  <ion-toolbar mode="ios" class="ion-color" [style.background-color]="customColor">
+        <ion-buttons slot="start">
+          <app-backbutton color="arrow" class="arrow"></app-backbutton>
+        </ion-buttons>
+        <ion-buttons slot="end">
+          <ion-button  slot="start" [routerLink]="['/tabs/tab1']">
+            <img src="./assets/images/close.png" class="close-img"/> 
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
   </ion-header>
   
   <ion-content class="ion-no-padding ion-color" [style.background-color]="customColor">
 
       <ion-grid class="ion-no-padding">
 
-        <ion-row [style.background-image]="'url(' + (diet.diet_image | image) + ')'" [ngStyle]="{'height': innerHeight}">
-          <div class="ion-header">
-            <ion-toolbar mode="ios" class="ion-color" [style.background-color]="customColor">
-              <ion-buttons slot="start">
-                <app-backbutton color="arrow" class="arrow"></app-backbutton>
-              </ion-buttons>
-              <ion-buttons slot="end">
-                <ion-button  slot="start" [routerLink]="['/tabs/tab1']">
-                  <img src="./assets/images/close.png" class="close-img"/> 
-                  </ion-button>
-              </ion-buttons>
-          </ion-toolbar>
-           </div> 
-        </ion-row>
+
 
           <ion-row class="header-bg" >
       </ion-row>
