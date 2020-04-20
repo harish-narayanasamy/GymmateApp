@@ -7,9 +7,9 @@
       <ion-icon name="arrow-back" [routerLink]="['/tabs/tab5']" color="primary" class="arrow-back"></ion-icon>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button  slot="start" [routerLink]="['/tabs/tab1']">
-        <img src="./assets/images/close.png" class="close-img"/> 
-        </ion-button>
+      <ion-button slot="start" [routerLink]="['/tabs/tab1']">
+        <img src="./assets/images/close.png" class="close-img" />
+      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -18,109 +18,107 @@
 
 
   <ion-grid class="ion-no-padding">
-    <ion-row class="header-bg" >
+    <ion-row class="header-bg">
       <div class="text">
-          <img src= {{url}} class="author-img"/>
-       <!--<img src="./assets/images/avatar.png" class="author-img"/>
+        <img src={{url}} class="author-img" />
+        <!--<img src="./assets/images/avatar.png" class="author-img"/>
               <p class="author-info">Edit</p>
 
-      --> 
+      -->
         <label>
           <input (change)="uploadImage($event)" type="file" class="image-upload" accept="image/*">
         </label>
       </div>
-    </ion-row> 
-    <ion-row  >
-  <div class="hero-image">
- 
-  <div  class="container bg-text" >
-    <div style="margin:0 auto;width:90%">
-        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-          <div class="alert alert-danger" *ngIf="serverError">
-            {{ serverMessage }}
+    </ion-row>
+    <ion-row>
+      <div class="hero-image">
+
+        <div class="container bg-text">
+          <div style="margin:0 auto;width:90%">
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+              <div class="alert alert-danger" *ngIf="serverError">
+                {{ serverMessage }}
+              </div>
+              <p class="info-required">Name</p>
+              <div class="form-group">
+                <input required [(ngModel)]="profile.name" name="name" #name="ngModel" id="name" type="text"
+                  class="form-control form-rounded " rows="20" placeholder="Name">
+                <div class="alert alert-danger" *ngIf="name.touched && !name.valid">
+                  <div *ngIf="name.errors.required" class="required">
+                    Name Required
+                  </div>
+                  <div *ngIf="name.errors.pattern" class="required2">
+                    Enter a Valid Name
+                  </div>
+                </div>
+              </div>
+              <p class="info-required">Age</p>
+              <div class="form-group">
+                <input required [(ngModel)]="profile.age" name="age" #age="ngModel" id="age" type="number"
+                  class="form-control form-rounded" rows="20" placeholder="Age">
+                <div class="alert alert-danger" *ngIf="age.touched && !age.valid">
+                  <div *ngIf="age.errors.required" class="required">
+                    Age Required
+                  </div>
+                  <div *ngIf="age.errors.minlength" class="required2">
+                    Enter a Valid Age
+                  </div>
+                </div>
+              </div>
+              <p class="info-required">Gender</p>
+              <div class="form-group">
+                <input required [(ngModel)]="profile.gender" name="gender" #gender="ngModel" id="gender" type="text"
+                  class="form-control form-rounded " rows="20" placeholder="Gender">
+                <div class="alert alert-danger" *ngIf="gender.touched && !gender.valid">
+                  <div *ngIf="gender.errors.required" class="required">
+                    Gender Required
+                  </div>
+                  <div *ngIf="gender.errors.pattern" class="required2">
+                    Enter a Valid gender
+                  </div>
+                </div>
+              </div>
+              <p class="info-required">Gender</p>
+
+              <p class="info-required">Height</p>
+              <div class="form-group">
+                <input required [(ngModel)]="profile.height" name="Height" #height="ngModel" id="height" type="number"
+                  class="form-control form-rounded " rows="20" placeholder="Height">
+                <div class="alert alert-danger" *ngIf="height.touched && !height.valid">
+                  <div *ngIf="height.errors.required" class="required">
+                    Height Required
+                  </div>
+                  <div *ngIf="height.errors.pattern" class="required2">
+                    Enter a valid height
+                  </div>
+                </div>
+              </div>
+              <p class="info-required">Weight</p>
+              <div class="form-group">
+                <input required [(ngModel)]="profile.weight" name="Weight" #weight="ngModel" id="weight" type="number"
+                  class="form-control form-rounded " rows="20" placeholder="Weight">
+                <div class="alert alert-danger" *ngIf="weight.touched && !weight.valid">
+                  <div *ngIf="weight.errors.required" class="required">
+                    Weight Required
+                  </div>
+                  <div *ngIf="weight.errors.pattern" class="required2">
+                    Enter a Valid weight
+                  </div>
+                </div>
+              </div>
+              <div class="form-group text-center submit">
+                <button class="btn btn-primary btn-block" [disabled]="!f.valid">Save</button>
+              </div>
+            </form>
           </div>
-          <p class="info-required">Name</p>
-          <div class="form-group">
-            <input required [(ngModel)] ="profile.name" name="name" #name="ngModel" id="name" type="text"
-              class="form-control form-rounded " rows="20"
-              placeholder="Name">
-            <div class="alert alert-danger" *ngIf="name.touched && !name.valid">
-              <div *ngIf="name.errors.required" class="required">
-                Name Required
-              </div>
-              <div *ngIf="name.errors.pattern" class="required2">
-                Enter a Valid Name
-              </div>
-            </div>
-          </div>
-          <p class="info-required">Age</p>
-          <div class="form-group">
-            <input required  [(ngModel)] ="profile.age" name="age" #age="ngModel" id="age" type="number"
-              class="form-control form-rounded" rows="20" placeholder="Age">
-             <div class="alert alert-danger" *ngIf="age.touched && !age.valid">
-              <div *ngIf="age.errors.required" class="required">
-                Age Required
-              </div>
-              <div *ngIf="age.errors.minlength" class="required2">
-                Enter a Valid Age
-              </div>
-            </div>
-          </div>
-          <p class="info-required">Gender</p>
-          <div class="form-group">
-            <input required [(ngModel)] ="profile.gender" name="gender" #gender="ngModel" id="gender" type="text"
-               class="form-control form-rounded " rows="20"
-              placeholder="Gender">
-            <div class="alert alert-danger" *ngIf="gender.touched && !gender.valid">
-              <div *ngIf="gender.errors.required" class="required">
-                Gender Required
-              </div>
-              <div *ngIf="gender.errors.pattern" class="required2">
-                Enter a Valid gender
-              </div>
-            </div>
-          </div>
-          <p class="info-required">Height</p>
-          <div class="form-group">
-            <input required [(ngModel)] ="profile.height" name="Height" #height="ngModel" id="height" type="number"
-               class="form-control form-rounded " rows="20"
-              placeholder="Height">
-            <div class="alert alert-danger" *ngIf="height.touched && !height.valid">
-              <div *ngIf="height.errors.required" class="required">
-                Height Required
-              </div>
-              <div *ngIf="height.errors.pattern" class="required2">
-                Enter a valid height
-              </div>
-            </div>
-          </div>
-          <p class="info-required">Weight</p>
-          <div class="form-group">
-            <input required [(ngModel)] ="profile.weight" name="Weight" #weight="ngModel" id="weight" type="number"
-               class="form-control form-rounded " rows="20"
-              placeholder="Weight">
-            <div class="alert alert-danger" *ngIf="weight.touched && !weight.valid">
-              <div *ngIf="weight.errors.required" class="required">
-                Weight Required
-              </div>
-              <div *ngIf="weight.errors.pattern" class="required2">
-                Enter a Valid weight
-              </div>
-            </div>
-          </div>
-          <div class="form-group text-center submit">
-            <button class="btn btn-primary btn-block" [disabled]="!f.valid">Save</button>
-          </div>
-        </form>
+
+
+
+        </div>
+
+
       </div>
-
- 
-
-  </div>
-
-
-</div>
     </ion-row>
   </ion-grid>
-  
+
 </ion-content>
