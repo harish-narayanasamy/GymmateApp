@@ -68,17 +68,15 @@
           </div>
           <p class="info-required">Gender</p>
           <div class="form-group">
-            <input required [(ngModel)] ="profile.gender" name="gender" #gender="ngModel" id="gender" type="text"
-               class="form-control form-rounded " rows="20"
-              placeholder="Gender">
-            <div class="alert alert-danger" *ngIf="gender.touched && !gender.valid">
-              <div *ngIf="gender.errors.required" class="required">
-                Gender Required
-              </div>
-              <div *ngIf="gender.errors.pattern" class="required2">
-                Enter a Valid gender
-              </div>
-            </div>
+            <ion-item class="gender ion-color" [style.background-color]="customColor">
+              <ion-label>Gender</ion-label>
+              <ion-select placeholder="Select One">
+                <ion-select-option value="f">Female</ion-select-option>
+                <ion-select-option value="m">Male</ion-select-option>
+              </ion-select>
+            </ion-item>
+          
+          
           </div>
           <p class="info-required">Height</p>
           <div class="form-group">
