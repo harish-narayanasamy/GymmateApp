@@ -13,11 +13,11 @@ export class DataService {
 
   page = 0;
 
-  constructor( private http: HttpClient ) { }
+  constructor(private http: HttpClient) { }
 
-  private ejectQuery<T>( query: string ) {
+  private ejectQuery<T>(query: string) {
     query = Url + query;
-    return this.http.get<T>( query );
+    return this.http.get<T>(query);
   }
 
   getDataStrings() {
@@ -102,6 +102,9 @@ export class DataService {
 
   getDataPostById(id: number) {
     return this.ejectQuery(`/json/data_posts.php?id=${id}&limit=1`);
+  }
+  getDataNumberDaysById(id: number) {
+    return this.ejectQuery(`/json/data_nodays.php?id=${id}`);
   }
 
   getDataWorkoutExercisesByDay(id: number, day: number) {
