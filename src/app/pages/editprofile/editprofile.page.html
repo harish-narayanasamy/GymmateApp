@@ -39,6 +39,30 @@
               <div class="alert alert-danger" *ngIf="serverError">
                 {{ serverMessage }}
               </div>
+<<<<<<< HEAD
+            </div>
+          </div>
+          <p class="info-required">Gender</p>
+          <div class="form-group">
+            <ion-item class="gender ion-color" [style.background-color]="customColor">
+              <ion-label>Gender</ion-label>
+              <ion-select placeholder="Select One">
+                <ion-select-option value="f">Female</ion-select-option>
+                <ion-select-option value="m">Male</ion-select-option>
+              </ion-select>
+            </ion-item>
+          
+          
+          </div>
+          <p class="info-required">Height</p>
+          <div class="form-group">
+            <input required [(ngModel)] ="profile.height" name="Height" #height="ngModel" id="height" type="number"
+               class="form-control form-rounded " rows="20"
+              placeholder="Height">
+            <div class="alert alert-danger" *ngIf="height.touched && !height.valid">
+              <div *ngIf="height.errors.required" class="required">
+                Height Required
+=======
               <p class="info-required">Name</p>
               <div class="form-group">
                 <input required [(ngModel)]="profile.name" name="name" #name="ngModel" id="name" type="text"
@@ -77,6 +101,7 @@
                     Enter a Valid gender
                   </div>
                 </div>
+>>>>>>> 4217f3d9ab65814dcac320ff8d5c207cbfd40bf0
               </div>
               <p class="info-required">Gender</p>
 

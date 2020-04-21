@@ -1,5 +1,280 @@
 .header-bg {
     background-color: #191919;
+<<<<<<< HEAD
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .header-bg .text{
+      color: #fff;
+      text-align: center;
+  }
+  
+  .header-bg .name{
+      color: var(--ion-color-primary);
+      text-align: center;
+      margin-bottom: 9px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 16px;
+  }
+  
+  .header-bg .since{
+      color: #fff;
+      margin-top: 5px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 12px;
+  }
+  
+  .tags{
+      background-color: #f9f9f9;
+      border-left: 3px solid var(--ion-color-primary);
+      padding: 15px;
+      position: relative;
+      margin-bottom: 10px;
+  }
+  
+  .tags h1{
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin:0;
+  }
+  
+  .tags ion-icon{
+      position: absolute;
+      right: 14px;
+      top: 11px;
+      font-size: 22px;
+  }
+  
+  .view-more{
+      width: 100%;
+      color: #f7474f;
+      font-family: Proxima-bold;
+      font-size: 16px !important;
+      line-height: 16px;
+      text-transform: none !important;
+      text-align: right !important;
+  }
+  
+  ion-header{
+      background-color:#191919 ;
+      height: 100%;
+      padding: 10px 4px 0px 4px !important;
+      height: auto ;
+  }
+  
+  .ion-text-capitalize{
+      width: 100%;
+      color: #eafff7;
+      font-family: Proxima-bold;
+      font-size: 32px !important;
+      line-height: 32px;
+      text-transform: none !important;
+      text-align: left;
+      padding: 0;
+      }
+  
+  
+  ion-button{
+      margin-right: -5px !important;
+  }
+  
+  .text{
+      width: 90%;
+      margin: 0 auto;
+      border-radius: 5px;
+      padding: 20px 0px 20px 0;
+  }
+  
+  .author-img{
+      max-width: 80px;
+      max-height: 80px;
+      border-radius: 50%;
+  }
+  
+  .pro{
+      height: 100%;
+      display: block;
+      margin-right: auto;
+  }
+  
+  .sc-ion-buttons-ios-s ion-button {
+      --padding-start: 0px !important;
+      --padding-end: 0px !important;
+      padding: 0px !important;
+      margin: 0px;
+      --margin: 0px;
+      width: 100%;
+  }
+  
+  
+  .author-info{
+      font-family: 'Proxima-bold';
+      font-family: 14px;
+      line-height: 16px;
+      margin: 5px 0;
+      color: #f7474f;
+  }
+  
+  ion-content, .edit{
+      background: #191919;
+  }
+  
+  .edit .sc-ion-buttons-ios-h{
+      width: 90%;
+      margin: 0 auto;
+  }
+  
+  .ion-text-capitalize{
+      width: 100%;
+      color: #f7474f;
+      font-family: Proxima-bold;
+      font-size: 20px !important;
+      text-transform: none !important;
+      text-align: center;
+      }   
+  
+   p{
+       color: #ffffff;
+       margin: 5px 0;
+       font-size: 16px;
+       line-height: normal;
+       letter-spacing: normal;
+       font-family: 'Muli-light';
+   }
+  
+   .body-info{
+       position: absolute;
+       top: 20px;
+   }
+  
+   ion-item {
+      --background-focused: #fff !important;
+      --background-activated: #fff !important;
+      --detail-icon-color: var(--ion-color-primary);
+      --detail-icon-opacity: 1;
+      --detail-icon-transform: rotate(90deg) !important;
+  }
+  
+   .body-info p, .exer-info p{
+       font-size: 14px;
+       color: #979797;
+       line-height: 16px;
+       font-family: 'Nunito-light';
+  
+   }
+  
+   ion-content, .hero-image{
+      background: #191919;
+      width: 100%;
+      height: auto;
+      padding-bottom: 40px;
+      padding-top: 10px;
+  }
+  
+  .form-group input, .form-group, form{
+      width: 100% !important;
+  }
+  
+  .form-group{
+      margin-bottom: 20px;
+  }
+  
+  .form-group input, .gender{
+      background-color: #313235 !important;
+      border-radius: 5px !important;
+      padding: 10px !important;
+        color: #fafafa !important;
+      border: none !important;
+  }
+
+  .gender{
+      --padding: 0 !important;
+      padding: 0 !important;
+      --background-color: #313235 !important;
+      --border: none !important;
+      border: none !important;
+      --padding-inline-start: 0 !important;
+      padding-inline-start: 0 !important;
+      height: 39px;
+      --height: 39px !important;
+  }
+
+  .gender ion-select {
+    color: #fafafa !important;
+      --color: #7b7b7b !important;
+      margin: -10px 0 0 0px !important;
+      padding: 0px !important;
+      --margin: 0px !important;
+    --padding: 0px !important;
+  }
+  .gender .select-text{
+    color: #7b7b7b !important;
+    --color: #7b7b7b !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    --margin: 0px !important;
+    --padding: 0px !important;
+  }
+  .gender {
+    --ion-padding: 0 !important;
+    --padding-start: 10px !important;
+}
+
+.gender ion-alert:not(.select-alert) {
+   
+    --ion-text-color: #7b7b7b;
+}
+  .gender ion-label{
+    color: #7b7b7b !important;
+        --color: #7b7b7b !important;
+        margin: -10px 0 0 0px !important;
+        padding: 0px !important;
+        --margin: 0px !important;
+      --padding: 0px !important;
+
+      
+  }
+  .info-required{
+      font-family: 'Proxima-regular';
+      font-size: 14px;
+      line-height: 15px;
+      color: #aeabab;
+  }
+  
+  button{
+      background: #f7474f !important;
+      width: 90% !important;
+      color: #ffffff !important;
+      border-radius: 40px !important;
+      margin: 0 auto !important;
+      display: block;
+      padding: 20px 0;
+      font-family: 'Proxima-regular';
+      font-size: 20px;
+      line-height: 22px;
+  }
+  
+  .submit{
+      margin-top: 50px !important;
+  }
+
+  .close-img{
+      max-width: 16px;
+      max-height: 16px;
+      margin: 0 8px;
+  }
+
+  .arrow-back{
+      font-size: 22px;
+      padding: 0 8px;
+  }
+
+  .required, .required2{
+=======
     align-items: center;
     justify-content: center;
 }
@@ -232,6 +507,7 @@ button {
 
 .required,
 .required2 {
+>>>>>>> 4217f3d9ab65814dcac320ff8d5c207cbfd40bf0
     font-family: 'Proxima-regular';
     font-size: 14px;
     line-height: 15px;
