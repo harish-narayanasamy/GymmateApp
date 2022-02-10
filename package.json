@@ -95,7 +95,7 @@
     "karma-jasmine-html-reporter": "^1.5.2",
     "node-gyp": "^6.1.0",
     "node-pre-gyp": "^0.14.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "protractor": "^5.4.3",
     "tar": "^5.0.5",
     "ts-node": "~7.0.0",
